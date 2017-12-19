@@ -6,8 +6,41 @@ page-accueil {
     font-size: 200% !important;
   }
   .home_image{
-    background-image:url("/assets/imgs/detail_logo.jpg");
+    background-image:url("/assets/imgs/accueil_background.jpg");
     background-size: cover;
     background-position: center;
   }
+
+  .title{
+    padding-left: 10%;
+    padding-right: 10%;
+
+  }
+
+  .item-inner{
+    border: none !important;
+    color:  #5fb0e7 !important;
+    font-weight: bold;
+  }
+
+  .menuIcon{
+    width: 50%;
+
+  }
+
+  ion-col{
+    padding: 0 !important;
+  }
+
+
+
+  .scroll-content {
+    overflow-y: hidden !important;
+  }
+
+  .textMenu{
+    padding-left: 3px !important;
+    padding-right: 3px !important;
+  }
+
 }

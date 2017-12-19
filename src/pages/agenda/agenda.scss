@@ -1,3 +1,11 @@
 page-agenda {
+ .filter{
+   .item {
+     height: 10px;
+   }
+   }
 
+  .scroll-content{
+    overflow-y: hidden !important;
+  }
 }

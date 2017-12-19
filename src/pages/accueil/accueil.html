@@ -1,9 +1,9 @@
 
-<ion-header style="height: 12%">
+<ion-header style="height: 10%">
 
   <ion-navbar style="height: 100%">
     <ion-title>
-      <ion-item style="background: transparent; border: none;" text-center text-wrap>
+      <ion-item style="background: transparent;" text-center text-wrap>
       Chappelle Notre Dame de la Médaille Miraculeuse
       </ion-item>
     </ion-title>
@@ -12,84 +12,90 @@
 </ion-header>
 
 
-<ion-content>
+<ion-content >
     <ion-row class="home_image" style="height: 50%"></ion-row>
   <ion-row>
-    <ion-col>
+    <ion-col style="padding: 15px !important; color: #5fb0e7 !important; font-weight: bold;">
       <ion-row>
-        <ion-col col-4 text-center (click)="onNavSelect('prieres')">
+        <ion-col col-4 text-center (click)="onNavSelect('prieres')" class="menu">
           <ion-row>
             <ion-col>
-              <ion-icon  name="brush"></ion-icon>
+              <!--<ion-icon  name="brush"></ion-icon>-->
+              <img src="../../assets/imgs/priere.png" alt="" class="menuIcon">
             </ion-col>
           </ion-row>
           <ion-row>
-            <ion-col>
+            <ion-col class="textMenu">
               Prière du jour
             </ion-col>
           </ion-row>
         </ion-col>
-        <ion-col col-4 text-center (click)="onNavSelect('chapelets')">
+        <ion-col col-4 text-center (click)="onNavSelect('chapelets')" class="menu">
           <ion-row>
             <ion-col>
-              <ion-icon name="brush"></ion-icon>
+              <!--<ion-icon name="brush"></ion-icon>-->
+              <img src="../../assets/imgs/chapelet.png" alt="" class="menuIcon">
             </ion-col>
           </ion-row>
           <ion-row>
-            <ion-col>
+            <ion-col class="textMenu">
               Comment prier le Chapelet
             </ion-col>
           </ion-row>
 
         </ion-col>
-        <ion-col col-4 text-center (click)="onNavSelect('agenda')">
+        <ion-col col-4 text-center (click)="onNavSelect('agenda')" class="menu">
           <ion-row>
             <ion-col>
-              <ion-icon name="brush"></ion-icon>
+              <!--<ion-icon name="brush"></ion-icon>-->
+              <img src="../../assets/imgs/agenda.png" alt="" class="menuIcon">
             </ion-col>
           </ion-row>
           <ion-row>
-            <ion-col>
+            <ion-col class="textMenu">
               Agenda
             </ion-col>
           </ion-row>
         </ion-col>
       </ion-row>
       <ion-row>
-        <ion-col col-4 text-center (click)="onNavSelect('parcours')">
+        <ion-col col-4 text-center (click)="onNavSelect('parcours')" class="menu">
           <ion-row>
             <ion-col>
-              <ion-icon name="brush"></ion-icon>
+              <!--<ion-icon name="brush"></ion-icon>-->
+              <img src="../../assets/imgs/parcours.png" alt="" class="menuIcon">
             </ion-col>
           </ion-row>
           <ion-row>
-            <ion-col>
+            <ion-col class="textMenu" text-wrap>
               Parcours Spirituel
             </ion-col>
           </ion-row>
 
         </ion-col>
-        <ion-col col-4 text-center (click)="onNavSelect('benediction')">
+        <ion-col col-4 text-center (click)="onNavSelect('benediction')" class="menu">
           <ion-row>
             <ion-col>
-              <ion-icon name="brush"></ion-icon>
+              <!--<ion-icon name="brush"></ion-icon>-->
+              <img src="../../assets/imgs/help.png" alt="" class="menuIcon">
             </ion-col>
           </ion-row>
           <ion-row>
-            <ion-col>
+            <ion-col class="textMenu">
               Bénédiction des médailles
             </ion-col>
           </ion-row>
 
         </ion-col>
-        <ion-col col-4 text-center (click)="onNavSelect('intention')">
+        <ion-col col-4 text-center (click)="onNavSelect('intention')" class="menu">
           <ion-row>
             <ion-col>
-              <ion-icon name="brush"></ion-icon>
+              <!--<ion-icon name="brush"></ion-icon>-->
+              <img src="../../assets/imgs/help.png" alt="" class="menuIcon">
             </ion-col>
           </ion-row>
           <ion-row>
-            <ion-col>
+            <ion-col class="textMenu">
               Intention de prières
             </ion-col>
           </ion-row>
@@ -97,14 +103,15 @@
         </ion-col>
       </ion-row>
       <ion-row>
-        <ion-col col-4 text-center (click)="onNavSelect('historique')">
+        <ion-col col-4 text-center (click)="onNavSelect('historique')" class="menu">
           <ion-row>
             <ion-col>
-              <ion-icon name="brush"></ion-icon>
+              <!--<ion-icon name="brush"></ion-icon>-->
+              <img src="../../assets/imgs/historique.png" alt="" class="menuIcon">
             </ion-col>
           </ion-row>
           <ion-row>
-            <ion-col>
+            <ion-col class="textMenu">
               Historique
             </ion-col>
           </ion-row>
@@ -113,11 +120,12 @@
         <ion-col col-4 text-center>
           <ion-row>
             <ion-col>
-              <ion-icon name="brush"></ion-icon>
+              <!--<ion-icon name="brush"></ion-icon>-->
+              <img src="../../assets/imgs/parametres.png" alt="" class="menuIcon">
             </ion-col>
           </ion-row>
           <ion-row>
-            <ion-col>
+            <ion-col class="textMenu">
               Paramètres
             </ion-col>
           </ion-row>

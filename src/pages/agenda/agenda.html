@@ -9,7 +9,8 @@
 
 
 <ion-content>
-  <calendar [eventSource]="eventSource"
+  <calendar
+            [eventSource]="eventSource"
             [calendarMode]="calendar.mode"
             [currentDate]="calendar.currentDate"
             (onCurrentDateChanged)="onCurrentDateChanged($event)"
@@ -19,3 +20,45 @@
             step="30">
   </calendar>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar style=" padding:0 !important;">
+      <!--<ion-col  col-3 text-center padding>Filtrer</ion-col>-->
+
+
+        <!--<ion-list>-->
+          <!--<ion-list-header>-->
+            <!--Action-->
+          <!--</ion-list-header>-->
+          <!--<ion-item>Terminator II</ion-item>-->
+          <!--<ion-item>The Empire Strikes Back</ion-item>-->
+          <!--<ion-item>Blade Runner</ion-item>-->
+        <!--</ion-list>-->
+
+        <ion-list style="margin: 0;">
+
+          <ion-list-header>
+          Filtrer
+          </ion-list-header>
+        <ion-item>
+        <ion-label>Catégorie</ion-label>
+        <ion-select [(ngModel)]="categorySelect">
+          <ion-option value="tout">Tout</ion-option>
+          <ion-option value="evenement">Evènement</ion-option>
+          <ion-option value="pelerinage">Pélérinage</ion-option>
+        </ion-select>
+        </ion-item>
+
+        <ion-item>
+        <ion-label>Pays</ion-label>
+        <ion-select [(ngModel)]="countrySelect" (ionChange)="onActivityFiltered($event)">
+          <ion-option value="tout">Tout</ion-option>
+          <ion-option *ngFor="let countryValue of pays" value="{{countryValue.nom_fr}}">{{countryValue.nom_fr}}</ion-option>
+        </ion-select>
+        </ion-item>
+
+        </ion-list>
+
+
+  </ion-toolbar>
+</ion-footer>

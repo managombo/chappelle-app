@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {AlertController, IonicPage, NavController, NavParams} from 'ionic-angular';
 import {Activity} from "../../data/activity.interface";
 import{HttpClient} from "@angular/common/http";
 import * as moment from 'moment';
@@ -12,9 +12,12 @@ import * as moment from 'moment';
 export class AgendaPage implements OnInit {
 
   activities: Activity[]=[];
+  activitiesFiltered: Activity[]=[];
 
   eventSource;
   viewTitle;
+  categorySelect;
+  countrySelect;
   isToday: boolean;
   calendar = {
     mode: 'month',
@@ -22,13 +25,13 @@ export class AgendaPage implements OnInit {
   }; // these are the variable used by the calendar.
 
   evenements:any;
-  pays:any;
+  pays:any =[];
   pelerinages:any;
   activity: Activity;
 
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public http: HttpClient){
+  constructor(public navCtrl: NavController, public navParams: NavParams, public http: HttpClient, private alertCrl: AlertController){
   }
 
   ionViewDidLoad() {
@@ -42,76 +45,85 @@ export class AgendaPage implements OnInit {
   ngOnInit(){
 
 
-    this.activity ={
-      id:'',
-      title:'',
-      startTime:'',
-      endTime:'',
-      allDay:false,
-      description:'',
-      country:'',
-      type:'',
-      category:'',
-    };
-
    // console.log(this.httpProvider.getJsonData('../../data/mr_evenements.json'));
     console.log('test1');
    // console.log(this.httpProvider.getJsonData('../../../data/mr_evenements.json'));
    //  this.httpProvider.getJsonData('../../../data/mr_evenements.json');
 
 
-    this.http.get('/assets/json/mr_evenements.json').subscribe((res) => {
-      // return res;
-      this.evenements = res;
-      // console.log(this.evenements);
 
 
 
-      for(var evenement of this.evenements){
-        console.log(evenement);
-
-        this.activity.id =evenement.id;
-        this.activity.title=evenement.nom;
-        this.activity.startTime=(evenement.date+"T"+evenement.heure_debut);
-        this.activity.endTime=(evenement.date+"T"+evenement.heure_fin);
-        this.activity.allDay=false;
-        this.activity.description=evenement.descriptif;
-        this.activity.country=evenement.pays;
-        this.activity.category="evenement";
-
-        this.activities.push(this.activity);
-      }
-
-
-      this.http.get('/assets/json/mr_pelerinages.json').subscribe((res) => {
+      this.http.get('/assets/json/mr_evenements.json').subscribe((res) => {
         // return res;
-        this.pelerinages = res;
-        // console.log(this.pelerinages);
-        for(var pelerinage of this.pelerinages){
+        this.evenements = res;
+        // console.log(this.evenements);
 
-          this.activity.id =pelerinage.id;
-          this.activity.title=pelerinage.nom;
-          this.activity.startTime=(pelerinage.date+"T"+pelerinage.heure_debut);
-          this.activity.endTime=(pelerinage.date+"T23:59:59");
-          this.activity.allDay=false;
-          this.activity.description=pelerinage.ref;
-          this.activity.country=pelerinage.pays;
-          this.activity.category="pelerinage";
 
-          // console.log(this.activity);
+        // var i =0;
+        for(var evenement of this.evenements){
 
-          this.activities.push(this.activity);
-          console.log(this.activities);
+
+          // i=i+1;
+          // if(i>5) break;
+
+
+          this.activities.push({
+            id:evenement.id,
+            title:evenement.nom,
+            startTime:new Date(evenement.date+"T"+evenement.heure_debut),
+            endTime:new Date(evenement.date+"T"+((evenement.heure_fin == "00:00:00")? "23:59:59" : evenement.heure_fin)),
+            allDay:false,
+            description:evenement.descriptif,
+            country:evenement.pays,
+            type:'',
+            category:"evenement",
+          });
+
         }
+        console.log("evenement");
+        console.log(this.activities);
+
+        // console.log(this.activities);
+
+
+        this.http.get('/assets/json/mr_pelerinages.json').subscribe((res) => {
+          // return res;
+          this.pelerinages = res;
+          // console.log(this.pelerinages);
+          for(var pelerinage of this.pelerinages){
+
+
+            // console.log(this.activity);
+
+            this.activities.push({
+              id:pelerinage.id,
+              title:pelerinage.nom,
+              startTime:new Date(pelerinage.date+"T"+pelerinage.heure_debut),
+              endTime:new Date(pelerinage.date+"T23:59:59"),
+              allDay:false,
+              description:pelerinage.descriptif,
+              country:pelerinage.pays,
+              type:'',
+              category:"pelerinage",
+            });
+            // console.log(this.activities);
+          }
+          console.log("pelerinage");
+          console.log(this.activities);
+
+          this.loadEvents(this.activities);
+        });
+
+
+
       });
 
-
-
-    });
     this.http.get('/assets/json/mr_pays.json').subscribe((res) => {
       // return res;
       this.pays = res;
-      // console.log(this.pays);
+
+        // console.log(this.pays);
     });
 
 
@@ -120,14 +132,24 @@ export class AgendaPage implements OnInit {
 
 
 
-  loadEvents() {
-    this.eventSource = this.createRandomEvents();
+  loadEvents(activitiesToLoad: Activity[]) {
+    this.eventSource = activitiesToLoad;
+    // this.eventSource = this.createRandomEvents();
   }
   onViewTitleChanged(title) {
     this.viewTitle = title;
   }
   onEventSelected(event) {
-    console.log('Event selected:' + event.startTime + '-' + event.endTime + ',' + event.title);
+    let start = moment(event.startTime).format('LLLL');
+    let end = moment(event.endTime).format('LLLL');
+
+    let alert = this.alertCrl.create({
+      title: ''+event.title,
+      subTitle: '<p text-center="">Du<br>'+ start+' <br> au <br>'+ end + '</p><br>'+ 'Description:<br>'+event.description,
+      buttons: ['Enregistrer dans le calendrier','Ok']
+    });
+
+    alert.present();
   }
   changeMode(mode) {
     this.calendar.mode = mode;
@@ -145,42 +167,7 @@ export class AgendaPage implements OnInit {
     event.setHours(0, 0, 0, 0);
     this.isToday = today.getTime() === event.getTime();
   }
-  createRandomEvents() {
-    var events = [];
-    for (var i = 0; i < 50; i += 1) {
-      var date = new Date();
-      var eventType = Math.floor(Math.random() * 2);
-      var startDay = Math.floor(Math.random() * 90) - 45;
-      var endDay = Math.floor(Math.random() * 2) + startDay;
-      var startTime;
-      var endTime;
-      if (eventType === 0) {
-        startTime = new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate() + startDay));
-        if (endDay === startDay) {
-          endDay += 1;
-        }
-        endTime = new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate() + endDay));
-        events.push({
-          title: 'All Day - ' + i,
-          startTime: startTime,
-          endTime: endTime,
-          allDay: true
-        });
-      } else {
-        var startMinute = Math.floor(Math.random() * 24 * 60);
-        var endMinute = Math.floor(Math.random() * 180) + startMinute;
-        startTime = new Date(date.getFullYear(), date.getMonth(), date.getDate() + startDay, 0, date.getMinutes() + startMinute);
-        endTime = new Date(date.getFullYear(), date.getMonth(), date.getDate() + endDay, 0, date.getMinutes() + endMinute);
-        events.push({
-          title: 'Event - ' + i,
-          startTime: startTime,
-          endTime: endTime,
-          allDay: false
-        });
-      }
-    }
-    return events;
-  }
+
   onRangeChanged(ev) {
     console.log('range changed: startTime: ' + ev.startTime + ', endTime: ' + ev.endTime);
   }
@@ -189,6 +176,32 @@ export class AgendaPage implements OnInit {
     current.setHours(0, 0, 0);
     return date < current;
   };
+
+  onActivityFiltered(event: event){
+    category =
+    if(category == "evenement"){
+      if (country=="all") {
+        this.activitiesFiltered = this.activities.filter(value => value.category == "evenement");
+      } else {
+        this.activitiesFiltered = this.activities.filter(value => value.category == "evenement" && value.country == country);
+      }
+    } else if (category=="pelerinage"){
+      if (country=="all") {
+        this.activitiesFiltered = this.activities.filter(value => value.category == "pelerinage");
+      } else {
+        this.activitiesFiltered = this.activities.filter(value => value.category == "pelerinage" && value.country == country);
+      }
+    } else {
+
+      if (country=="all") {
+        this.activitiesFiltered = this.activities;
+      } else {
+        this.activitiesFiltered = this.activities.filter(value => value.country == country);
+      }
+    }
+
+    this.loadEvents(this.activitiesFiltered);
+  }
 
 
 

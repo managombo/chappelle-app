@@ -1,8 +1,8 @@
 export interface Activity {
   id: string;
   title: string;
-  startTime: string;
-  endTime: string;
+  startTime: Date;
+  endTime: Date;
   allDay: boolean;
   country: string;
   description: string;

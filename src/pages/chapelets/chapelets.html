@@ -13,6 +13,45 @@
 </ion-header>
 
 
-<ion-nav [root]="tabsPage">
+<ion-content>
+  <ion-list style="margin: 0;">
 
-</ion-nav>
+    <button
+      ion-item
+      [navPush]="chapeletPage"
+    >
+      <img src="../../assets/imgs/help.png" alt="" item-left >
+      <h2>A propos</h2>
+    </button>
+        <button
+      ion-item
+      [navPush]="chapeletGlorieux"
+    >
+      <img src="../../assets/imgs/glorieux.png" alt="" item-left >
+      <h2>Chapelet glorieux</h2>
+    </button>
+    <button
+      ion-item
+      [navPush]="chapeletLumineux"
+    >
+      <img src="../../assets/imgs/lumineux.png" alt="" item-left>
+      <h2>Chapelet lumineux</h2>
+    </button>
+    <button
+      ion-item
+      [navPush]="chapeletJoyeux"
+    >
+      <img src="../../assets/imgs/joyeux.png" alt="" item-left>
+      <h2>Chapelet joyeux</h2>
+    </button>
+    <button
+      ion-item
+      [navPush]="chapeletDouloureux"
+    >
+      <img src="../../assets/imgs/douloureux.png" alt="" item-left>
+      <h2>Chapelet douloureux</h2>
+    </button>
+
+  </ion-list>
+
+</ion-content>
