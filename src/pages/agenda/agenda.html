@@ -42,8 +42,8 @@
           </ion-list-header>
         <ion-item>
         <ion-label>Catégorie</ion-label>
-        <ion-select [(ngModel)]="categorySelect">
-          <ion-option value="tout">Tout</ion-option>
+        <ion-select [(ngModel)]="categorySelect" (ionChange)="onActivityFiltered($event)">
+          <ion-option value="all">Tout</ion-option>
           <ion-option value="evenement">Evènement</ion-option>
           <ion-option value="pelerinage">Pélérinage</ion-option>
         </ion-select>
@@ -52,8 +52,8 @@
         <ion-item>
         <ion-label>Pays</ion-label>
         <ion-select [(ngModel)]="countrySelect" (ionChange)="onActivityFiltered($event)">
-          <ion-option value="tout">Tout</ion-option>
-          <ion-option *ngFor="let countryValue of pays" value="{{countryValue.nom_fr}}">{{countryValue.nom_fr}}</ion-option>
+          <ion-option value="all">Tout</ion-option>
+          <ion-option *ngFor="let countryValue of pays" value="{{countryValue.code}}">{{countryValue.nom_fr}}</ion-option>
         </ion-select>
         </ion-item>
 

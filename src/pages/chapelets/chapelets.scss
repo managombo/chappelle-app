@@ -1,9 +1,105 @@
 page-chapelets {
-  img{
-    height: 60px;
+
+  ion-content{
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    scroll: false;
   }
+
+  img{
+    //height: ;
+    max-height: 100%;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+
+  .main-image{
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .listChapelet{
+    height: 20%;
+    position: relative;
+  }
+
+  .center-menu {
+    /* let it fill the whole container */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+
+  .center-menu:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+  }
+
+  ion-icon{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 20%;
+  }
+
+
 
   .scroll-content{
     overflow-y: hidden !important;
+    color:  #5fb0e7 !important;
   }
+  //
+  //ion-list{
+  //  height: 60vh;
+  //}
+  //ion-list{
+  //  height: 100%;
+  //}
+  //.item-inner{
+  //  height: 100%;
+  //}
+  //.item{
+  //  height: 20%;
+  //}
+  //
+  //.box {
+  //
+  //}
+  //
+  //.box .row{
+  //
+  //}
+  //
+  //.header-image{
+  //  flex-grow: 1 !important;
+  //  he
+  //}
+
+
+  //.box .row {
+  //  border: 1px dotted grey;
+  //}
+  //
+  //.box .row.header {
+  //  flex: 0 1 auto;
+  //  /* The above is shorthand for:
+  //  flex-grow: 0,
+  //  flex-shrink: 1,
+  //  flex-basis: auto
+  //  */
+  //}
+  //
+  //.box .row.content {
+  //  flex: 1 1 auto;
+  //}
+  //
+  //.box .row.footer {
+  //  flex: 0 1 40px;
+  //}
 }

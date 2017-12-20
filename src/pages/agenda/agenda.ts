@@ -16,8 +16,8 @@ export class AgendaPage implements OnInit {
 
   eventSource;
   viewTitle;
-  categorySelect;
-  countrySelect;
+  categorySelect = "all";
+  countrySelect = "all";
   isToday: boolean;
   calendar = {
     mode: 'month',
@@ -177,26 +177,25 @@ export class AgendaPage implements OnInit {
     return date < current;
   };
 
-  onActivityFiltered(event: event){
-    category =
-    if(category == "evenement"){
-      if (country=="all") {
+  onActivityFiltered(event){
+    if(this.categorySelect == "evenement"){
+      if (this.countrySelect=="all") {
         this.activitiesFiltered = this.activities.filter(value => value.category == "evenement");
       } else {
-        this.activitiesFiltered = this.activities.filter(value => value.category == "evenement" && value.country == country);
+        this.activitiesFiltered = this.activities.filter(value => value.category == "evenement" && value.country == this.countrySelect);
       }
-    } else if (category=="pelerinage"){
-      if (country=="all") {
+    } else if (this.categorySelect=="pelerinage"){
+      if (this.countrySelect=="all") {
         this.activitiesFiltered = this.activities.filter(value => value.category == "pelerinage");
       } else {
-        this.activitiesFiltered = this.activities.filter(value => value.category == "pelerinage" && value.country == country);
+        this.activitiesFiltered = this.activities.filter(value => value.category == "pelerinage" && value.country == this.countrySelect);
       }
     } else {
 
-      if (country=="all") {
+      if (this.countrySelect=="all") {
         this.activitiesFiltered = this.activities;
       } else {
-        this.activitiesFiltered = this.activities.filter(value => value.country == country);
+        this.activitiesFiltered = this.activities.filter(value => value.country == this.countrySelect);
       }
     }
 

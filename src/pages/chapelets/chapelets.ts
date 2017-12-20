@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import {TabsPage} from "../tabs/tabs";
+
 import {ChapeletGlorieuxPage} from "../chapelet-glorieux/chapelet-glorieux";
 import {ChapeletLumineuxPage} from "../chapelet-lumineux/chapelet-lumineux";
 import {ChapeletJoyeuxPage} from "../chapelet-joyeux/chapelet-joyeux";
@@ -21,19 +21,26 @@ import {ChapeletPage} from "../chapelet/chapelet";
 })
 export class ChapeletsPage {
 
+  navigationMenu = {
+    "apropos": ChapeletPage,
+    "glorieux": ChapeletGlorieuxPage,
+    "lumineux": ChapeletLumineuxPage,
+    "joyeux": ChapeletJoyeuxPage,
+    "douloureux": ChapeletDouloureuxPage
+  };
+
   // tabsPage = TabsPage;
 
-  chapeletGlorieux = ChapeletGlorieuxPage;
-  chapeletLumineux = ChapeletLumineuxPage;
-  chapeletJoyeux = ChapeletJoyeuxPage;
-  chapeletDouloureux = ChapeletDouloureuxPage;
-  chapeletPage = ChapeletPage;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ChapeletsPage');
+  }
+
+  onNavSelect(name: string){
+    this.navCtrl.push(this.navigationMenu[name]);
   }
 
 }

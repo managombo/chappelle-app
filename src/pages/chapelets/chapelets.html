@@ -13,45 +13,109 @@
 </ion-header>
 
 
-<ion-content>
-  <ion-list style="margin: 0;">
+<ion-content >
+  <ion-row style="height: 50%">
+    <ion-col text-center >
+      <img src="../../assets/imgs/chapelet.png" alt="" style="height: 100%" class="main-image">
+    </ion-col>
+  </ion-row>
+  <hr style="margin: 0">
 
-    <button
-      ion-item
-      [navPush]="chapeletPage"
-    >
-      <img src="../../assets/imgs/help.png" alt="" item-left >
-      <h2>A propos</h2>
-    </button>
-        <button
-      ion-item
-      [navPush]="chapeletGlorieux"
-    >
-      <img src="../../assets/imgs/glorieux.png" alt="" item-left >
-      <h2>Chapelet glorieux</h2>
-    </button>
-    <button
-      ion-item
-      [navPush]="chapeletLumineux"
-    >
-      <img src="../../assets/imgs/lumineux.png" alt="" item-left>
-      <h2>Chapelet lumineux</h2>
-    </button>
-    <button
-      ion-item
-      [navPush]="chapeletJoyeux"
-    >
-      <img src="../../assets/imgs/joyeux.png" alt="" item-left>
-      <h2>Chapelet joyeux</h2>
-    </button>
-    <button
-      ion-item
-      [navPush]="chapeletDouloureux"
-    >
-      <img src="../../assets/imgs/douloureux.png" alt="" item-left>
-      <h2>Chapelet douloureux</h2>
-    </button>
+  <ion-row style="height: 50%">
+    <ion-col>
+      <ion-row class="listChapelet" (click)="onNavSelect('apropos')">
+        <ion-col col-4>
+          <img src="../../assets/imgs/help.png" alt="" item-left >
+        </ion-col>
+        <ion-col col-6>
+          <div class="center-menu">A propos du Chapelet </div>
+        </ion-col>
+        <ion-col col-2>
+          <div class="center-menu">
+          <ion-icon name="arrow-forward" style="font-size: 2em;"></ion-icon>
+          </div>
+        </ion-col>
 
-  </ion-list>
+      </ion-row>
+      <hr style="margin: 0">
+      <ion-row class="listChapelet" (click)="onNavSelect('glorieux')">
+<ion-col col-4>        <img src="../../assets/imgs/glorieux.png" alt="" item-left ></ion-col>
+        <ion-col col-6><div class="center-menu">Mystères glorieux</div></ion-col>
+        <ion-col col-2>
+          <div class="center-menu">
+            <ion-icon name="arrow-forward" style="font-size: 2em;"></ion-icon>
+          </div>
+        </ion-col>
+      </ion-row>
+      <hr style="margin: 0">
+      <ion-row class="listChapelet" (click)="onNavSelect('lumineux')">
+        <ion-col col-4><img src="../../assets/imgs/lumineux.png" alt="" item-left></ion-col>
+        <ion-col col-6><div class="center-menu">Mystères lumineux</div></ion-col>
+        <ion-col col-2>
+          <div class="center-menu">
+            <ion-icon name="arrow-forward" style="font-size: 2em;"></ion-icon>
+          </div>
+        </ion-col>
+      </ion-row>
+      <hr style="margin: 0">
+      <ion-row class="listChapelet" (click)="onNavSelect('joyeux')">
+        <ion-col col-4><img src="../../assets/imgs/joyeux.png" alt="" item-left></ion-col>
+        <ion-col col-6><div class="center-menu">Mystères joyeux</div></ion-col>
+        <ion-col col-2>
+          <div class="center-menu">
+            <ion-icon name="arrow-forward" style="font-size: 2em;"></ion-icon>
+          </div>
+        </ion-col>
+      </ion-row>
+      <hr style="margin: 0">
+      <ion-row class="listChapelet" (click)="onNavSelect('douloureux')">
+        <ion-col col-4><img src="../../assets/imgs/douloureux.png" alt="" item-left></ion-col>
+        <ion-col col-6><div class="center-menu">Mystères douloureux</div></ion-col>
+        <ion-col col-2>
+          <div class="center-menu">
+            <ion-icon name="arrow-forward" style="font-size: 2em;"></ion-icon>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+  <!--<ion-list>-->
+
+      <!--<button-->
+        <!--ion-item-->
+        <!--[navPush]="chapeletPage"-->
+      <!--&gt;-->
+
+
+      <!--</button>-->
+      <!--<button-->
+        <!--ion-item-->
+        <!--[navPush]="chapeletGlorieux"-->
+      <!--&gt;-->
+
+      <!--</button>-->
+      <!--<button-->
+        <!--ion-item-->
+        <!--[navPush]="chapeletLumineux"-->
+      <!--&gt;-->
+
+      <!--</button>-->
+      <!--<button-->
+        <!--ion-item-->
+        <!--[navPush]="chapeletJoyeux"-->
+      <!--&gt;-->
+
+      <!--</button>-->
+      <!--<button-->
+        <!--ion-item-->
+        <!--[navPush]="chapeletDouloureux"-->
+      <!--&gt;-->
+
+      <!--</button>-->
+
+    <!--</ion-list>-->
+    <!--</ion-col>-->
+  <!--</ion-row>-->
+
 
 </ion-content>
