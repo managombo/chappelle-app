@@ -9,6 +9,12 @@
 
 
 <ion-content>
+  <ng-template #template let-view="view" let-row="row" let-col="col" >
+    <span >{{view.dates[row*7+col].label}}</span>
+
+  </ng-template>
+
+
   <calendar
             [eventSource]="eventSource"
             [calendarMode]="calendar.mode"
@@ -17,7 +23,9 @@
             (onEventSelected)="onEventSelected($event)"
             (onTitleChanged)="onViewTitleChanged($event)"
             (onTimeSelected)="onTimeSelected($event)"
-            step="30">
+            step="30"
+            [monthviewDisplayEventTemplate]="template"
+  >
   </calendar>
 </ion-content>
 

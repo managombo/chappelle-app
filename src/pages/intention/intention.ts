@@ -15,6 +15,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class IntentionPage {
 
+  typeIntentionPriere = "priere";
+;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 

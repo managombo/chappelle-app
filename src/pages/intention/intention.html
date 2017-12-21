@@ -7,12 +7,47 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>intention</ion-title>
+    <ion-title>Intention de prières</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content >
+
+<ion-row style="margin-top: 40%">
+  <ion-col>
+    <ion-item>
+      <ion-label color="primary" stacked>Email</ion-label>
+      <ion-input type="email" placeholder="entrer email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" stacked>Type d'intention de prière</ion-label>
+      <ion-select [(ngModel)]="typeIntentionPriere">
+        <ion-option value="priere">Prière</ion-option>
+        <ion-option value="merci">Remerciement</ion-option>
+
+      </ion-select>
+    </ion-item>
+    <ion-item style="line-height: 50px">
+      <ion-label color="primary" stacked>Contenu du texte</ion-label>
+      <ion-textarea  placeholder="Entrez votre texte"></ion-textarea>
+    </ion-item>
+  </ion-col>
+</ion-row>
+
+<ion-row style="margin-top: 20px;">
+  <ion-col text-center col-12>
+    <button ion-button   style="width: 50%; padding: 0; margin: 0">Envoyer</button>
+  </ion-col>
+
+</ion-row>
+
+
+
+
+
+
+
 
 </ion-content>

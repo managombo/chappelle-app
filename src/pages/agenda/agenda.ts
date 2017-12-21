@@ -46,7 +46,7 @@ export class AgendaPage implements OnInit {
 
 
    // console.log(this.httpProvider.getJsonData('../../data/mr_evenements.json'));
-    console.log('test1');
+   //  console.log('test1');
    // console.log(this.httpProvider.getJsonData('../../../data/mr_evenements.json'));
    //  this.httpProvider.getJsonData('../../../data/mr_evenements.json');
 
@@ -82,7 +82,7 @@ export class AgendaPage implements OnInit {
 
         }
         console.log("evenement");
-        console.log(this.activities);
+        // console.log(this.activities);
 
         // console.log(this.activities);
 
@@ -110,7 +110,7 @@ export class AgendaPage implements OnInit {
             // console.log(this.activities);
           }
           console.log("pelerinage");
-          console.log(this.activities);
+          // console.log(this.activities);
 
           this.loadEvents(this.activities);
         });
