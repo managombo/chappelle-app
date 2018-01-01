@@ -1,9 +1,21 @@
 
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>{{viewTitle}}</ion-title>
-  </ion-navbar>
+<ion-navbar>
+  <ion-title>{{viewTitle}}</ion-title>
+</ion-navbar>
+  <!--<ion-toolbar>-->
+    <!--<ion-buttons begin>-->
+      <!--<button ion-button icon-only navPop>-->
+        <!--<ion-icon name="arrow-back"></ion-icon> Back-->
+      <!--</button>-->
+    <!--</ion-buttons>-->
+    <!--<ion-title>{{viewTitle}}</ion-title>-->
+    <!--<ion-buttons end>-->
+      <!--<button ion-button icon-only style="color:rgba(255,161,32,0.61)" [navPush]="horaire">-->
+        <!--<ion-icon name="time"></ion-icon>Ouverture-->
+      <!--</button>-->
+    <!--</ion-buttons>-->
+  <!--</ion-toolbar>-->
 
 </ion-header>
 
@@ -45,9 +57,9 @@
 
         <ion-list style="margin: 0;">
 
-          <ion-list-header>
-          Filtrer
-          </ion-list-header>
+          <ion-item-divider color="light">
+          Filtrer le calendrier par:
+          </ion-item-divider>
         <ion-item>
         <ion-label>Catégorie</ion-label>
         <ion-select [(ngModel)]="categorySelect" (ionChange)="onActivityFiltered($event)">
@@ -64,8 +76,13 @@
           <ion-option *ngFor="let countryValue of pays" value="{{countryValue.code}}">{{countryValue.nom_fr}}</ion-option>
         </ion-select>
         </ion-item>
-
+          <ion-list-header>
+            Autre
+          </ion-list-header>
+          <button ion-item clear full  [navPush]="horaire">Voir horaires d'ouverture</button>
         </ion-list>
+
+        <!--<button ion-button clear full  icon-right [navPush]="horaire">Voir horaires d'ouverture <ion-icon name="md-arrow-forward"></ion-icon></button>-->
 
 
   </ion-toolbar>

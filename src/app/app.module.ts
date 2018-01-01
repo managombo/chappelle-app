@@ -21,7 +21,10 @@ import {ChapeletDouloureuxPage} from "../pages/chapelet-douloureux/chapelet-doul
 import {ChapeletJoyeuxPage} from "../pages/chapelet-joyeux/chapelet-joyeux";
 import {TabsPage} from "../pages/tabs/tabs";
 import {CommonModule} from "@angular/common";
-import {HttpClientModule} from "@angular/common/http";
+import { HttpClientModule} from "@angular/common/http";
+import {HttpModule} from "@angular/http";
+import {HorairePage} from "../pages/horaire/horaire";
+import {LocalNotifications} from "@ionic-native/local-notifications";
 
 @NgModule({
   declarations: [
@@ -40,14 +43,16 @@ import {HttpClientModule} from "@angular/common/http";
     ChapeletLumineuxPage,
     ChapeletDouloureuxPage,
     ChapeletJoyeuxPage,
-    TabsPage
+    TabsPage,
+    HorairePage
   ],
   imports: [
     CommonModule,
     BrowserModule,
     NgCalendarModule,
     HttpClientModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    HttpModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -66,12 +71,15 @@ import {HttpClientModule} from "@angular/common/http";
     ChapeletLumineuxPage,
     ChapeletDouloureuxPage,
     ChapeletJoyeuxPage,
-    TabsPage
+    TabsPage,
+    HorairePage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
+    LocalNotifications
+    // RssService
   ]
 })
 export class AppModule {}

@@ -6,6 +6,19 @@ page-agenda {
    }
 
   .scroll-content{
-    overflow-y: hidden !important;
+
+  }
+
+  .ion-slides{
+
+  }
+
+  .ion-list{
+    overflow: scroll;
+  }
+
+  .toolbar-title{
+    color:  #5fb0e7 !important;
+    font-size: 4.7vw !important;
   }
 }

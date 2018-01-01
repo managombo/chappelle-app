@@ -3,6 +3,7 @@ import {AlertController, IonicPage, NavController, NavParams} from 'ionic-angula
 import {Activity} from "../../data/activity.interface";
 import{HttpClient} from "@angular/common/http";
 import * as moment from 'moment';
+import {HorairePage} from "../horaire/horaire";
 
 @IonicPage()
 @Component({
@@ -13,7 +14,7 @@ export class AgendaPage implements OnInit {
 
   activities: Activity[]=[];
   activitiesFiltered: Activity[]=[];
-
+  horaire: any;
   eventSource;
   viewTitle;
   categorySelect = "all";
@@ -43,6 +44,7 @@ export class AgendaPage implements OnInit {
   }
 
   ngOnInit(){
+    this.horaire = HorairePage;
 
 
    // console.log(this.httpProvider.getJsonData('../../data/mr_evenements.json'));
@@ -54,7 +56,7 @@ export class AgendaPage implements OnInit {
 
 
 
-      this.http.get('/assets/json/mr_evenements.json').subscribe((res) => {
+      this.http.get('assets/json/mr_evenements.json').subscribe((res) => {
         // return res;
         this.evenements = res;
         // console.log(this.evenements);
@@ -87,7 +89,7 @@ export class AgendaPage implements OnInit {
         // console.log(this.activities);
 
 
-        this.http.get('/assets/json/mr_pelerinages.json').subscribe((res) => {
+        this.http.get('assets/json/mr_pelerinages.json').subscribe((res) => {
           // return res;
           this.pelerinages = res;
           // console.log(this.pelerinages);
@@ -119,7 +121,7 @@ export class AgendaPage implements OnInit {
 
       });
 
-    this.http.get('/assets/json/mr_pays.json').subscribe((res) => {
+    this.http.get('assets/json/mr_pays.json').subscribe((res) => {
       // return res;
       this.pays = res;
 
