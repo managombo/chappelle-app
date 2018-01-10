@@ -76,10 +76,10 @@
           <ion-option *ngFor="let countryValue of pays" value="{{countryValue.code}}">{{countryValue.nom_fr}}</ion-option>
         </ion-select>
         </ion-item>
-          <ion-list-header>
+          <ion-item-divider color="light">
             Autre
-          </ion-list-header>
-          <button ion-item clear full  [navPush]="horaire">Voir horaires d'ouverture</button>
+          </ion-item-divider>
+          <button ion-button full outline  [navPush]="horaire" style="margin: 0" icon-right>Voir horaires d'ouverture <ion-icon  name="arrow-forward"></ion-icon></button>
         </ion-list>
 
         <!--<button ion-button clear full  icon-right [navPush]="horaire">Voir horaires d'ouverture <ion-icon name="md-arrow-forward"></ion-icon></button>-->

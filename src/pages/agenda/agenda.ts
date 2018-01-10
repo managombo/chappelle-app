@@ -14,7 +14,7 @@ export class AgendaPage implements OnInit {
 
   activities: Activity[]=[];
   activitiesFiltered: Activity[]=[];
-  horaire: any;
+  horaire;
   eventSource;
   viewTitle;
   categorySelect = "all";
@@ -37,6 +37,7 @@ export class AgendaPage implements OnInit {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AgendaPage');
+    this.horaire = HorairePage;
   }
 
   convertToActivities(source: string){
@@ -44,7 +45,7 @@ export class AgendaPage implements OnInit {
   }
 
   ngOnInit(){
-    this.horaire = HorairePage;
+
 
 
    // console.log(this.httpProvider.getJsonData('../../data/mr_evenements.json'));
@@ -142,13 +143,13 @@ export class AgendaPage implements OnInit {
     this.viewTitle = title;
   }
   onEventSelected(event) {
-    let start = moment(event.startTime).format('LLLL');
-    let end = moment(event.endTime).format('LLLL');
+    let start = moment(event.startTime).lang('fr').format('LLLL');
+    let end = moment(event.endTime).lang('fr').format('LLLL');
 
     let alert = this.alertCrl.create({
       title: ''+event.title,
       subTitle: '<p text-center="">Du<br>'+ start+' <br> au <br>'+ end + '</p><br>'+ 'Description:<br>'+event.description,
-      buttons: ['Enregistrer dans le calendrier','Ok']
+      buttons: ['Ok']
     });
 
     alert.present();

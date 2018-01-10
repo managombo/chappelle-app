@@ -13,7 +13,7 @@
 
 
 <ion-content >
-    <ion-row class="home_image" style="height: 45%"></ion-row>
+    <ion-row class="home_image" style="height: 40%"></ion-row>
   <ion-row style="height: 55%">
     <ion-col style="color: #707070 !important; ">
       <ion-row style="height: 33%; padding-top: 10px; margin-left: 5px; margin-right: 5px;">
@@ -58,7 +58,7 @@
           </ion-row>
         </ion-col>
       </ion-row>
-      <ion-row style="height: 33%; padding-top: 20px; margin-left: 5px; margin-right: 5px;">
+      <ion-row style=" padding-top: 15px; margin-left: 5px; margin-right: 5px;">
         <ion-col col-4 text-center (click)="onNavSelect('parcours')" class="menu">
           <ion-row>
             <ion-col>
@@ -102,7 +102,7 @@
 
         </ion-col>
       </ion-row>
-      <ion-row style="height: 33%; padding-top: 20px; margin-left: 5px; margin-right: 5px;">
+      <ion-row style=" padding-top: 15px; margin-left: 5px; margin-right: 5px;">
         <ion-col col-4 text-center (click)="onNavSelect('historique')" class="menu">
           <ion-row>
             <ion-col>
@@ -117,7 +117,21 @@
           </ion-row>
 
         </ion-col>
-        <ion-col col-4 text-center>
+        <ion-col col-4 text-center (click)="onNavSelect('medaille')" class="menu">
+          <ion-row>
+            <ion-col>
+              <!--<ion-icon name="brush"></ion-icon>-->
+              <img src="assets/imgs/medaille-01.png" alt="" class="menuIcon">
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="textMenu">
+              La médaille miraculeuse
+            </ion-col>
+          </ion-row>
+
+        </ion-col>
+        <ion-col col-4 text-center (click)="onNavSelect('parametres')" class="menu">
           <ion-row>
             <ion-col>
               <!--<ion-icon name="brush"></ion-icon>-->

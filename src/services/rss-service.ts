@@ -13,15 +13,16 @@ export class RssService{
   }
 
   load(){
+    console.log('loadservice');
     return Observable.create(s=>{
-      this.http.get('/priere/feed', { responseType: 'text' })
-      // this.http.get('http://www.medaille-miraculeuse.fr/feed', { responseType: 'text' })
+      // this.http.get('/priere/feed', { responseType: 'text' })
+      this.http.get('http://www.medaille-miraculeuse.fr/feed', { responseType: 'text' })
       // this.http.get('assets/xml/test.xml', { responseType: 'text' })
         .map(res=>res.toString())
         .subscribe(data => {
 
             if(data){
-              // console.log(data);
+              console.log(data);
               var parser = new DOMParser();
               var xmlData = parser.parseFromString(data, "application/xml");
               var items = xmlData.querySelectorAll("item");

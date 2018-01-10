@@ -24,7 +24,12 @@ import {CommonModule} from "@angular/common";
 import { HttpClientModule} from "@angular/common/http";
 import {HttpModule} from "@angular/http";
 import {HorairePage} from "../pages/horaire/horaire";
+import {IonicStorageModule} from "@ionic/storage";
+// import { Storage } from '@ionic/storage';
 import {LocalNotifications} from "@ionic-native/local-notifications";
+import {ParametresPage} from "../pages/parametres/parametres";
+import {MedaillePage} from "../pages/medaille/medaille";
+
 
 @NgModule({
   declarations: [
@@ -44,7 +49,9 @@ import {LocalNotifications} from "@ionic-native/local-notifications";
     ChapeletDouloureuxPage,
     ChapeletJoyeuxPage,
     TabsPage,
-    HorairePage
+    HorairePage,
+    ParametresPage,
+    MedaillePage
   ],
   imports: [
     CommonModule,
@@ -52,7 +59,8 @@ import {LocalNotifications} from "@ionic-native/local-notifications";
     NgCalendarModule,
     HttpClientModule,
     IonicModule.forRoot(MyApp),
-    HttpModule,
+    IonicStorageModule.forRoot(),
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -72,14 +80,20 @@ import {LocalNotifications} from "@ionic-native/local-notifications";
     ChapeletDouloureuxPage,
     ChapeletJoyeuxPage,
     TabsPage,
-    HorairePage
+    HorairePage,
+    ParametresPage,
+    MedaillePage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    LocalNotifications
+    LocalNotifications,
+    // {provide: ErrorHandler, useClass: IonicErrorHandler},
+    // Storage
+    // Storage
     // RssService
   ]
 })
+
 export class AppModule {}

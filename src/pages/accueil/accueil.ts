@@ -7,6 +7,8 @@ import {HistoriquePage} from "../historique/historique";
 import {IntentionPage} from "../intention/intention";
 import {ParcoursPage} from "../parcours/parcours";
 import {ChapeletsPage} from "../chapelets/chapelets";
+import {MedaillePage} from "../medaille/medaille";
+import {ParametresPage} from "../parametres/parametres";
 
 
 
@@ -25,6 +27,8 @@ export class AccueilPage {
     "historique": HistoriquePage,
     "intention": IntentionPage,
     "parcours": ParcoursPage,
+    "medaille": MedaillePage,
+    "parametres": ParametresPage
   }
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {

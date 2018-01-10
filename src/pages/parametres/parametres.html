@@ -1,0 +1,37 @@
+<!--
+  Generated template for the ParametresPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>parametres</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list style="margin-top: 20%">
+      <ion-item>
+        <ion-label>Choix de la langue</ion-label>
+
+          <ion-select [(ngModel)]="countrySelect" (ionChange)="onLangageChoosen($event)">
+
+            <ion-option value="english">English</ion-option>
+            <ion-option value="french">Français</ion-option>
+            <ion-option value="deutsch">Deutsch</ion-option>
+            <ion-option value="spanish">Español</ion-option>
+            <ion-option value="italian">Italiano</ion-option>
+            <ion-option value="portuguese">Português</ion-option>
+          </ion-select>
+
+      </ion-item>
+      <ion-item>
+        <ion-label>Activer notification prière</ion-label>
+        <ion-toggle></ion-toggle>
+      </ion-item>
+    </ion-list>
+</ion-content>
