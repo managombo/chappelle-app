@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {AlertController, IonicPage, NavController, NavParams} from 'ionic-angular';
+import {AlertController, IonicPage, LoadingController, NavController, NavParams} from 'ionic-angular';
 import {Activity} from "../../data/activity.interface";
 import{HttpClient} from "@angular/common/http";
 import * as moment from 'moment';
@@ -29,10 +29,15 @@ export class AgendaPage implements OnInit {
   pays:any =[];
   pelerinages:any;
   activity: Activity;
+  loading: any;
 
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public http: HttpClient, private alertCrl: AlertController){
+  constructor(public navCtrl: NavController, public navParams: NavParams, public http: HttpClient, private alertCrl: AlertController,public loadingCtrl: LoadingController){
+  }
+
+  ionViewDidLeave(){
+    this.loading.dismiss();
   }
 
   ionViewDidLoad() {
@@ -53,11 +58,15 @@ export class AgendaPage implements OnInit {
    // console.log(this.httpProvider.getJsonData('../../../data/mr_evenements.json'));
    //  this.httpProvider.getJsonData('../../../data/mr_evenements.json');
 
+    this.loading = this.loadingCtrl.create({
+      content: 'Please wait...'
+    });
+
+    this.loading.present();
 
 
 
-
-      this.http.get('assets/json/mr_evenements.json').subscribe((res) => {
+      this.http.get('https://raw.githubusercontent.com/managombo/chappelle-app/master/src/assets/json/mr_evenements.json').subscribe((res) => {
         // return res;
         this.evenements = res;
         // console.log(this.evenements);
@@ -90,9 +99,10 @@ export class AgendaPage implements OnInit {
         // console.log(this.activities);
 
 
-        this.http.get('assets/json/mr_pelerinages.json').subscribe((res) => {
+        this.http.get('https://raw.githubusercontent.com/managombo/chappelle-app/master/src/assets/json/mr_pelerinages.json').subscribe((res) => {
           // return res;
           this.pelerinages = res;
+          this.loading.dismiss();
           // console.log(this.pelerinages);
           for(var pelerinage of this.pelerinages){
 
@@ -122,12 +132,14 @@ export class AgendaPage implements OnInit {
 
       });
 
-    this.http.get('assets/json/mr_pays.json').subscribe((res) => {
+    this.http.get('https://raw.githubusercontent.com/managombo/chappelle-app/master/src/assets/json/mr_pays.json').subscribe((res) => {
       // return res;
       this.pays = res;
 
         // console.log(this.pays);
     });
+
+
 
 
 

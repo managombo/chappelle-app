@@ -2,6 +2,7 @@
 <ion-header>
 <ion-navbar>
   <ion-title>{{viewTitle}}</ion-title>
+  <button *ngIf="!evenements || !pelerinages">Loading...</button>
 </ion-navbar>
   <!--<ion-toolbar>-->
     <!--<ion-buttons begin>-->
