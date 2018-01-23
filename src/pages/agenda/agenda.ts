@@ -64,7 +64,7 @@ export class AgendaPage implements OnInit {
 
     this.loading.present();
 
-    https://raw.githubusercontent.com/managombo/chappelle-app/master/src/assets/xml/mr_evenements.json
+
 
       this.http.get('https://raw.githubusercontent.com/managombo/chappelle-app/master/src/assets/json/mr_evenements.json').subscribe((res) => {
         // return res;
