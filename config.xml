@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.ionic.chappellemiraculeuse" version="0.0.4" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="io.ionic.chappellemiraculeuse" version="0.0.5" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Chappelle Miraculeuse</name>
     <description>An awesome Ionic/Cordova app.</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
@@ -91,10 +91,8 @@
         <variable name="XWALK_MODE" value="embedded" />
         <variable name="XWALK_MULTIPLEAPK" value="true" />
     </plugin>
-  <access origin="*" />
-  <allow-intent href="*" />
-  <allow-navigation href="*" />
-    <!--<allow-navigation href="http://192.168.11.190:8100" />-->
-  <!--<allow-navigation href="http://www.medaille-miraculeuse.fr/*" />-->
+    <access origin="*" />
+    <allow-intent href="*" />
+    <allow-navigation href="*" />
     <engine name="android" spec="~6.3.0" />
 </widget>
