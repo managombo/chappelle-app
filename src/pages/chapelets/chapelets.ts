@@ -6,6 +6,7 @@ import {ChapeletLumineuxPage} from "../chapelet-lumineux/chapelet-lumineux";
 import {ChapeletJoyeuxPage} from "../chapelet-joyeux/chapelet-joyeux";
 import {ChapeletDouloureuxPage} from "../chapelet-douloureux/chapelet-douloureux";
 import {ChapeletPage} from "../chapelet/chapelet";
+import { Storage } from '@ionic/storage';
 
 /**
  * Generated class for the ChapeletsPage page.
@@ -21,6 +22,8 @@ import {ChapeletPage} from "../chapelet/chapelet";
 })
 export class ChapeletsPage {
 
+  language;
+
   navigationMenu = {
     "apropos": ChapeletPage,
     "glorieux": ChapeletGlorieuxPage,
@@ -32,11 +35,21 @@ export class ChapeletsPage {
   // tabsPage = TabsPage;
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              private storage: Storage
+  ) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ChapeletsPage');
+  }
+
+
+  ionViewWillEnter(){
+    this.storage.get('language').then((val) => {
+      this.language = val;
+    });
   }
 
   onNavSelect(name: string){

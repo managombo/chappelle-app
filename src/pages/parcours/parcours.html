@@ -159,6 +159,11 @@
     </li>
     <li>n’ayant pas mangé ni bu une heure avant de communier.</li>
   </ul>
+<ion-row style="width:100%;">
+  <ion-col text-right>
+    <button  ion-button [navPush]="horairePage" outline icon-right >Horaires messes <ion-icon name="arrow-forward"></ion-icon></button>
+  </ion-col>
+</ion-row>
 
 
   <br>
@@ -226,7 +231,17 @@
   <p style="color: #5fb0e7">Priez pendant quelques minutes, en demandant à Dieu par l’intercession de Sainte Louise la
     grâce d’accueillir le don de l’Esprit Saint et d’accomplir ainsi sa volonté.</p>
 
+
+  <ion-row style="width:100%;">
+    <ion-col text-right>
+      <button  ion-button [navPush]="historiquePage" outline icon-right >Historique<ion-icon name="arrow-forward"></ion-icon></button>
+    </ion-col>
+  </ion-row>
+
+
   <br>
+
+
   <hr style="width: 100%; margin-top: 30px; margin-bottom: 30px">
   <h5><u>Cinquième pas</u><br><br>Le chapelet</h5>
 
@@ -261,6 +276,12 @@
     humaine, le point vers lequel convergent les désirs de l'histoire et de la civilisation »</em> (Rosarium Virginis
     Mariae).</p>
 
+  <ion-row style="width:100%;">
+    <ion-col text-right>
+      <button  ion-button [navPush]="chapeletPage" outline icon-right >Prier le Chapelet<ion-icon name="arrow-forward"></ion-icon></button>
+    </ion-col>
+  </ion-row>
+
   <br>
   <hr style="width: 100%;">
   <h5><u>Sixième pas</u><br><br> les statues de Saint Vincent et Sainte Louise dans l’allée</h5>
@@ -294,7 +315,11 @@
     à la spiritualité de Saint Vincent de Paul et qui engagent les laïcs à ce service très important.
     <span style="color: #5fb0e7">Cherchez dans la ville où vous habitez une association caritative ou demandez dans votre paroisse comment vous pouvez vous engager concrètement.</span>
   </p>
-
+  <ion-row style="width:100%;">
+    <ion-col text-right>
+      <button  ion-button [navPush]="medaillePage" outline icon-right >A propos de la medaille<ion-icon name="arrow-forward"></ion-icon></button>
+    </ion-col>
+  </ion-row>
    
 </ion-row>
 </ion-content>

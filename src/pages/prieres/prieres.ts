@@ -4,7 +4,8 @@ import {RssService} from "../../services/rss-service";
 // import{Http} from "@angular/http";
 // import {HttpClient} from "@angular/common/http";
 import moment from 'moment';
-import { Storage } from '@ionic/storage';
+// import { Storage } from '@ionic/storage';
+import { BackgroundMode } from '@ionic-native/background-mode';
 
 
 import { LocalNotifications } from '@ionic-native/local-notifications';
@@ -36,9 +37,10 @@ export class PrieresPage implements OnInit{
               // public http: HttpClient,
               public rssService: RssService,
               private localNotifications: LocalNotifications,
-              private storage: Storage,
+              // private storage: Storage,
               public loadingCtrl: LoadingController,
-              private http: HttpClient
+              private http: HttpClient,
+              private backgroundMode: BackgroundMode
               ) {
   }
 
@@ -140,6 +142,7 @@ export class PrieresPage implements OnInit{
         // }
         }
       });
+    this.backgroundMode.enable();
 
       // });
 

@@ -2,7 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {AlertController, IonicPage, LoadingController, NavController, NavParams} from 'ionic-angular';
 import {Activity} from "../../data/activity.interface";
 import{HttpClient} from "@angular/common/http";
-import * as moment from 'moment';
+// import * as moment from 'moment';
+import * as moment from 'moment-timezone';
 import {HorairePage} from "../horaire/horaire";
 
 @IonicPage()
@@ -21,6 +22,7 @@ export class AgendaPage implements OnInit {
   countrySelect = "all";
   isToday: boolean;
   calendar = {
+    // locale: 'zh-CN',
     mode: 'month',
     currentDate: new Date()
   }; // these are the variable used by the calendar.
@@ -59,10 +61,12 @@ export class AgendaPage implements OnInit {
    //  this.httpProvider.getJsonData('../../../data/mr_evenements.json');
 
     this.loading = this.loadingCtrl.create({
-      content: 'Please wait...'
+      content: 'Chargement...'
     });
 
     this.loading.present();
+
+
 
 
 
@@ -106,14 +110,22 @@ export class AgendaPage implements OnInit {
           // console.log(this.pelerinages);
           for(var pelerinage of this.pelerinages){
 
-
+            var starthour =  new Date(pelerinage.date+"T"+pelerinage.heure_debut);
+            var endhour = new Date(pelerinage.date+"T23:59:59");
+            // var starthour = moment.tz(pelerinage.date+" "+pelerinage.heure_debut, moment.tz.guess()).clone().tz("Europe/Gibraltar").toDate();
+            // starthour = moment.tz(starthour.toString(), moment.tz.guess()).clone().tz("Europe/Gibraltar").toDate();
+            // var endhour = moment.tz(pelerinage.date+" 23:59:59", "Europe/Paris").clone().tz("Europe/Gibraltar").toDate();
+            // endhour = moment.tz(endhour.toString(), moment.tz.guess()).clone().tz("Europe/Gibraltar").toDate();
+            // var actual_date = new Date();
+            // var actual_paris_date = actual_date.tz("Europe/Paris").format('YYYY-MM-DD HH:mm:ss')
+            // endhour.setHours(endhour.getHours() + 1);
             // console.log(this.activity);
 
             this.activities.push({
               id:pelerinage.id,
               title:pelerinage.nom,
-              startTime:new Date(pelerinage.date+"T"+pelerinage.heure_debut),
-              endTime:new Date(pelerinage.date+"T23:59:59"),
+              startTime:starthour,
+              endTime: endhour,
               allDay:false,
               description:pelerinage.descriptif,
               country:pelerinage.pays,

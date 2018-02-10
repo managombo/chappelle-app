@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
 
 /**
  * Generated class for the ParametresPage page.
@@ -14,9 +15,19 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'parametres.html',
 })
 export class ParametresPage {
-  countrySelect = "french";
+  countrySelect;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              private storage: Storage
+              ) {
+  }
+
+  ionViewWillLoad(){
+    this.storage.get('language').then((val) => {
+      this.countrySelect = val;
+      // console.log('Your age is', val);
+    });
   }
 
   ionViewDidLoad() {
@@ -24,7 +35,8 @@ export class ParametresPage {
   }
 
   onLangageChoosen(event){
-    console.log(event);
+    this.storage.set('language', this.countrySelect);
+    console.log(this.countrySelect);
   }
 
 }

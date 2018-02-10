@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { ErrorHandler, NgModule } from '@angular/core';
+import {ErrorHandler, LOCALE_ID, NgModule} from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -29,6 +29,11 @@ import {IonicStorageModule} from "@ionic/storage";
 import {LocalNotifications} from "@ionic-native/local-notifications";
 import {ParametresPage} from "../pages/parametres/parametres";
 import {MedaillePage} from "../pages/medaille/medaille";
+import {BackgroundMode} from "@ionic-native/background-mode";
+import { registerLocaleData } from '@angular/common';
+import localeZh from '@angular/common/locales/fr';
+
+registerLocaleData(localeZh);
 
 
 @NgModule({
@@ -59,7 +64,11 @@ import {MedaillePage} from "../pages/medaille/medaille";
     NgCalendarModule,
     HttpClientModule,
     IonicModule.forRoot(MyApp),
-    IonicStorageModule.forRoot(),
+    // IonicStorageModule.forRoot(),
+    IonicStorageModule.forRoot({
+      name: '__mydb',
+      driverOrder: ['indexeddb', 'sqlite', 'websql']
+    }),
     HttpModule
   ],
   bootstrap: [IonicApp],
@@ -89,9 +98,10 @@ import {MedaillePage} from "../pages/medaille/medaille";
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     LocalNotifications,
+    BackgroundMode,
+    { provide: LOCALE_ID, useValue: 'fr' },
     // {provide: ErrorHandler, useClass: IonicErrorHandler},
-    // Storage
-    // Storage
+
     // RssService
   ]
 })
