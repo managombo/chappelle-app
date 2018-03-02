@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "720741064401",
+    "firebase_url": "https://medaille-miraculeuse-ae768.firebaseio.com",
+    "project_id": "medaille-miraculeuse-ae768",
+    "storage_bucket": "medaille-miraculeuse-ae768.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:720741064401:android:540ebe33f922a6fd",
+        "android_client_info": {
+          "package_name": "io.ionic.chapellemiraculeuse"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "720741064401-rcfiootk2pkarq4cvgsbdcn9j61hgtu3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzmJVRdyQS_l_N3_6GkG2kSgLJIT0mDSA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

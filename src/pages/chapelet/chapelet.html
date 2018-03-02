@@ -9,15 +9,24 @@
       <ion-navbar>
         <ion-title *ngIf="language=='french'">A propos du Chapelet</ion-title>
         <ion-title *ngIf="language=='english'">About the Rosary</ion-title>
+        <ion-title *ngIf="language=='spanish'">Acerca del rosario</ion-title>
       </ion-navbar>
 
   </ion-header>
 
 
-  <ion-content padding>
+  <ion-content >
     <label *ngIf="language=='french'">
-      <ion-row>
+      <ion-row style="margin-top: 0 !important; padding-top: 0 !important;">
+        <ion-col style="margin: 0 !important; padding: 0 !important;">
+          <img src="../../assets/imgs/Mode_d’emploi_chapelet.jpg" alt="" style="width: 100%">
+        </ion-col>
+
+      </ion-row>
+      <ion-row padding>
         <ion-col>
+
+
 
           <h6>Une démarche féconde</h6>
           <p>Sur la mer de la vie, naviguons en regardant Marie! Les mystères de la vie du Christ que nous contemplons avec elle dans le Rosaire seront nos balises. Selon que notre cap sera joyeux, lumineux, douloureux ou glorieux, comme la mer reflète le ciel, nos journées auront une couleur spirituelle.</p>
@@ -47,7 +56,7 @@
     </label>
 
     <label *ngIf="language=='english'">
-      <ion-row>
+      <ion-row padding>
         <ion-col >
           The Rosary a treasure to rediscover! Have you already looked at the Rosary beads?
           It is a chain, a gentle chain, that links us to God, our Father, and to others, our brothers in Christ. This filial and fraternal chain converges towards a cross because it is Christ who opens up and leads the way to prayer. “ To recite the Rosary, is to contemplate with Mary, the face of Christ”  wrote John-Paul II in the Letter of the Rosary, 16th October, 2002.
@@ -80,6 +89,42 @@
           <strong>In the nineteenth century</strong> Pauline Jaricot launches the Living Rosary; At the Grotto of Lourdes, in 1858, Bernadette Soubirou recites the Rosary with the Blessed Virgin; Bartolo Longo founded in Pompeii a sanctuary dedicated to the Virgin of the Holy Rosary; Pope Leo XIII devotes twelve encyclicals to prayer, so he was known as « the Pope of the Rosary. »<br>
           <strong>In the 20th century</strong>, in Fatima, in 1917, the Virgin herself declared to three children: "I am Our Lady of the Rosary. I have come to urge the faithful recite the rosary every day, do penance for their sins and change their lives. "<br>
           <strong>At the beginning of the twenty-first century</strong>, John Paul II proclaims a year of the Rosary. He utters a poignant cry to all Christians: "Let not my call be a dead letter," and add to the fifteen mysteries, joyous, painful, glorious, "little new ones," the five luminous mysteries.<br>
+        </ion-col>
+      </ion-row>
+    </label>
+
+    <label *ngIf="language=='spanish'">
+      <ion-row padding>
+        <ion-col >
+
+
+
+          <h6>Los origenes</h6>
+          <strong>Desde los primeros tiempos de la Iglesia</strong>, María se une a su Hijo Jesús en el amor de los cristianos y la oración de los fieles.
+          <br>
+          <strong>En el siglo III </strong>, recurrimos a María repitiendo las palabras del ángel Gabriel en la Anunciación: “Te saludo, lleno de gracia”.<br>
+          <strong>En el siglo IX </strong>, la antífona del ofertorio del 4º domingo de Adviento agrega al saludo del ángel a María la exclamación de Isabel durante la Visitación. Sólo el nombre de María se agrega al texto. Será, hasta el final del siglo XV, la primera expresión de Ave María.<br>
+          <strong>En el siglo XII </strong>, la devoción a María tuvo una importancia considerable en Occidente. Esta antífona del Ave María se convierte en una oración popular que nos gusta repetir, ya que al mismo tiempo, en Oriente, repetimos el nombre de Jesús en lo que se llama la oración del corazón. En los monasterios reemplaza gradualmente al Pater Noster recitado por los hermanos legos mientras los monjes cantan los salmos en latín. Los cordones anudados y los cuencos de grano inventados, tal vez con la influencia de los musulmanes encontrados durante las peregrinaciones a Tierra Santa o durante las primeras Cruzadas, para contar los Salmos y el Padrenuestro, se utilizarán a partir de ese momento para contar el Ave María. Estamos hablando del Salterio de María.<br>
+          <strong>En el siglo XIII </strong>, la gran mística Santa Gertrudis agrega el nombre de Jesús en la conclusión de Avemaría.<br>
+          <strong>En el siglo XIV </strong>, nos gusta coronar las estatuas de la Virgen con pequeños sombreros de flores o rosarios, o con guirnaldas de rosas o rosarios, como los que solíamos vestir niñas en días de fiesta. Es entonces cuando estos bonitos nombres de cuerdas y ábacos fueron dados a estos granos que sirven para contar los Pater y la Ave. ¡Cada Ave María es como una rosa ofrecida a la Virgen María!<br>
+
+          <h6>Dominique, el padre cartujo del rosario</h6>
+          <strong>En el siglo XV </strong>, en Prusia, el prior de la Chartreuse de Trèves aconseja a un novato que recite todos los días cincuenta Ave Maria meditando sobre la vida de Jesús. El joven cartujo Dominique luego escribió 50 meditaciones breves, o clausulae, no solo en latín, sino también en alemán. Su prior es seducido por esta nueva propuesta y la envía a varios monasterios de su orden. Entonces Dominique escribe una serie de tres veces 50 clausulae, en paralelo con los 150 salmos. Poco a poco, para facilitar la memorización, pasamos al uso de agrupar la Ave en quince decenas, todo introducido por un Pater. Esto reduce el número de clausulas de 150 a 15. Nace el Rosario. Posteriormente, en idioma francés hay dos palabras: reservamos el uso de la palabra «Rosario» a quince decenas, «Chapelet» designando solo cinco. Es el hermano Alain de la Roche, nacido en Bretaña en 1428 y entró en la Orden de los predicadores (dominicanos) que lo difundió ampliamente. Predica en Flandes y luego en Lille, donde, en contacto con los monasterios cartujanos, descubre los clausulae de Domingo de Prusia que lo entusiasman. Alain de la Roche se convierte en el gran apóstol del Rosario. Predica la creación de las Hermandades del Rosario, cuyo éxito es tremendo, corriendo hasta Italia y el resto de Europa occidental.<br>
+          Curiosamente, Alain de la Roche atribuye el origen del Rosario a Santo Domingo, el fundador de su orden, ¡que murió en 1221! Aunque sin ningún fundamento histórico, esta leyenda se repetirá hasta hace muy poco.<br>
+          A finales del siglo XV aparece la frase «Santa María, Madre de Dios, ruega por nosotros, pecadores». El adjetivo «pobre» unido a «pecadores» se agrega más adelante.<br>
+
+
+          <h6>La oración del pueblo cristiano</h6>
+          <strong>En el siglo XVI </strong>, la imprenta permite multiplicar los folletos decorados con grabados que representan los «misterios» elegidos para la meditación.
+          <br>
+          <strong>En 1571, el Papa Pío V </strong>, dominico, estableció el 7 de octubre el Día de Nuestra Señora del Rosario, ya fiesta de la hermandad, en acción de gracias por la victoria de Lepante sobre los turcos, que fue considerado como un milagro obtenido por la oración del Rosario en el que toda la cristiandad estaba involucrada a petición suya.<br>
+          <strong>En 1572 </strong>, el mismo Pie V formaliza la lista de quince misterios. El Rosario se convierte en la oración del pueblo cristiano.<br>
+          <strong>A lo largo de los siglos </strong>, los grandes cristianos adjuntarán sus nombres.<br>
+          <strong>En el siglo XVIII </strong>, Louis-Marie Grignion de Montfort es el gran apóstol del Rosario.<br>
+          <strong>En el siglo XIX </strong>, Pauline Jaricot lanza el Living Rosary; En la Gruta de Lourdes, en 1858, Bernadette Soubirou recita el Rosario con la Santísima Virgen; Bartolo Longo fundó en Pompeya un santuario dedicado a la Virgen del Santo Rosario; El Papa León XIII dedica doce encíclicas a la oración, por lo que era conocido como «el Papa del Rosario». »<br>
+          <strong>En el siglo XX </strong>, en Fátima, en 1917, la propia Virgen declaró a tres niños: "Soy Nuestra Señora del Rosario. He venido a instar a los fieles a recitar el rosario todos los días, hacer penitencia por sus pecados y cambiar sus vidas. "<br>
+          <strong>A comienzos del siglo XXI </strong>, Juan Pablo II proclama un año del Rosario. Lanza un agudo grito a todos los cristianos: "No dejen que mi llamado sea una letra muerta", y añádanse a los quince misterios, gozosos, dolorosos, gloriosos, "pequeños nuevos", los cinco misterios luminosos.<br>
+
         </ion-col>
       </ion-row>
     </label>

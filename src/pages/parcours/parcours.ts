@@ -4,6 +4,7 @@ import {HorairePage} from "../horaire/horaire";
 import {MedaillePage} from "../medaille/medaille";
 import {HistoriquePage} from "../historique/historique";
 import {ChapeletPage} from "../chapelet/chapelet";
+import { Storage } from '@ionic/storage';
 
 /**
  * Generated class for the ParcoursPage page.
@@ -19,16 +20,28 @@ import {ChapeletPage} from "../chapelet/chapelet";
 })
 export class ParcoursPage {
 
+  language;
+
   horairePage = HorairePage;
   medaillePage = MedaillePage;
   historiquePage = HistoriquePage;
   chapeletPage = ChapeletPage;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              private storage: Storage
+              ) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ParcoursPage');
+  }
+
+
+  ionViewWillEnter(){
+    this.storage.get('language').then((val) => {
+      this.language = val;
+    });
   }
 
 }

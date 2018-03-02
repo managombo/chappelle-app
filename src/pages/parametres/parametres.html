@@ -6,32 +6,82 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>parametres</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+      <ion-title *ngIf="language=='french'">Paramètres</ion-title>
+      <ion-title *ngIf="language=='english'">Settings</ion-title>
+      <ion-title *ngIf="language=='spanish'">Ajustes</ion-title>
+    </ion-navbar>
 
 </ion-header>
 
 
+
 <ion-content padding>
+
+  <label *ngIf="language=='french'">
     <ion-list style="margin-top: 20%">
       <ion-item>
-        <ion-label>Choix de la langue</ion-label>
+        <ion-label>Sélection de la langue</ion-label>
+
+          <ion-select [(ngModel)]="countrySelect" (ionChange)="onLangageChoosen($event)" cancelText="Annuler" okText="Valider">
+
+            <ion-option value="english">English</ion-option>
+            <ion-option value="french">Français</ion-option>
+            <ion-option value="spanish">Español</ion-option>
+            <!--<ion-option value="italian">Italiano</ion-option>-->
+            <!--<ion-option value="portuguese">Português</ion-option>-->
+          </ion-select>
+
+      </ion-item>
+      <ion-item>
+        <ion-label>Notifications des prières</ion-label>
+        <ion-toggle [(ngModel)]="subscribed" (ionChange)="updateItem()"></ion-toggle>
+      </ion-item>
+    </ion-list>
+  </label>
+
+  <label *ngIf="language=='english'">
+    <ion-list style="margin-top: 20%">
+      <ion-item>
+        <ion-label>Language selection</ion-label>
 
           <ion-select [(ngModel)]="countrySelect" (ionChange)="onLangageChoosen($event)">
 
             <ion-option value="english">English</ion-option>
             <ion-option value="french">Français</ion-option>
-            <ion-option value="deutsch">Deutsch</ion-option>
             <ion-option value="spanish">Español</ion-option>
-            <ion-option value="italian">Italiano</ion-option>
-            <ion-option value="portuguese">Português</ion-option>
+            <!--<ion-option value="italian">Italiano</ion-option>-->
+            <!--<ion-option value="portuguese">Português</ion-option>-->
           </ion-select>
 
       </ion-item>
       <ion-item>
-        <ion-label>Activer notification prière</ion-label>
-        <ion-toggle></ion-toggle>
+        <ion-label> Prayer notifications</ion-label>
+        <ion-toggle [(ngModel)]="subscribed" (ionChange)="updateItem()"></ion-toggle>
       </ion-item>
     </ion-list>
+  </label>
+
+  <label *ngIf="language=='spanish'">
+    <ion-list style="margin-top: 20%">
+      <ion-item>
+        <ion-label>Selección de idiomas</ion-label>
+
+          <ion-select [(ngModel)]="countrySelect" (ionChange)="onLangageChoosen($event)" cancelText="Cancelar" okText="Validar">
+
+            <ion-option value="english">English</ion-option>
+            <ion-option value="french">Français</ion-option>
+            <ion-option value="spanish">Español</ion-option>
+            <!--<ion-option value="italian">Italiano</ion-option>-->
+            <!--<ion-option value="portuguese">Português</ion-option>-->
+          </ion-select>
+
+      </ion-item>
+      <ion-item>
+        <ion-label>Notificaciones de oraciones</ion-label>
+        <ion-toggle [(ngModel)]="subscribed" (ionChange)="updateItem()"></ion-toggle>
+      </ion-item>
+    </ion-list>
+  </label>
+
 </ion-content>

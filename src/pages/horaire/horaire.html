@@ -7,13 +7,16 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>horaire</ion-title>
+    <ion-title *ngIf="language=='french'">Horaire</ion-title>
+    <ion-title *ngIf="language=='english'">Schedules</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+
+  <label *ngIf="language=='french'">
 
   <h6>DIMANCHE et FÊTES :</h6>
   <p>
@@ -96,4 +99,138 @@
 
   <h6>MERCREDI DES CENDRES</h6>
   Messes à 8h-10h30-12h30-15h30-17h15
+
+  </label>
+
+
+
+  <label *ngIf="language=='english'">
+
+    <h6>Monday</h6>
+      <strong> Hours open:</strong> 7:45am – 1:00pm and 2:30pm – 7:00pm <br>
+    <strong>Masses:</strong> 8:00am, 10:30am, 12:30pm <br>
+    <strong> Celebrations:</strong> Rosary 3:30pm <br>
+    <strong> Confession:</strong> 9:00am – 11:45am and 3:00pm – 6:00pm <br>
+    <strong> Vespers:</strong> 6:50pm <br>
+
+    <h6>Tuesday</h6>
+    Marian day <br>
+    <strong> Hours open:</strong> 7:45am  – 7:00pm / no midday closure <br>
+    <strong> Masses:</strong> 8:00am, 10:30am, 12:30pm, 3:30pm, 5:15pm <br>
+    <strong> Celebrations:</strong> No Rosary; Adoration: 1:30 and 6:15 <br>
+    <strong> Confession:</strong> 9:00am – 11:45am and 3:00pm – 6:00pm <br>
+    <strong> Vespers:</strong> 6:50pm  <br>
+
+    <h6>Wednesday</h6>
+    <strong> Hours open:</strong> 7:45am – 1:00pm and 2:30pm – 7:00pm <br>
+    <strong> Masses:</strong> 8:00am, 10:30am, 12:30pm <br>
+    <strong> Celebrations:</strong> Rosary 3:30pm <br>
+    <strong> Confession:</strong> 9:00am – 11:45am and 3:00pm – 6:00pm <br>
+    <strong> Vespers:</strong> 6:50pm <br>
+
+    <h6>Thursday</h6>
+    <strong> Hours open:</strong> 7:45am – 1:00pm and 2:30pm – 7:00pm <br>
+    <strong> Masses:</strong> 8:00am, 10:30am, 12:30pm <br>
+    <strong> Celebrations:</strong> Rosary 3:30pm <br>
+    <strong> Confession:</strong> 9:00am – 11:45am and 3:00pm – 6:00pm <br>
+    <strong> Vespers:</strong> 6:50pm <br>
+
+    <h6>Friday</h6>
+    <strong> Hours open:</strong> 7:45am – 1:00pm and 2:30pm – 7:00pm <br>
+    <strong> Masses:</strong> 8:00am, 10:30am, 12:30pm <br>
+    <strong> Celebrations:</strong> Stations of the Cross 3:30pm <br>
+    <strong> Confession:</strong> 9:00am – 11:45am and 3:00pm – 6:00pm <br>
+    <strong> Vespers:</strong> 6:50pm <br>
+
+    <h6>Saturday</h6>
+    <strong> Hours open:</strong> 7:45am – 1:00pm and 2:30pm – 7:00pm <br>
+    <strong> Masses:</strong> 8:00am, 10:30am, 12:30pm, 5:15pm (Vigil for Sunday) <br>
+    <strong> Celebrations:</strong> Rosary 4: 00pm <br>
+    <strong> Confession:</strong> 9:00am – 11:45am and 3:00pm – 6:00pm <br>
+    <strong> Vespers:</strong> 6:50pm <br>
+
+    <h6>Sunday</h6>
+    <strong> Hours open:</strong> 7:45am – 1:00pm and 2:30pm – 7:00pm <br>
+    <strong> Masses:</strong> 8:00am, 10:00am, 11:15am <br>
+    <strong> Celebrations:</strong> Rosary 3:30pm <br>
+    No Confession <br>
+    <strong> Vespers:</strong> 6:50pm <br>
+     
+
+     
+    <h6>Public holidays</h6>
+    (except holy days)<br>
+    <strong> Hours open:</strong> 8:15am – 12:30pm and 2:30pm – 7:00pm <br>
+    <strong> Masses:</strong> 8:30am, 10:30pm <br>
+    <strong> Celebrations:</strong> Rosary 3:30pm <br>
+    No Confession <br>
+    <strong> Vespers:</strong> 6:50pm <br>
+
+  </label>
+
+
+ <label *ngIf="language=='spanish'">
+
+
+   <h6>Lunes</h6>
+   <strong>Horario: </strong> de 7:45 a.m. a 1:00 p.m. y de 2:30 p.m. a 7:00 p.m. <br>
+   <strong>Misas: </strong> 8:00 a.m., 10:30 a.m., 12:30 p.m. <br>
+   <strong>Celebraciones: </strong> Rosario a las 3:30 p.m. <br>
+   <strong>Confesión: </strong> de 9:00a.m. - 11:45a.m. y 3:p.m. - 6:00 p.m. <br>
+   <strong>Verspers: </strong> 6:50 p.m. <br>
+
+   <h6>Martes : </h6> día mariano <br>
+   <strong>Horario: </strong> 7:45 a.m. - 7:00 p.m. / no hay cierre al mediodía. <br>
+   <strong>Misas: 8: </strong>00 a.m., 10:30 a.m., 12:30 p.m., 3:30 p.m., 5:15 p.m. <br>
+   <strong>Celebraciones: </strong> Sin rosario; <br>
+   <strong>Adoración: </strong> 1:30 y 6:15 <br>
+   <strong>Confesión: </strong> de 9:00 a.m. - 11:45 a.m. y de 3:00 p.m. - 6:00 p.m. <br>
+   <strong>Verspers: </strong> 6:50 p.m. <br>
+
+   <h6>Miércoles</h6>
+   <strong>Horario: </strong> de 7:45 am a 1:00 pm y de 2:30 pm a 7:00 pm <br>
+   <strong>Misas: </strong> 8:00 am, 10:30 am, 12:30 pm <br>
+   <strong>Celebrations: </strong> Rosario 03:30 pm <br>
+   <strong>Confession: </strong> 9:00 am - 11:45 am y 3:00 pm - 6:00 p.m. <br>
+   <strong>Verspers: </strong> 6:50 p.m. <br>
+
+   <h6>Jueves</h6>
+   <strong>Horario: </strong> de 7:45am a 1:00pm y de 2:30pm a 7:00pm <br>
+   <strong>Misas: </strong> 8:00am, 10:30am, 12:30pm <br>
+   <strong>Celebrations: </strong> Rosary 3:30pm <br>
+   <strong>Confession: </strong> de 9:00am a 11:45am and de 3:00pm a 6:00pm <br>
+   <strong>Vespers: </strong> 6:50pm <br>
+
+   <h6>Viernes</h6>
+   <strong>Horario: </strong> 7:45 am - 1:00 pm y 2:30 pm - 7:00 pm <br>
+   <strong>Misas: </strong> 8:00 am, 10:30 am, 12:30 pm <br>
+   <strong>Celebrations: </strong> Estaciones de la Cruz 03:30 pm <br>
+   <strong>Confession: </strong> 9:00 am - 11:45 am y 3:00 p.m. - 6:00 p.m. <br>
+   <strong>Verspers: </strong> 6:50 p.m. <br>
+
+   <h6>Sábado</h6>
+   <strong>Horario: </strong> 7:45 am - 1:00 pm y 2:30 pm - 7:00 pm <br>
+   <strong>Misas: </strong> 8:00 am, 10:30 am, 12:30 horas, 17:15 (Vigilia para el domingo) Celebraciones: Rosario 4: 00pm
+   <br>
+   <strong>Confession: </strong> de 9:00am a 11:45 a.m. y de 3:00 p.m. a 6:00 p.m. <br>
+   <strong>Verspers: </strong> 6:50 p.m. <br>
+
+   <h6>Domingo</h6>
+   <strong>Horario: </strong> 7:45 am - 1:00 pm y 2:30 pm - 7:00 pm <br>
+   <strong>Misas: </strong> 8:00 am, 10:00 am, 11:15 am <br>
+   <strong>Celebrations: </strong>  Rosario 03:30pm <br>
+   No Confession <br>
+   <strong>Vespers: </strong> 6:50pm <br>
+    
+    
+   <h6>Días festivos</h6>
+   (Excepto días festivos) <br>
+   Horario de atención: de 8:15 am a 12:30 pm y de 2:30 pm a 7:00 pm
+   <strong>Misas: </strong> 8:30 am, 10:30 pm <br>
+   <strong>Celebrations: </strong> Rosario 03:30pm <br>
+   No Confession <br>
+   <strong>Vespers: </strong> 06:50pm <br>
+
+  </label>
+
 </ion-content>

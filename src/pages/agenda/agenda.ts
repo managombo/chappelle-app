@@ -5,6 +5,7 @@ import{HttpClient} from "@angular/common/http";
 // import * as moment from 'moment';
 import * as moment from 'moment-timezone';
 import {HorairePage} from "../horaire/horaire";
+import { Storage } from '@ionic/storage';
 
 @IonicPage()
 @Component({
@@ -21,21 +22,103 @@ export class AgendaPage implements OnInit {
   categorySelect = "all";
   countrySelect = "all";
   isToday: boolean;
-  calendar = {
-    // locale: 'zh-CN',
+  // calendar = {
+  //   locale: 'en',
+  //   mode: 'month',
+  //   currentDate: new Date()
+  // }; // these are the variable used by the calendar.
+
+  calendar_french = {
+    locale: 'fr',
     mode: 'month',
     currentDate: new Date()
-  }; // these are the variable used by the calendar.
+  };
+
+  calendar_spanish = {
+    locale: 'es',
+    mode: 'month',
+    currentDate: new Date()
+  };
+
+  calendar_english = {
+    locale: 'en',
+    mode: 'month',
+    currentDate: new Date()
+  };
+
+
 
   evenements:any;
   pays:any =[];
   pelerinages:any;
   activity: Activity;
   loading: any;
+  language;
 
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public http: HttpClient, private alertCrl: AlertController,public loadingCtrl: LoadingController){
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public http: HttpClient,
+    private alertCrl: AlertController,
+    public loadingCtrl: LoadingController,
+    private storage: Storage
+  ){
+  }
+
+  ionViewWillEnter(){
+
+
+    this.storage.get('language').then((val) => {
+      this.language = val;
+      console.log("### value language: "+val);
+      //
+      // this.calendar = {
+      //   locale: '',
+      //   mode: 'month',
+      //   currentDate: new Date()
+      // }; // these are the variable used by the calendar.
+      //
+      // if(this.language == "french"){
+      //   this.calendar.locale = "fr-FR";
+      // } else if(this.language == "english"){
+      //   this.calendar.locale = "en-GB";
+      // }
+      //
+      //
+      // console.log("###### langage: "+this.language);
+      // console.log("###### langage code: "+this.calendar.locale);
+
+    });
+
+
+    // this.storage.get('language').then((val) => {
+    //   this.language = val;
+    // });
+    //
+    //
+    // if(this.language == "french"){
+    //   this.calendar.locale = "fr";
+    // } else if(this.language == "english"){
+    //   this.calendar.locale = "en";
+    // }
+    // console.log("###### langage: "+this.language);
+
+    // this.storage.get('language').then((val) => {
+    //   this.language = val;
+    //   console.log("### value language: "+val);
+    //
+    //   if(this.language == "french"){
+    //     this.calendar.locale = "fr-FR";
+    //   } else if(this.language == "english"){
+    //     this.calendar.locale = "en-GB";
+    //   }
+    //   console.log("###### langage: "+this.language);
+    //   console.log("###### langage code: "+this.calendar.locale);
+    //
+    // });
+
   }
 
   ionViewDidLeave(){
@@ -51,14 +134,34 @@ export class AgendaPage implements OnInit {
 
   }
 
+
   ngOnInit(){
 
+
+
+//     this.storage.get('language').then((val) => {
+//       this.language = val;
+//     });
+//
+// console.log(this.language);
+//     if(this.language == "french"){
+//       this.calendar.locale = "fr";
+//     } else if(this.language == "english"){
+//       this.calendar.locale = "en";
+//     }
 
 
    // console.log(this.httpProvider.getJsonData('../../data/mr_evenements.json'));
    //  console.log('test1');
    // console.log(this.httpProvider.getJsonData('../../../data/mr_evenements.json'));
    //  this.httpProvider.getJsonData('../../../data/mr_evenements.json');
+
+
+
+
+
+
+
 
     this.loading = this.loadingCtrl.create({
       content: 'Chargement...'
@@ -110,12 +213,14 @@ export class AgendaPage implements OnInit {
           // console.log(this.pelerinages);
           for(var pelerinage of this.pelerinages){
 
-            var starthour =  new Date(pelerinage.date+"T"+pelerinage.heure_debut);
-            var endhour = new Date(pelerinage.date+"T23:59:59");
-            // var starthour = moment.tz(pelerinage.date+" "+pelerinage.heure_debut, moment.tz.guess()).clone().tz("Europe/Gibraltar").toDate();
-            // starthour = moment.tz(starthour.toString(), moment.tz.guess()).clone().tz("Europe/Gibraltar").toDate();
-            // var endhour = moment.tz(pelerinage.date+" 23:59:59", "Europe/Paris").clone().tz("Europe/Gibraltar").toDate();
-            // endhour = moment.tz(endhour.toString(), moment.tz.guess()).clone().tz("Europe/Gibraltar").toDate();
+            // var starthour =  new Date(pelerinage.date+"T"+pelerinage.heure_debut);
+            // var endhour = new Date(pelerinage.date+"T23:59:59");
+
+
+            var starthour = moment.tz(pelerinage.date+" "+pelerinage.heure_debut, moment.tz.guess()).clone().tz("Europe/Gibraltar").toDate();
+            starthour = moment.tz(starthour.toString(), moment.tz.guess()).clone().tz("Europe/Gibraltar").toDate();
+            var endhour = moment.tz(pelerinage.date+" 23:59:59", "Europe/Paris").clone().tz("Europe/Gibraltar").toDate();
+            endhour = moment.tz(endhour.toString(), moment.tz.guess()).clone().tz("Europe/Gibraltar").toDate();
             // var actual_date = new Date();
             // var actual_paris_date = actual_date.tz("Europe/Paris").format('YYYY-MM-DD HH:mm:ss')
             // endhour.setHours(endhour.getHours() + 1);
@@ -179,10 +284,14 @@ export class AgendaPage implements OnInit {
     alert.present();
   }
   changeMode(mode) {
-    this.calendar.mode = mode;
+    this.calendar_french.mode = mode;
+    this.calendar_english.mode = mode;
+    this.calendar_spanish.mode = mode;
   }
   today() {
-    this.calendar.currentDate = new Date();
+    this.calendar_french.currentDate = new Date();
+    this.calendar_english.currentDate = new Date();
+    this.calendar_spanish.currentDate = new Date();
   }
   onTimeSelected(ev) {
     console.log('Selected time: ' + ev.selectedTime + ', hasEvents: ' +
