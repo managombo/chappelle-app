@@ -216,11 +216,13 @@ export class AgendaPage implements OnInit {
             // var starthour =  new Date(pelerinage.date+"T"+pelerinage.heure_debut);
             // var endhour = new Date(pelerinage.date+"T23:59:59");
 
+            var timezone = moment.tz.guess();
 
-            var starthour = moment.tz(pelerinage.date+" "+pelerinage.heure_debut, moment.tz.guess()).clone().tz("Europe/Gibraltar").toDate();
-            starthour = moment.tz(starthour.toString(), moment.tz.guess()).clone().tz("Europe/Gibraltar").toDate();
+
+            var starthour = moment.tz(pelerinage.date+" "+pelerinage.heure_debut, timezone).clone().tz("Europe/Gibraltar").toDate();
+            starthour = moment.tz(starthour.toString(), timezone).clone().tz("Europe/Gibraltar").toDate();
             var endhour = moment.tz(pelerinage.date+" 23:59:59", "Europe/Paris").clone().tz("Europe/Gibraltar").toDate();
-            endhour = moment.tz(endhour.toString(), moment.tz.guess()).clone().tz("Europe/Gibraltar").toDate();
+            endhour = moment.tz(endhour.toString(), timezone).clone().tz("Europe/Gibraltar").toDate();
             // var actual_date = new Date();
             // var actual_paris_date = actual_date.tz("Europe/Paris").format('YYYY-MM-DD HH:mm:ss')
             // endhour.setHours(endhour.getHours() + 1);

@@ -10,9 +10,19 @@
 
 <ion-content padding>
   <ion-row style="margin-top: 60%">
-    <ion-col style="margin: 15px; color: #5fb0e7">
-      <h3>
-        La bénédiction des médailles - à la fin de chaque messe.
+    <ion-col style="margin: 30px; color: #5fb0e7" *ngIf="language=='french'">
+      <h3 text-center>
+        Les médailles sont bénies à la fin de chaque messe.
+      </h3>
+    </ion-col>
+    <ion-col style="margin: 30px; color: #5fb0e7" *ngIf="language=='english'">
+      <h3 text-center>
+        Medals are blessed at the end of each Mass.
+      </h3>
+    </ion-col>
+    <ion-col style="margin: 30px; color: #5fb0e7" *ngIf="language=='spanish'">
+      <h3 text-center>
+        Las medallas son bendecidas al final de cada misa.
       </h3>
     </ion-col>
   </ion-row>

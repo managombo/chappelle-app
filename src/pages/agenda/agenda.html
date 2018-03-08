@@ -23,7 +23,7 @@
 
 <ion-content>
 
-  <label *ngIf="language=='spanish'">
+  <!--<label *ngIf="language=='spanish'">-->
 
     <ng-template #template let-view="view" let-row="row" let-col="col" >
       <span >{{view.dates[row*7+col].label}}</span>
@@ -41,18 +41,21 @@
       step="30"
       [monthviewDisplayEventTemplate]="template"
       [locale]="calendar_spanish.locale"
+      *ngIf="language=='spanish'"
     >
     </calendar>
 
-  </label>
+  <!--</label>-->
 
 
-  <label *ngIf="language=='french'">
 
-    <ng-template #template let-view="view" let-row="row" let-col="col" >
-      <span >{{view.dates[row*7+col].label}}</span>
 
-    </ng-template>
+  <!--<label *ngIf="language=='french'">-->
+
+    <!--<ng-template #template let-view="view" let-row="row" let-col="col" >-->
+      <!--<span >{{view.dates[row*7+col].label}}</span>-->
+<!---->
+    <!--</ng-template>-->
 
     <calendar
       [eventSource]="eventSource"
@@ -65,17 +68,18 @@
       step="30"
       [monthviewDisplayEventTemplate]="template"
       [locale]="calendar_french.locale"
+      *ngIf="language=='french'"
     >
     </calendar>
 
-  </label>
+  <!--</label>-->
 
-  <label *ngIf="language=='english'">
+  <!--<label *ngIf="language=='english'">-->
 
-    <ng-template #template let-view="view" let-row="row" let-col="col" >
-      <span >{{view.dates[row*7+col].label}}</span>
+    <!--<ng-template #template let-view="view" let-row="row" let-col="col" >-->
+      <!--<span >{{view.dates[row*7+col].label}}</span>-->
 
-    </ng-template>
+    <!--</ng-template>-->
 
     <calendar
       [eventSource]="eventSource"
@@ -88,10 +92,11 @@
       step="30"
       [monthviewDisplayEventTemplate]="template"
       [locale]="calendar_english.locale"
+      *ngIf="language=='english'"
     >
     </calendar>
 
-  </label>
+  <!--</label>-->
 
 
 

@@ -7,47 +7,151 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Intention de prières</ion-title>
+    <ion-title *ngIf="language=='french'">Intention de prières</ion-title>
+    <ion-title *ngIf="language=='english'">Prayer intentions</ion-title>
+    <ion-title *ngIf="language=='spanish'">Intenciones de oración</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content >
+<ion-content>
 
-<ion-row style="margin-top: 40%">
-  <ion-col>
-    <ion-item>
-      <ion-label color="primary" stacked>Email</ion-label>
-      <ion-input type="email" placeholder="entrer email"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label color="primary" stacked>Type d'intention de prière</ion-label>
-      <ion-select [(ngModel)]="typeIntentionPriere">
-        <ion-option value="priere">Prière</ion-option>
-        <ion-option value="merci">Remerciement</ion-option>
+  <ion-row style="margin-top: 20%">
+    <ion-col *ngIf="language=='french'">
 
-      </ion-select>
-    </ion-item>
-    <ion-item style="line-height: 50px">
-      <ion-label color="primary" stacked>Contenu du texte</ion-label>
-      <ion-textarea  placeholder="Entrez votre texte"></ion-textarea>
-    </ion-item>
-  </ion-col>
-</ion-row>
+      <form #form="ngForm" (ngSubmit)="logForm(form)" novalidate>
 
-<ion-row style="margin-top: 20px;">
-  <ion-col text-center col-12>
-    <button ion-button   style="width: 50%; padding: 0; margin: 0">Envoyer</button>
-  </ion-col>
+        <ion-row>
 
-</ion-row>
+          <ion-col>
+
+            <ion-item>
+              <ion-label color="primary" stacked>Votre Nom</ion-label>
+              <ion-input required [(ngModel)]="name" ngControl="name"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label color="primary" stacked>Votre prénom</ion-label>
+              <ion-input required [(ngModel)]="subName" ngControl="subName"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label color="primary" stacked>Type de prière</ion-label>
+              <ion-select [(ngModel)]="prayType" ngControl="prayType">
+
+                <ion-option value="illness">Maladie et problèmes de santé</ion-option>
+                <ion-option value="thanks">Remerciement</ion-option>
+                <ion-option value="school-failure">Echec académique</ion-option>
+                <ion-option value="family-conflict">Conflit Familial</ion-option>
+                <ion-option value="work-conflict">Conflit de travail</ion-option>
+                <ion-option value="job-search">Recherche d'emploi</ion-option>
+              </ion-select>
+            </ion-item>
+
+            <ion-item>
+              <ion-label color="primary" stacked>Contenu du texte</ion-label>
+              <!--<ion-textarea  placeholder="Entrez votre texte"></ion-textarea>-->
+              <ion-textarea required [(ngModel)]="content" ngControl="content"></ion-textarea>
+            </ion-item>
+
+          </ion-col>
+
+        </ion-row>
+
+        <ion-row style="margin-top: 10%;" *ngIf="language=='french'">
+          <ion-col text-center col-12>
+            <button ion-button style="width: 50%; padding: 0; margin: 0" type="submit">Envoyer</button>
+          </ion-col>
+        </ion-row>
+
+      </form>
 
 
+    </ion-col>
 
 
+    <ion-col *ngIf="language=='english'">
+
+      <ion-row>
+
+        <ion-item>
+          <ion-label color="primary" stacked>Your first name</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label color="primary" stacked>Your family name</ion-label>
+          <ion-input></ion-input>
+          <!--<ion-input type="email" placeholder="entrer email"></ion-input>-->
+        </ion-item>
+        <ion-item>
+          <ion-label color="primary" stacked>Prayer type</ion-label>
+          <ion-select [(ngModel)]="prayType">
+
+            <ion-option value="illness">Illness & Health issues</ion-option>
+            <ion-option value="thanks">Thanks</ion-option>
+            <ion-option value="school-failure">School failure</ion-option>
+            <ion-option value="family-conflict">Family Conflict</ion-option>
+            <ion-option value="work-conflict">Work conflict</ion-option>
+            <ion-option value="job-search">Job search</ion-option>
+          </ion-select>
+
+        </ion-item>
+        <ion-item>
+          <ion-label color="primary" stacked>Text content</ion-label>
+          <ion-textarea></ion-textarea>
+        </ion-item>
+
+      </ion-row>
+
+      <ion-row style="margin-top: 10%;">
+        <ion-col text-center col-12>
+          <button ion-button style="width: 50%; padding: 0; margin: 0">Send</button>
+        </ion-col>
+
+      </ion-row>
+
+    </ion-col>
+
+    <ion-col *ngIf="language=='spanish'">
+      <ion-item>
+        <ion-label color="primary" stacked>Tu primer nombre</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" stacked>Tu apellido</ion-label>
+        <ion-input></ion-input>
+        <!--<ion-input type="email" placeholder="entrer email"></ion-input>-->
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" stacked>Tipo de oración</ion-label>
+        <ion-select [(ngModel)]="prayType">
+
+          <ion-option value="illness">Enfermedades y problemas de salud</ion-option>
+          <ion-option value="thanks">gracias</ion-option>
+          <ion-option value="school-failure">Fracaso escolar</ion-option>
+          <ion-option value="family-conflict">Conflicto familiar</ion-option>
+          <ion-option value="work-conflict">Conflicto laboral</ion-option>
+          <ion-option value="job-search">Búsqueda de trabajo</ion-option>
+        </ion-select>
+
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" stacked>Contenido de texto</ion-label>
+        <ion-textarea></ion-textarea>
+      </ion-item>
+    </ion-col>
 
 
+  </ion-row>
+
+
+  <ion-row style="margin-top: 10%" *ngIf="language=='spanish'">
+    <ion-col text-center col-12>
+      <button ion-button style="width: 50%; padding: 0; margin: 0">Enviar</button>
+    </ion-col>
+
+  </ion-row>
 
 
 </ion-content>

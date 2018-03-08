@@ -1,242 +1,194 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Origine de la chapelle</ion-title>
+    <ion-title *ngIf="language=='french'">Historique</ion-title>
+    <ion-title *ngIf="language=='english'">Historical</ion-title>
+    <ion-title *ngIf="language=='spanish'"> Histórico</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
+  <ion-row style="margin-top: 0 !important; padding-top: 0 !important;">
+    <ion-col style="margin: 0 !important; padding: 0 !important;">
+      <img src="../../assets/imgs/Historique.jpg" alt="" style="width: 100%">
+    </ion-col>
 
-    <!--<h6 style="text-align: justify;"><span-->
-      <!--style="color: #5fb0e7;"><strong>Années 1813 </strong><strong>–</strong><strong> 1848</strong></span></h6>-->
-    <!--<p style="text-align: justify;">En 1813, un décret impérial attribue aux Filles de la Charité la jouissance de-->
-      <!--l’Hôtel de Châtillon, pour y établir l’Etablissement principal de leur Ordre.&nbsp; C’est seulement le 28 juin-->
-      <!--1815 que les Sœurs peuvent prendre possession de leur nouvelle Maison Mère.&nbsp;La Chapelle n’est pas-->
-      <!--complètement achevée.</p>-->
-    <!--<p style="text-align: justify;">Le 6 août 1815, fête de la Transfiguration, Monsieur Hanon procède à la bénédiction-->
-      <!--solennelle de la Chapelle. Le 15 août, on y place, sous &nbsp;un autel latéral, le corps de Saint Vincent. Quant à-->
-      <!--celui de Sainte Louise, il est transféré le 3 novembre 1824, dans un caveau, préparé à cet effet, dans la nef,-->
-      <!--près des marches de l’autel.</p>-->
-    <!--<p text-center><img  src="assets/imgs/DSC08484.jpg"-->
-                                         <!--alt="SONY DSC" width="100%" ></p>-->
-      <!--<p>Sœur Pineau,-->
-      <!--première d’Office de la Sacristie, décrit ainsi la Chapelle, telle qu’elle était en 1830 :&nbsp;«Au temps de Sœur-->
-      <!--Labouré, la Chapelle n’avait pas de bas-côtés et le sanctuaire était beaucoup moins profond. Le maître-autel se-->
-      <!--trouvait beaucoup plus en avant. Le bas-côté actuel, du côté de l’épître, était alors un corridor, au-dessus-->
-      <!--duquel courait l’unique tribune qui existât.-->
-      <!--</p>-->
-  <!--<p text-center>-->
-  <!--<a-->
-        <!--href="assets/imgs/St-Joseph-tableau.jpg"><img-->
-        <!--class="  wp-image-4214 alignright"-->
-        <!--src="assets/imgs/St-Joseph-tableau.jpg"-->
-        <!--alt="St Joseph tableau"-->
+  </ion-row>
 
-         <!--width="100%"></a>-->
-      <!--</p>-->
-  <!--<p>C’est par cette tribune que la Sainte-->
-      <!--Vierge arriva. Une plus petite tribune, dite “de la cloche”, était située au-dessus de la porte d’entrée.&nbsp;»-->
-    <!--</p>-->
-    <!--<p text-center>«&nbsp;L’allée de la nef aboutissait à deux autels: du côté de l’Evangile,</p>-->
-  <!--<p text-center><a-->
-      <!--href="assets/imgs/Ste-Anne.png"><img-->
-      <!--class="  wp-image-4213 alignright"-->
-      <!--src="assets/imgs/Ste-Anne.png"-->
-      <!--alt="Ste Anne"-->
+  <ion-row *ngIf="language=='french'"  padding>
 
-       <!--width="100%"></a>-->
-  <!--</p>-->
-    <!--<p>-->
-    <!--l’autel de la Vierge et, du côté de l’épître,-->
-      <!--celui de Saint Vincent. Cette allée partageait la Chapelle en deux parties. La plus rapprochée du sanctuaire était-->
-      <!--réservée aux Sœurs du Séminaire et l’autre était destinée aux Sœurs à l’habit. C’est dans le carré des Sœurs du-->
-      <!--Séminaire, du côté de la chaire, que se trouvait Sœur Labouré, le 27 novembre 1830, pendant l’apparition de la-->
-      <!--Vierge. Le tableau de Saint Joseph se trouvait à l’emplacement actuel de Notre-Dame au Globe. » Là où se trouve,-->
-      <!--actuellement, la statue de Saint Joseph, était placé le tableau de Sainte Anne.</p>-->
-    <!--<p text-center><a-->
-      <!--href="assets/imgs/autel-st-Vincent.jpg"><img-->
-      <!--class="  wp-image-4201 alignleft"-->
-      <!--src="assets/imgs/autel-st-Vincent.jpg"-->
-      <!--alt="autel st Vincent"-->
-
-       <!--width="100%"></a>-->
-    <!--</p><p>Le &nbsp;maître-autel en marbre, celui-là-->
-      <!--même qui se trouve maintenant dans la chapelle latérale dédiée à Saint Vincent, était placé au milieu du-->
-      <!--sanctuaire, à peu près sur la ligne de l’autel de la Vierge Puissante. De chaque côté du maître-autel, une petite-->
-      <!--statue d’ange adorateur. Derrière l’autel, s’ouvrait la porte de la sacristie. Le sanctuaire n’avait pas de-->
-      <!--coupole.</p>-->
-  <!--<p text-center>-->
-    <!--<a-->
-        <!--href="assets/imgs/coeurs.jpg"><img-->
-        <!--class="  wp-image-4217 alignright"-->
-        <!--src="assets/imgs/coeurs.jpg" alt="coeurs"-->
-
-         <!--width="100%"></a>-->
-  <!--</p>-->
-    <!--<p>Ce mur du fond était orné de trois tableaux:-->
-      <!--au milieu, le Cœur de Notre Seigneur, adoré par deux anges; à droite et à gauche, les tableaux de Saint Michel et-->
-      <!--de l’Ange Gardien. La Chapelle était dédiée au Sacré-Cœur de Jésus, dont la fête était considérée comme la fête de-->
-      <!--ce sanctuaire. Monsieur Etienne, dans sa circulaire du 8 décembre 1853, dira aux Sœurs que la Sainte Vierge-->
-      <!--s’était « montrée dans le sanctuaire de notre Maison Mère, si heureusement et si providentiellement dédiée au-->
-      <!--Sacré-Cœur de Jésus. » Cette dédicace remontait donc avant 1830.</p>-->
-    <!--<h6 style="text-align: justify;"><span-->
-      <!--style="color: #5fb0e7;"><strong>1849 </strong><strong>–</strong><strong> 1929</strong></span></h6>-->
-    <!--<p style="text-align: justify;">En 1849, le nombre des Sœurs du Séminaire étant passé, depuis 1815, de 80 à 500-->
-      <!--environ, il devint nécessaire d’agrandir la Chapelle. Le corridor de droite fut repoussé de quelques mètres, la-->
-      <!--tribune, dite aujourd’hui « tribune vitrée », s’élargit au-dessus du corridor inférieur. A gauche, on empiéta sur-->
-      <!--la cour Sainte Marie pour ajouter un bas-côté, surmonté d’une tribune. Pour ce faire, on abattit les murs latéraux-->
-      <!--de la nef primitive, ne conservant que des piliers. Cela semblait une solution excellente et, cependant, combien-->
-      <!--de fois, par la suite, les seize lourds piliers qui soutenaient la voûte, vestiges des murs latéraux primitifs,-->
-      <!--feront-ils le désespoir des pèlerins et des Sœurs: « C’était beau, diront-ils, mais j’étais derrière un pilier et-->
-      <!--je n’ai rien vu&nbsp;! »</p>-->
-    <!--<p text-center><img class="  wp-image-3619 alignleft"-->
-                                         <!--src="assets/imgs/1-1854.jpg"-->
-                                         <!--alt="1 -1854"-->
-
-                                          <!--width="100%"></p>-->
-    <!--<p>Le chœur subit-->
-      <!--d’importantes modifications. Tout en conservant l’espace primitif, on l’agrandit en arrière aux dépens de l’espace-->
-      <!--consacré précédemment à la sacristie, située derrière le maître-autel. Celle-ci est placée à côté. Le maître-autel-->
-      <!--est surélevé de deux marches, tandis que les deux autels latéraux sont transportés dans le haut de la nef, sur les-->
-      <!--bas-côtés. Celui du côté de l’Évangile est dédié-->
-    <!--</p>-->
-    <!--<p text-center><img class="  wp-image-3626 alignleft"-->
-                                                            <!--src="assets/imgs/3-1914.jpg"-->
-                                                            <!--alt="3-1914"-->
-
-                                                             <!--width="100%"-->
-                                                           <!--&gt;-->
-    <!--</p>-->
-    <!--<p>à Saint Joseph et celui du côté de l’Épître, à-->
-      <!--Saint Vincent. Chacun d’eux est surmonté de la statue de son titulaire.<br>-->
-      <!--Lorsqu’en 1815, on fit la consécration de la Chapelle de notre Maison Mère, on la mit sous le vocable du-->
-      <!--Sacré-Cœur de Jésus et un tableau, placé derrière le maître-autel le représentait. Il eut donc été impossible,-->
-      <!--après les Apparitions, d’y placer une statue de la Sainte Vierge. Dans ce décor du sanctuaire, on crut qu’il-->
-      <!--serait plus convenable de supprimer le tableau du Sacré-Cœur et de représenter, dans la coupole, les Sacrés Cœurs-->
-      <!--de Jésus et de Marie, tels qu’on les voit actuellement et on trouvait ce décor suffisant.<br>-->
-      <!--Cependant, pour répondre au désir de la Sainte Vierge, on songe à faire ciseler une Vierge laissant tomber de ses-->
-      <!--mains les rayons, symboles des grâces qu’elle veut déverser sur les hommes. Une statue provisoire en plâtre est-->
-      <!--placée au-dessus du maître-autel. Mais, le Gouvernement ayant fait don de deux magnifiques blocs de marbre blanc,-->
-      <!--en reconnaissance des soins donnés par les Sœurs aux victimes du choléra et à leurs orphelins, on en destine un au-->
-      <!--maître-autel et l’autre à la statue de marbre que nous admirons aujourd’hui. L’ancien autel est transféré dans la-->
-      <!--chapelle latérale dédiée à Saint Vincent.<br>-->
-      <!--En 1876, Sœur Dufès fait réaliser, sur les indications de Sœur Catherine et de celles recueillies par Monsieur-->
-      <!--Aladel, la statue de la Vierge Puissante qui surmonte l’autel commémoratif des apparitions, érigé depuis. Elle est-->
-      <!--posée le 31 mai 1880. Enlevée pour diverses raisons, elle est définitivement mise en place le 22 janvier 1881.<br>-->
-      <!--En 1891, est entrepris un nouveau remaniement des tribunes. On rehausse la tribune latérale du Sacré-Cœur et on-->
-      <!--établit, au-dessus de la porte d’entrée principale, une deuxième tribune pour le nouvel orgue, qui doit remplacer-->
-      <!--celui situé derrière le maître-autel.<br>-->
-    <!--</p>-->
-    <!--<p text-center>-->
-      <!--<a href="assets/imgs/5-1920.jpg"><img-->
-        <!--class="  wp-image-3628 alignleft"-->
-        <!--src="assets/imgs/5-1920.jpg" alt="5-1920"-->
-
-         <!--width="100%"></a>-->
-    <!--</p>-->
-    <!--<p>En 1914, la Chapelle a été blanchie et-->
-      <!--repeinte, des dalles jusqu’à la coupole. Les tableaux ornant le Chœur ont été supprimés et remplacés par un-->
-      <!--revêtement de marbre blanc, destiné à devenir une surface d’ex-voto. Le maître-autel n’a pas été touché, mais les-->
-      <!--grands Anges porte-lumières, placés de chaque côté, avec les nuages qui supportaient la statue de la Sainte Vierge-->
-      <!--… se sont envolés … tandis que, sous les pieds de la reine du Ciel, deux Séraphins à six ailes sont venus placer-->
-      <!--d’autres nuages qu’ils supportent sur leurs épaules …a porte, donnant accès à la sacristie dans le Chœur a été-->
-      <!--murée et on se dispose à ériger, symétriquement à l’autel de la Vierge Puissante, un autel dédié à Saint Joseph,-->
-      <!--surmonté de sa statue.</p>-->
-    <!--<h6 style="text-align: justify;"><span-->
-      <!--style="color: #5fb0e7;">&nbsp;<strong>1930: Cent</strong><strong>e</strong><strong>n</strong><strong>a</strong><strong>ire d</strong><strong>e</strong><strong>s Apparition</strong><strong>s</strong></span>-->
-    <!--</h6>-->
-    <!--<p  text-center>Ce devait être l’occasion, bien longtemps attendue, de restaurer cette maison de-->
-      <!--Marie<img class="  wp-image-3629 alignright"-->
-                <!--src="assets/imgs/6-1930.jpg"-->
-                <!--alt="C"-->
-
-                 <!--width="100%"></p>-->
-    <!--<p>, pour son honneur, pour sa gloire et,-->
-      <!--aussi, de l’aménager pratiquement, en fonction des besoins de la Communauté.<br>-->
-      <!--L’aménagement permet de placer la nouvelle tribune des chanteuses, d’un galbe plus gracieux que l’ancienne, et-->
-      <!--dont les deux prolongements la relient à celles des bas-côtés, ce qui offre encore une cinquantaine de places. Un-->
-      <!--nombre équivalent sera récupéré dans la petite tribune haute qui forme le clocher, enrichi de quatre nouvelles-->
-      <!--cloches, faisant bon ménage avec l’ancienne qu’on a tenu à conserver.</p>-->
-    <!--<p text-center><a-->
-        <!--href="assets/imgs/7-1930.jpg"><img-->
-        <!--class="  wp-image-3630 alignright"-->
-        <!--src="assets/imgs/7-1930.jpg" alt="7-1930"-->
-
-         <!--width="100%"></a><br></p>-->
-    <!--<p>-->
-      <!--La chaire en marbre et fer forgé remplace l’ancienne, en bois un peu vermoulu et un très beau Chemin de Croix, en-->
-      <!--marbre de Carrare, vient compléter l’ornementation.<br>-->
-      <!--La lumière est diffusée par un plafond lumineux, courant le long des tribunes et au centre des architraves, et par-->
-      <!--8 lampes électriques entourant chaque colonne, au-dessous des croix en mosaïque qui marqueront la consécration de-->
-      <!--la Chapelle. La Chapelle a donc gagné en élévation, en air, en lumière. Elle peut accueillir facilement un millier-->
-      <!--de personnes. On y retrouve les mêmes autels: aucun n’a été modifié, ni changé de place, celui de Saint Vincent-->
-      <!--est toujours l’ancien maître-autel de 1830. Seuls, les autels du fond des tribunes modifiées seront nouveaux.-->
-    <!--</p>-->
-    <!--<h6 style="text-align: justify;"><span style="color: #5fb0e7;"><strong>1959 </strong><strong>–</strong><strong> 1999</strong></span></h6>-->
-      <!--<p text-center><img-->
-      <!--class="  wp-image-3632 alignright"-->
-      <!--src="assets/imgs/9-1960.jpg" alt="9-1960"-->
-
-       <!--width="100%"> </p>-->
-    <!--<p style="text-align: justify;">A la fin de l’année 1959, il est décidé de repeindre le sanctuaire de notre Mère-->
-      <!--Immaculée.Très peu de changements, hormis les vitraux des tribunes: ils sont de teinte uniforme, de couleur ocrée.-->
-      <!--Le maître-autel est un peu déchargé, mais les deux anges porte-lumière continuent à monter la garde.<br>-->
-      <!--1979 : des panneaux-informations indiquent l’essentiel des travaux projetés :-->
-    <!--</p>-->
-    <!--<p text-center>-->
-      <!--<img-->
-        <!--class="  wp-image-3634 alignright"-->
-        <!--src="assets/imgs/11-1975.jpg"-->
-        <!--alt="11-1975"-->
-
-         <!--width="100%"><br></p>-->
-
-    <!--<p>– extension de la superficie réservée aux fidèles: incorporation au volume global du rez-de-chaussée d’une partie-->
-      <!--des locaux utilisés actuellement pour les confessionnaux et bureaux. Cela permettra, soit de célébrer la messe-->
-      <!--pour des petits groupes, soit d’augmenter le nombre des places pour celles célébrées dans le chœur.<br>-->
-      <!--– installation des confessionnaux dans le bas de cette extension de la Chapelle.<br>-->
-      <!--– les tribunes: aucun changement, sinon mise en conformité avec les normes imposées. Celles de droite sont-->
-      <!--séparées de la nef par des vitres insonorisantes, afin que les groupes de visiteurs, qui ne font qu’une courte-->
-      <!--halte, ne troublent pas les offices par leurs allers et venues. Les tribunes sont équipées d’une sonorisation.<br>-->
-      <!--A cette description très technique, il faut ajouter quelques détails d’aménagement. L’autel en bois, placé face au-->
-      <!--peuple pour répondre aux exigences de la nouvelle liturgie conciliaire, a été remplacé par un bel autel en marbre-->
-      <!--blanc. A l’avant de celui-ci, deux colonnes, qui supportaient des vases de fleurs dans la tribune, viennent-->
-      <!--corriger la rigidité du marbre. La chaire est supprimée, ce qui permet de récupérer quelques places. Enfin, la-->
-      <!--table de communion est largement ouverte sur le chœur et supprimée devant les autels de Saint Vincent et de Sainte-->
-      <!--Louise.-->
-    <!--</p>-->
-    <!--<p text-center><img class="  wp-image-4150 alignright"-->
-                  <!--src="assets/imgs/Pim0007.jpg"-->
-                  <!--alt="Pim0007"-->
-
-                   <!--width="100%"><br></p>-->
-    <!--<p>-->
-      <!--Après tous ces travaux de restauration, la Chapelle sera solennellement inaugurée le 31 mai 1980 par Sa Sainteté-->
-      <!--le pape Jean Paul II. Près de la porte de la sacristie, une plaque rappelle l’événement:<br>-->
-      <!--<em>Sa Sainteté Jean Paul II, le 31 mai 1980, a inauguré officiellement la reprise du culte dans cette Chapelle-->
-        <!--nouvellement restaurée</em>.</p>-->
-
-  <ion-row>
     <ion-col>
-      <p>C’était la nuit de 18 au 19 juillet 1830. L’ange a réveillé Catherine Labouré, novice des filles de la charité en lui disant : « Levez-vous en diligence et venez à la chapelle, la Sainte Vierge vous y attend! » L’ange l’a accompagnée à la Chapelle – tout allumée, comme aux jours des fêtes solennelles. La Sainte Vierge était assise dans le fauteuil du prêtre. Catherine s’est mise à genoux, et l'enfant (l’ange) est resté debout tout le temps. A plusieurs reprises il lui dit : « Voici la Sainte Vierge. La voici. »</p>
 
-      <p>« Alors, regardant la Sainte Vierge » – raconte Catherine – « je n'ai fait qu'un saut auprès d’elle », à genoux sur les marches de l’autel, les mains appuyées sur ses genoux. Là, il s’est passé un moment, le plus doux de ma vie. Il me serait impossible de dire ce que j’ai éprouvé. La Vierge m’a montré de la main gauche le pied de l’autel ; c’est là que je dois venir me jeter…répandre mon cœur. Elle a continué : « Les temps sont mauvais ; le monde entier sera traversé par des malheurs de toutes sortes, mais ‘Venez au pied de cet autel. Là, les grâces seront répandues sur toutes les personnes qui les demanderont avec confiance et ferveur : grands et petits.’ »</p>
+    <h5>Sainte Catherine (1806 -1876)</h5>
+    <p>
+    Catherine Labouré (Zoé) est la 8ème enfant d’ une  famille de propriétaires fermiers  simples, travailleurs, profondément croyants.  Elle a 9 ans quand sa mère meurt ! Dans sa foi d’enfant, elle choisit Marie pour Mère !  A l’entrée de sa sœur aînée chez les Filles de la Charité, elle devient fermière à 12 ans. Volontaire et tenace elle assume les responsabilités avec calme et compétence.
+      <br>
+    En secret, Catherine cultive son désir de répondre à l’appel de Dieu.  A 21 ans, elle le dévoile à son père. Celui-ci  refuse catégoriquement. Il finit par se laisser convaincre  et Catherine peut commencer sa formation chez les Filles de la Charité.
+      <br>
+    Elle arrive à la rue du Bac en avril 1830. Humble et discrète, elle passe inaperçue… Quelqu’un l’a remarquée : Marie !  Elle vient à sa rencontre le 18 juillet et le 27 novembre et lui confie la mission de faire frapper une médaille. Son confesseur sera le seul confident de Sœur Catherine et il sera lreès sceptique et peu convaincu de la véracité des récits de la Soeur .
+      <br>
+    Les premières médailles seront frappées en 1832 et répandues dans le monde entier. Sœur Catherine gardera le secret jusqu’à sa mort, se réservant pour Dieu seul et le service de ceux vers qui elle sera envoyée à Reuilly. Pendant 45 ans, avec persévérance, elle combat le aspérités de son tempérament et, avec endurance et attention réaliste, elle met son intelligence et son cœur au service de tous, en particulier des pauvres en qui elle reconnaît Jésus. En communauté, elle fait preuve de cordiale humilité et de disponibilité généreuse. L’élan de sa prière et de sa charité quotidienne, en période paisible et en temps de guerre, puisait à une même source : l’Esprit
+    St Vincent aurait vu en elle une vraie  Fille de la Charité, servante simple, humble et aimante. Elle est morte aussi silencieuse qu’elle l’a été pendant sa vie. L’Eglise a reconnu en elle  non une voyante, mais une croyante : une sainte !
+      <br>
+    </p>
 
-      <p>La Sainte Vierge a manifesté son amour de façon visible encore une fois, le 27 novembre 1830, pendant l’oraison, dans un profond silence. Elle lui a demandé : « de faire frapper la médaille selon ce modèle. »  <br>
-        Catherine a vu un tableau représentant la Sainte Vierge, débout, vêtue d’une robe blanche, un manteau de couleur bleue argenté, un voile aurore, les mains tendues et  les pieds appuyés sur une boule. Il sortait de ses mains comme par faisceaux, des rayons d’un éclat ravissant. Autour de la Vierge Marie Catherine a lu, en caractère d’or, l’invocation suivante : « Ô Marie, conçue sans péché, priez pour nous qui avons recours à vous. »<br>
+    <p>
+    Le 18 juillet 1830, en la veille de la fête de saint Vincent qu’elle aime tant, Catherine recourt à celui dont elle a vu le cœur débordant d’amour pour que son grand désir de voir la Sainte Vierge soit enfin exaucé. A 11 heures et demie du soir, elle s’entend appeler par son nom.
+      <br>
+    Un mystérieux enfant est là, au pied de son lit et l’invite à se lever : <br>
+    <em>« La Sainte Vierge vous attend »</em>
+    Catherine s’habille et suit l’enfant <em>« portant des rayons de clarté partout où il passait. »</em> <br>
+    Arrivée dans la chapelle, Catherine s’arrête près du fauteuil du prêtre placé dans le chœur sous le tableau de sainte Anne (emplacement actuel de la statue de saint Joseph). Elle entend alors « comme le froufrou d’une robe de soie ». Son petit guide dit:
+      <br>
+    <em>« Voici la Sainte Vierge »</em>
+    Elle hésite à croire. Mais l’enfant répète d’une voix plus forte : <br>
+    <em>« Voici la Sainte Vierge. »</em>
+    Catherine s’élance aux pieds de la Sainte Vierge assise dans un fauteuil et appuie les mains sur les genoux de la Mère de Dieu.
+      <br>
+    <em>«Là, il s’est passé un moment, le plus doux de ma vie. Il me serait impossible de dire ce que j’éprouvais. La Sainte Vierge m’a dit comment je devais me conduire envers mon confesseur et plusieurs autres choses.»</em>
+      <br>
+    La Sainte Vierge désigne de la main l’autel où repose le tabernacle et dit: <br>
+    <em>« Venez au pied de cet autel. <br>
+    Là, les grâces seront répandues sur toutes les personnes qui les demanderont avec confiance et ferveur.»</em> <br>
+    Catherine reçoit l’annonce d’une mission difficile et la demande de fondation d’une Confrérie d’Enfants de Marie.
+      <br>
+    Cette dernière sera réalisée par le Père Aladel le 2 février 1840.
+    </p>
 
-        Quelques moments après, ce tableau s’est retourné, et sur le revers, elle a distingué la lettre M surmontée d’une petite croix, en bas, les Saints Cœurs de Jésus et de Marie et autour douze étoiles étaient gravées. Ensuite, elle a entendu une voix : « Faire frapper une médaille sur ce modèle, et les personnes qui la porteront avec confiance, obtiendront les grâces en abondance.</p>
+<p>
+    Le 27 novembre 1830, la Sainte Vierge apparaît de nouveau à Catherine dans la chapelle. Cette fois, c’est à 17h30, pendant l’oraison des novices, sous le tableau de saint Joseph (emplacement actuel de la Vierge au globe).
+  <br>
+    D’abord Catherine voit comme deux tableaux vivants qui passent, en fondu enchaîné, et dans lesquels la Sainte Vierge se tient debout sur le demi-globe terrestre, ses pieds écrasant le serpent.
+  <br>
+    Dans le 1er tableau, la Vierge porte dans ses mains un petit globe doré surmonté d’une croix qu’elle élève vers le ciel. Catherine entend:
+  <br>
+    <em>« Cette boule représente le monde entier, la France et chaque personne en particulier » </em> <br>
+    Dans le 2e tableau, il sort de ses mains ouvertes, dont les doigts portent des anneaux de pierreries, des rayons d’un éclat ravissant. Catherine entend au même instant une voix qui dit :
+  <br>
+    <em>« Ces rayons sont le symbole des grâces que je répands
+    sur les personnes qui me les demandent »</em>.
+    Puis un ovale se forme autour de l’apparition et Catherine voit s’inscrire en demi-cercle cette invocation en lettres d’or :
+  <br>
+    <em>« O Marie conçue sans péché, priez pour nous qui avons recours à vous ».</em><br>
+    Alors une voix se fait entendre: <br>
+    <em>« Faites, faites frapper une médaille sur ce modèle. Les personnes qui la porteront avec confiance recevront de grandes grâces»</em>.
+  <br>
+    Enfin le tableau se retourne  et Catherine voit le revers de la médaille :  en haut une croix surmonte l’initiale de Marie,  en bas deux cœurs, l’un couronné d’épines,  l’autre transpercé d’un glaive.
+</p>
 
-      <p>Les symboles :</p>
-      <ul>
-        <li>la Sainte Vierge Marie – l’Immaculée Conception – la Créature la plus belle, toute donnée à Dieu</li>
-        <li>les rayons – le symbole des grâces que la Sainte Vierge obtient aux personnes qui les lui demandent ;</li>
-        <li>la lettre « M » surmontée d’une croix. Le salut vient du Christ ; c’est Elle qui lui donne la vie.</li>
-        <li>les deux cœurs, toujours intimement liés - l’un entouré d’une couronne d’épines – la Passion de Jésus, l’autre transpercé d’un glaive – « ton cœur sera transpercé » - selon la prophétie de Siméon.</li>
-        <li>douze étoiles nous rappellent les  douze apôtres, missionnaires de l’Evangile, notre propre mission.</li>
-      </ul>
+
+    <h5>Filles de la charité et les Pères Lazaristes</h5>
+    <p>
+    Nous sommes ici à la Maison Mère des Filles de la Charité. <br>
+    Avec elles, c’est à leur histoire, que nous sommes reliés. La Compagnie des Filles de la Charité fondée en 1633, fut le commun chef d’œuvre de saint Vincent et de sainte Louise.
+      <br>
+    La Compagnie s’est développée dans le monde entier, fidèle à sa vocation. Quand, un jour de 1830, est arrivée au noviciat de la rue du Bac une jeune bourguignonne de 24 ans…
+      <br>
+    Les apparitions de la Vierge Marie à Catherine Labouré et la diffusion de la médaille miraculeuse furent suivies d’un extraordinaire renouveau des vocations, tant chez les Filles de la Charité que chez les Prêtres de la Mission. La ferveur y redevint des plus ardentes. Au long des années, la Compagnie a continué son service dans l’esprit des fondateurs : humilité, simplicité, charité.
+      <br>
+    A ce jour, les Filles de la Charité sont présentes sur les cinq continents.
+    </p>
+
+      </ion-col>
+  </ion-row>
+
+  <ion-row *ngIf="language=='spanish'" padding>
+    <ion-col>
+
+      <h5>Catalina Labouré (1806 -1876)</h5>
+
+      <p>
+      Catalina Labouré nació el 2 de mayo de 1806 en un pueblo de Borgoña, Fain-les-Moutiers. Es la octava de los diez hijos de Pedro y Magdalena Labouré, propietarios de una granja. La muerte de Magdalena, a los 46 años de edad, causa el duelo de la familia. Catalina, llorando, sube a una silla para abrazar la estatua de la Virgen Santísima y declara: “Ahora serás tú mi mamá”.
+      <br>
+      A los 24 años, Catalina, después de vencer muchos obstáculos, entra para ser novicia en la Casa Madre de las Hijas de la Caridad, calle del Bac en París Es aquí, en la capilla, donde la Virgen Santa se le aparece algunos meses más tarde; por primera vez, el 19 de julio de 1830, par anunciarle una misión y, por segunda vez, el 27 de noviembre del mismo año para revelarle la medalla y encargarle que la haga acuñar. El año siguiente, acabado ya el seminario, Sor Catalina es destinada a Reuilly, que era entonces un suburbio desheredado de la parte sudeste de París.Hasta el final de su vida, cuidará de los ancianos, guardando el incógnito total, mientras se va difundiendo la medalla de manera milagrosa por el mundo entero. Catalina Labouré muere el 31 de diciembre de 1876, en paz: “Me voy al cielo a ver a Nuestro Señor, a su Madre y a San Vicente”. En 1833, cuando su beatificación, se abre la tumba de la capilla de Reuilly. El cuerpo de Catalina se había conservado intacto y fue trasladado a la capilla de la calle del Bac para ser instalado debajo del altar de la Virgen del Globo.
+      </p>
+
+      <p>El 18 de julio de 1830, en vísperas de la fiesta de San Vicente a quien quiere tanto, Catalina acude a este santo que le había mostrado su corazón desbordante de amor, para que su gran deseo de ver a la Santísima Virgen se cumpla por fin. A las once y media de la noche, oye que la llaman por su nombre.
+        <br>
+      Al pie de su cama, un niño misterioso la invita a levantarse  : <br>
+      <em>« La Virgen María te espera »</em> <br>
+      dice. Catalina se viste y sigue al niño cuyos destellos iluminan todo a su paso. <br>
+      Llegan a la capilla, Catalina se detiene cerca del sillón del sacerdote situado en el presbiterio. Oye entonces como el “frufru” de un vestido de seda.
+        <br>
+      <em>«He aquí la Santísima Virgen »</em>  dice su pequeño guía. Duda en creerlo, pero el niño repite en voz más alta: <br>
+      <em>« He aquí la Santísima Virgen. »</em> <br>
+      Catalina corre a arrodillarse ante María sentada en el sillón. <br>
+      Entonces, de un salto, me puse de hinojos, en las gradas del altar, apoyadas las manos en las rodillas de la Virgen Santísima.
+        <br>
+      Allí, pasó un momento, el más feliz de mi vida. Sería imposible decir lo que experimenté. La Virgen me dijo cómo debía portarme con mi confesor y varias otras cosas.
+        <br>
+      Catalina recibe el anuncio de una misión y una petición: que se funde una Cofradía de las Hijas de María. Lo que hará el Padre Aladel el 2 de febrero de 1840.
+        <br>
+      </p>
+
+      <p>
+
+      27 de noviembre de 1830, a las 5 y media de la tarde, estando las novicias en oración, la Virgen Santísima se le aparece de nuevo a Catalina debajo del cuadro de San José (sitio donde está actualmente la Virgen del globo). Primero ve Catalina como dos cuadros vivientes que pasan en fundido encadenado y en los cuales la Virgen está de pie sobre medio globo terráqueo, aplastando sus pies una serpiente.
+        <br>
+      En el primer cuadro, lleva la Virgen en sus manos un pequeño globo dorado rematado por una cruz que levanta hacia el cielo. Oye Catalina:
+        <br>
+      “Esta bola representa al mundo entero, a Francia y a cada persona en particular.” <br>
+      En el segundo, salen de sus manos abiertas, cuyos dedos llevan anillos de piedras preciosas, unos rayos de un brillo bellísimo. Al mismo tiempo Catalina oye una voz que dice:
+        <br>
+      “Estos rayos son el símbolo de las gracias que María consigue para los hombres.” <br>
+      Después se forma un óvalo en torno a la aparición y Catalina ve como se inscribe en semicírculo una invocación, hasta entonces desconocida, escrita en letras de oro:
+        <br>
+      « Oh María sin pecado concebida, ruega por nosotros que recurrimos a ti». <br>
+      Se oye entonces una voz: <br>
+      « Haz, haz acuñar una medalla según este modelo. Las personas que la lleven con confianza recibirán grandes gracias ».
+        <br>
+      Después, se vuelve el cuadro y Catalina ve el reverso de la medalla: arriba, una cruz sobre la letra inicial de María, abajo, dos corazones, uno coronado de espinas, otro atravesado por una espada.
+        <br>
+      </p>
+
+      <h5>Historia de una familia</h5>
+
+      <p>
+      140 rue du Bac. Esta es la Casa Madre de las Hijas de la Caridad. Con ellas, con su historia, nos sentimos vinculados.
+        <br>
+      La Compañía de las Hijas de la Caridad, fundada en 1633, fue la obra maestra común de San Vicente y de Santa Luisa. Se desarrolló la Compañía en el mundo entero, siendo fiel a su vocación. Cuando, un día del año 1830, llegó a la calle del Bac, para ser novicia, una joven borgoñona de 24 años…
+        <br>
+      A las apariciones de la Virgen Santísima a Catalina Labouré y a la difusión de la medalla milagrosa siguió un extraordinario aumento de vocaciones, tanto para las Hijas de la Caridad como para los Padres de la Misión. El fervor creció más que nunca.
+        <br>
+      A lo largo de los años, la Compañía siguió cumpliendo su servicio respetando el espíritu de los fundadores: humildad, sencillez, caridad.
+        <br>
+      Hoy, las Hijas de la Caridad están presentes en 91 países de los cinco continentes, sobre todo en los más pobres. Son aproximadamente 20 000 en el mundo. En Europa, son 13 000. En Francia, 1000.
+        <br>
+      </p>
+
+
+    </ion-col>
+
+  </ion-row>
+
+    <ion-row *ngIf="language=='english'" padding>
+    <ion-col>
+      <h5>Catherine Labouré (1806 -1876)</h5>
+
+      <p>
+      Catherine Labouré was born on May 2, 1806, in a town in Bourgogne, France, called Fain-les-Moutiers. She was the eighth of ten children born to Madeleine and Pierre Labouré, who owned a farm. The death of Madeleine at age 46 plunged the family into mourning. Catherine, in tears, climbed on a chair to reach the statue of the Blessed Virgin and kissed it, saying: “Now you will be my mother.”
+      At age twenty-four, Catherine, after overcoming many obstacles, entered the Seminary (novitiate) at the Mother House of the Daughters of Charity, on rue du Bac in Paris. It was here in the Chapel that the Blessed Virgin appeared to her several months later, the first time on the night of July 18-19, 1830, to tell her about a mission to be confided to her, the second time the following November 27, to show Catherine the medal that she was asked to have made.
+      The following year, having completed her Seminary, Sister Catherine was sent to Reuilly, at that time a very poor neighbourhood in the southeast of Paris. She would serve elderly men there until the end of her life, keeping her secret to herself, while the medal miraculously spread throughout the world.
+      Catherine Labouré died in peace on December 31, 1876: “I am going to heaven… to see Our Lord, His Mother and Saint Vincent.”
+      In 1933, at the time of her beatification, the vault where she was buried at the chapel in Reuilly was opened. The body of Catherine was found to be intact and was transferred to the Chapel at rue du Bac and placed under the altar of Our Lady of the Globe.
+      </p>
+
+      <p>
+      <strong>July 18, 1830</strong>, the eve of the feast of Saint Vincent whom she loved so much and whose heart she had seen overflowing with love, Catherine prayed that, through his intercession, her desire to see the Blessed Virgin would finally be fulfilled.  At eleven-thirty at night, she was called by name. A mysterious child was at the foot of her bed and asked her to get up. “The Blessed Virgin is waiting for you.” Catherine dressed and followed the child who was “bringing rays of brightness wherever he passed.” Having arrived in the chapel, St. Catherine stopped near the chair used by the priest in the sanctuary (current location of the statue of Saint Joseph).  She then heard a sound “like the rustle of a silk dress.”  Her little guide said, “Here is the Blessed Virgin.” She hesitated. But the child repeated in a stronger tone of voice, “Here is the Blessed Virgin.” In a single bound, Catherine was at the feet of the Blessed Virgin, seated on a chair and rested her hands on the knees of the Mother of God. “There, a period of time passed, the sweetest of my life.  It would be impossible for me to say what I experienced.  The Blessed Virgin told me how I should behave towards my spiritual director and also several other things.” The Blessed Virgin pointed to the altar where the tabernacle was and said, “Come to the foot of this altar.  Here, graces will be spread over all who ask for them with confidence and fervour.” A difficult mission was announced as well as a request for the establishment of a Confraternity of the Children of Mary.  Father Aladel would accomplish this request on February 2, 1840.
+      </p>
+      <p>
+      <strong>November 27, 1830</strong>, the Blessed Virgin appeared to Catherine again in the chapel.  This time, it was at 5:30 pm, during meditation, under the painting of Saint Joseph (current location of Our Lady of the Globe).  First, Catherine saw something like two living paintings, one fading into the other, in which the Blessed Virgin stood on a half-globe, her feet crushing a serpent. In this first image, the Virgin held a small golden globe topped with a cross, which she lifted up toward heaven.  Catherine heard, “This globe represents the entire world, including France, and every person.” In the second image, beautiful rays of light stream from the Blessed Virgin’s open hands, covered with jewelled rings.  At that same moment St. Catherine heard a voice saying, “These rays are a symbol of the graces that I pour out on those who ask them of me.” Then an oval formed around the apparition, and Catherine saw in a semi-circle this invocation: “O Mary conceived without sin, pray for us who have recourse to you,” emblazoned in gold letters. She then heard a voice saying, “Have a medal made according to this model. For those who wear it with confidence, there will be abundant graces.” Finally, the image turned, and Catherine saw the reverse side of the medal: the letter M surmounted with a little cross and two hearts, one crowned with thorns and the other pierced with a sword, below.
+      </p>
+
+      <p>
+      We are at the <strong>Mother House of the Daughters of Charity</strong>.  We are connected to their history as well.  The Company of the Daughters of Charity, founded in 1633, was the shared masterpiece of Saint Vincent and Saint Louise.  The Company has expanded throughout the world in fidelity to its charism.
+        <br>
+      The apparitions of the Virgin Mary to Catherine Labouré in 1830 and the diffusion of the Miraculous Medal were followed by an extraordinary growth in vocations, both to the Daughters of Charity and to the Congregation of the Mission.  Their members’ fervour became even stronger.  Over the years, the Company continued its service according to the spirit of the Founders: humility, simplicity and charity.
+        <br>
+      The Daughters of Charity are now found on all five continents.
+      </p>
 
     </ion-col>
   </ion-row>
