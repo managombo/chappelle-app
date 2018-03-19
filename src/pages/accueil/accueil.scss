@@ -7,8 +7,10 @@ page-accueil {
   }
   .home_image{
     background: url("../assets/imgs/accueil_background.jpg");
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     background-position: center;
+    background-color: #5fb0e7;
   }
 
   .title{
@@ -27,7 +29,8 @@ page-accueil {
   }
 
   .menuIcon{
-    width: 17.5vw;
+    width: 11.25vh;
+    //height: 10%;
 
   }
 
@@ -44,7 +47,7 @@ page-accueil {
   .textMenu{
     padding-left: 11% !important;
     padding-right: 11% !important;
-    font-size: 3.6vw !important;
+    font-size: 3.1vw !important;
     font-weight: bold;
     padding-top: 2px !important;
   }

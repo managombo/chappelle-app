@@ -15,8 +15,8 @@ export class RssService{
   load(){
     console.log('loadservice');
     return Observable.create(s=>{
-      // this.http.get('/priere/feed', { responseType: 'text' })
-      this.http.get('http://www.medaille-miraculeuse.fr/feed', { responseType: 'text' })
+      // this.http.get('/priere', { responseType: 'text' })
+      this.http.get('https://www.medaille-miraculeuse.fr/feed', { responseType: 'text' })
       // this.http.get('assets/xml/test.xml', { responseType: 'text' })
         .map(res=>res.toString())
         .subscribe(data => {

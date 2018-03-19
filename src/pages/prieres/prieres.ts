@@ -50,8 +50,8 @@ export class PrieresPage implements OnInit{
     });
 
     this.loading.present();
-
-    this.http.get('https://www.medaille-miraculeuse.fr/feed', { responseType: 'text' })
+    // this.http.get('/priere/feed', { responseType: 'text' })
+    this.http.get('https://www.medaille-miraculeuse.fr/feed')
     // this.http.get('https://raw.githubusercontent.com/managombo/chappelle-app/master/src/assets/xml/test.xml', { responseType: 'text' })
     // this.http.get('assets/xml/test.xml', { responseType: 'text' })
       .map(res=>res.toString())

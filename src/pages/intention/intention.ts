@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { Storage } from '@ionic/storage';
-import {HttpClient} from "@angular/common/http";
+import {Component} from '@angular/core';
+import {AlertController, IonicPage, NavController, NavParams} from 'ionic-angular';
+import {Storage} from '@ionic/storage';
+import {HttpClient, HttpHeaders} from "@angular/common/http";
+
 
 /**
  * Generated class for the IntentionPage page.
@@ -18,13 +19,17 @@ import {HttpClient} from "@angular/common/http";
 export class IntentionPage {
 
   prayType = "thanks";
+  name;
+  subName;
+  content;
   language;
 ;
-  constructor(
-    public navCtrl: NavController,
-    public navParams: NavParams,
-    private storage: Storage,
-    private http: HttpClient
+
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              private storage: Storage,
+              private http: HttpClient,
+              private alertCtrl: AlertController
   ) {
   }
 
@@ -33,28 +38,73 @@ export class IntentionPage {
   }
 
 
-
-  ionViewWillEnter(){
+  ionViewWillEnter() {
     this.storage.get('language').then((val) => {
       this.language = val;
     });
   }
 
-  onSend(){
 
-    var option = {
-      hostname : "35.189.73.232" ,
-      port : 3000 ,
-      method : "POST",
-      path : "/"
+  submit() {
+
+    var typepriere = {
+      "illness": "Maladie et problèmes de santé",
+      "thanks": "Remerciement",
+      "school-failure": "Echec académique",
+      "family-conflict": "Conflit Familial",
+      "work-conflict": "Conflit de travail",
+      "job-search": "Recherche d'emploi"
     }
 
-   this.http.get(option , function(resp){
-      resp.on("data",function(chunck){
-        console.log(chunck.toString());
+    var link = 'http://35.189.73.232:3000';
+    var myData = JSON.stringify({
+      name: this.name,
+      subName: this.subName,
+      prayType: typepriere[this.prayType],
+      content: this.content,
+      language: this.language
+
+    });
+
+    console.log(myData);
+
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
       })
-    })
-    request.end();
+    };
+
+    this.http.post(link, myData, httpOptions)
+      .subscribe(data => {
+        console.log(data); //https://stackoverflow.com/questions/39574305/property-body-does-not-exist-on-type-response
+
+        var message = {
+          french: "Message envoyé",
+          english: "Message envoyé",
+          spanish: "Mensaje enviado"
+        }
+
+        // var messageButton = {
+        //   french: "Valier",
+        //   english: "Message envoyé",
+        //   spanish: "Mensaje enviado"
+        // }
+
+        let alert = this.alertCtrl.create({
+          title: message[this.language],
+          buttons: ['Ok']
+        });
+
+        alert.present();
+
+        this.name= '';
+        this.subName= '';
+        this.prayType= '';
+        this.content='';
+
+      }, error => {
+        console.log("Oooops!");
+      });
   }
 
 }

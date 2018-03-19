@@ -218,11 +218,15 @@ export class AgendaPage implements OnInit {
 
             var timezone = moment.tz.guess();
 
-
+            // console.log("initial date begin "+pelerinage.date+" "+pelerinage.heure_debut);
             var starthour = moment.tz(pelerinage.date+" "+pelerinage.heure_debut, timezone).clone().tz("Europe/Gibraltar").toDate();
-            starthour = moment.tz(starthour.toString(), timezone).clone().tz("Europe/Gibraltar").toDate();
-            var endhour = moment.tz(pelerinage.date+" 23:59:59", "Europe/Paris").clone().tz("Europe/Gibraltar").toDate();
-            endhour = moment.tz(endhour.toString(), timezone).clone().tz("Europe/Gibraltar").toDate();
+            // console.log("final date begin "+starthour);
+            // starthour = moment.tz(starthour.toString(), timezone).clone().tz("Europe/Gibraltar").toDate();
+            // console.log("initial date end "+pelerinage.date+" 23:59:59")
+            // var endhour = moment.tz(pelerinage.date+" 23:59:59", "Europe/Paris").clone().tz("Europe/Gibraltar").toDate();
+            var endhour = moment.tz(pelerinage.date+" 23:59:59", timezone).clone().tz("Europe/Gibraltar").toDate();
+            // console.log("final date end "+endhour);
+            // endhour = moment.tz(endhour.toString(), timezone).clone().tz("Europe/Gibraltar").toDate();
             // var actual_date = new Date();
             // var actual_paris_date = actual_date.tz("Europe/Paris").format('YYYY-MM-DD HH:mm:ss')
             // endhour.setHours(endhour.getHours() + 1);
