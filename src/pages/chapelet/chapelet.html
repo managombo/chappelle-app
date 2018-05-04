@@ -5,130 +5,343 @@
   Ionic pages and navigation.
 -->
 
-  <ion-header>
-      <ion-navbar>
-        <ion-title *ngIf="language=='french'">A propos du Chapelet</ion-title>
-        <ion-title *ngIf="language=='english'">About the Rosary</ion-title>
-        <ion-title *ngIf="language=='spanish'">Acerca del rosario</ion-title>
-      </ion-navbar>
+<ion-header>
+  <ion-navbar>
+    <ion-title *ngIf="language=='french'">A propos du Chapelet</ion-title>
+    <ion-title *ngIf="language=='english'">About the Rosary</ion-title>
+    <ion-title *ngIf="language=='spanish'">Acerca del rosario</ion-title>
+    <ion-title *ngIf="language=='portuguese'">Sobre o Rosário</ion-title>
+    <ion-title *ngIf="language=='arabic'">حول الوردية</ion-title>
+  </ion-navbar>
 
-  </ion-header>
-
-
-  <ion-content >
-    <label *ngIf="language=='french'">
-      <ion-row style="margin-top: 0 !important; padding-top: 0 !important;">
-        <ion-col style="margin: 0 !important; padding: 0 !important;">
-          <img src="assets/imgs/Mode_d’emploi_chapelet.jpg" alt="" style="width: 100%">
-        </ion-col>
-
-      </ion-row>
-      <ion-row padding>
-        <ion-col>
+</ion-header>
 
 
+<ion-content>
+  <label *ngIf="language=='french'">
+    <ion-row style="margin-top: 0 !important; padding-top: 0 !important;">
+      <ion-col style="margin: 0 !important; padding: 0 !important;">
+        <img src="assets/imgs/Mode_d’emploi_chapelet.jpg" alt="" style="width: 100%">
+      </ion-col>
 
-          <h6>Une démarche féconde</h6>
-          <p>Sur la mer de la vie, naviguons en regardant Marie! Les mystères de la vie du Christ que nous contemplons avec elle dans le Rosaire seront nos balises. Selon que notre cap sera joyeux, lumineux, douloureux ou glorieux, comme la mer reflète le ciel, nos journées auront une couleur spirituelle.</p>
-          <h6>Une prière litanique</h6>
-          <p>Répéter, c’est bien ennuyeux? Peut-être pas si nous nous laissons imprégner par le mystère de l’amour qui ne se lasse pas de se tourner vers la personne aimée… Dans le Christ, Dieu n’a pas seulement un coeur divin mais il a aussi un coeur humain. « M’aimes-tu? » demande Jésus, par trois fois, à Pierre. Trois fois, Pierre répond: « Seigneur, tu sais bien que je t’aime ». La beauté de cette répétition, qui manifeste l’amour, habite aussi le Rosaire.</p>
-          <h6>Laisser parler Dieu</h6>
-          <p>Même s’il nous est bien connu, considérons le passage d’Evangile qui expose le mystère en introduction à chaque dizaine comme prononcé pour aujourd’hui et pour nous. Dans le silence intérieur, la Parole de Dieu agit dans les âmes avec une efficacité particulière.</p>
-          <h6>Le recours à l’imagination</h6>
-          <p>Les vingt mystères du Rosaire sont comme vingt tableaux qui nous font entrer plus avant dans l’intimité de Jésus et Marie. On peut camper le décor en se transportant en esprit au lieu indiqué, ou en regardant une image pour guider son imagination vers l’épisode de la vie de Jésus et de Marie.</p>
-          <h6>Une grâce à demander</h6>
-          <p>Par la contemplation du mystère et à l’écoute de notre coeur, demandons la grâce de mettre en pratique l’Evangile médité.</p>
-          <hr>
-          <h4><span style="color: #5fb0e7;">Mode d’emploi</span></h4>
-          <p>Choisissons, parmi les quatre cycles de mystères, celui que nous voulons méditer avec le chapelet. L’Eglise recommande un certain ordre.</p>
-          <p>Au début du chapelet, le <strong>Signe de la Croix</strong> est le point de départ de notre chemin de contemplation. Puis nous affirmons notre foi en disant <strong>Je crois en Dieu.</strong></p>
-          <p>Au premier grain, un <strong>Notre Père</strong>&nbsp;: Jésus veut nous introduire dans l’intimité de son Père. Quel honneur pour nous! Et en nous apprenant à appeler Dieu « Père », il fait aussi de nous ses frères et nous fait frères les uns des autres.</p>
-          <p>Aux trois grains suivants, trois <strong>Je vous salue Marie</strong>: En reprenant les paroles d’allégresse de l’ange Gabriel et d’Elisabeth à la Vierge Marie, nous partageons leur émerveillement devant le chef d’oeuvre de Dieu.</p>
-          <p>Au centre de la prière, le nom de Jésus: par Lui seul nous est donné le Salut. Enfin nous confions notre vie et l’heure de notre mort à l’intercession de celle qui est Mère de Dieu.</p>
-          <p>Puis un <strong>Gloire au Père</strong>&nbsp;: Notre perspective, c’est le mystère de la Trinité!<br>
-            On récite ensuite les <strong>cinq dizaines du chapelet</strong>.</p>
-          <p>Pour chacune, on considère d’abord un événement de la vie de Jésus et Marie, soit un «&nbsp;mystère&nbsp;» du cycle choisi. Puis au premier grain, on dit un <strong>Notre Père</strong>, et aux dix grains suivants les <strong>Je vous salue Marie</strong>, dans lesquels on peut insérer une clausule, c’est-à-dire des mots qui illustrent le mystère.</p>
-          <p>Terminons par un <strong>Gloire au Père</strong>, et si l’on veut, par les mots inscrits sur la Médaille Miraculeuse: <strong>Ô Marie</strong>…</p>
+    </ion-row>
+    <ion-row padding>
+      <ion-col>
 
 
-        </ion-col>
-      </ion-row>
-    </label>
-
-    <label *ngIf="language=='english'">
-      <ion-row padding>
-        <ion-col >
-          The Rosary a treasure to rediscover! Have you already looked at the Rosary beads?
-          It is a chain, a gentle chain, that links us to God, our Father, and to others, our brothers in Christ. This filial and fraternal chain converges towards a cross because it is Christ who opens up and leads the way to prayer. “ To recite the Rosary, is to contemplate with Mary, the face of Christ”  wrote John-Paul II in the Letter of the Rosary, 16th October, 2002.
-          <br>
-
-          <h6>The origins</h6>
-          <strong>From the earliest times of the Church</strong>, Mary is united with her Son Jesus in the love of Christians and the prayer of the faithful.
-          <br>
-          <strong>In the third century</strong>, we turn to Mary by repeating the words of the angel Gabriel at the Annunciation: "I greet you, full of grace."<br>
-          <strong>In the 9th century</strong>, the antiphon of the offertory of the 4th Sunday of Advent adds to the greeting of the angel to Mary the exclamation of Elizabeth during the Visitation. Only the name of Mary is added to the text. It will be, until the end of the fifteenth century, the first expression of Hail Mary.<br>
-          <strong>In the twelfth century</strong>, devotion to Mary took an considerable importance in the West. This antiphon of the Ave Maria becomes a popular prayer that we like to repeat, as at the same time, in the East, we repeat the name of Jesus in what is called the prayer of the heart. In the monasteries it gradually replaces the Pater Noster recited by the lay brothers while the monks sing the psalms in Latin. Knotted cords and invented grain bowls, perhaps under the influence of Muslims encountered during pilgrimages to the Holy Land or during the first Crusades, to count the Psalms and the Lord's Prayer, will be used from then on, to count the Hail Mary. We are talking about the Psalter of Mary.<br>
-          <strong>In the thirteenth century</strong>, the great mystic Saint Gertrude adds the name of Jesus in conclusion of Hail Mary.<br>
-          <strong>In the fourteenth century</strong>, we like to crown the statues of the Virgin with little hats of flowers or rosaries, or with garlands of roses or rosaries, like those we used to dress young girls on feast days. It is then, that these pretty names of cords and abacuses were given to these grains which serve to count the Paters and the Ave. Every Ave Maria is like a rose offered to the Virgin Mary!<br>
-
-          <h6>Dominique the Carthusian father of the Rosary</h6>
-          <strong>In the 15th century</strong>, in Prussia, the prior of the Chartreuse of Trèves advises a novice to recite every day fifty Ave Maria meditating the life of Jesus. The young Carthusian Dominique then wrote 50 short meditations, or clausulae, not only in Latin but also in German. His prior is seduced by this new proposal and sends it to various monasteries of his order. Then Dominique writes a series of three times 50 clausulae, in parallel with the 150 Psalms. Little by little, to facilitate the memorization, we move to the use of grouping the Ave in fifteen tens, all introduced by a Pater. This reduces the number of clausulae from 150 to 15. The Rosary is born. Subsequently, in French language there are two words : we reserve the use of the word « Rosary » to fifteen tens, « Chapelet » designating only five. It is the brother Alain de la Roche, born in Brittany in 1428 and entered into the Order of the preachers (Dominicans) who diffused it widely. He preaches in Flanders then in Lille where, in contact with Carthusian monasteries, he discovers the clausulae of Dominic of Prussia which enthuse him. Alain de la Roche becomes the great apostle of the Rosary. He preaches the creation of the Rosary Brotherhoods, whose success is tremendous, racing as far as Italy and the rest of Western Europe.
-          <br>
-          Curiously, Alain de la Roche attributes the origin of the Rosary to Saint Dominic, the founder of his order, who died in 1221! Although without any historical foundation, this legend will be repeated until very recently.
-          <br>
-          At the end of the fifteenth century, the phrase « Holy Mary, Mother of God, pray for us sinners » appears. The adjective « poor » attached to « sinners » is added later.
-          <br>
-
-          <h6>The prayer of the Christian people</h6>
-          <strong>In the sixteenth century</strong>, the printing press allows to multiply the booklets decorated with engravings representing the « mysteries" chosen for meditation.
-          <br>
-          <strong>In 1571</strong>, Pope Pius V, Dominican, established the Day of Our Lady of the Rosary on October 7, already feast of the brotherhood, in thanksgiving for the victory of Lepante on the Turks which was considered as a miracle obtained by the prayer of the Rosary in which all Christendom was involved at his request.<br>
-          <strong>In 1572</strong> the same Pie V formalizes the list of fifteen mysteries. The Rosary becomes the prayer of the Christian people.<br>
-          <strong>Throughout the centuries</strong>, great Christians will attach their names.<br>
-          <strong>In the eighteenth century</strong>, Louis-Marie Grignion de Montfort is the great apostle of the Rosary.<br>
-          <strong>In the nineteenth century</strong> Pauline Jaricot launches the Living Rosary; At the Grotto of Lourdes, in 1858, Bernadette Soubirou recites the Rosary with the Blessed Virgin; Bartolo Longo founded in Pompeii a sanctuary dedicated to the Virgin of the Holy Rosary; Pope Leo XIII devotes twelve encyclicals to prayer, so he was known as « the Pope of the Rosary. »<br>
-          <strong>In the 20th century</strong>, in Fatima, in 1917, the Virgin herself declared to three children: "I am Our Lady of the Rosary. I have come to urge the faithful recite the rosary every day, do penance for their sins and change their lives. "<br>
-          <strong>At the beginning of the twenty-first century</strong>, John Paul II proclaims a year of the Rosary. He utters a poignant cry to all Christians: "Let not my call be a dead letter," and add to the fifteen mysteries, joyous, painful, glorious, "little new ones," the five luminous mysteries.<br>
-        </ion-col>
-      </ion-row>
-    </label>
-
-    <label *ngIf="language=='spanish'">
-      <ion-row padding>
-        <ion-col >
+        <h6>Une démarche féconde</h6>
+        <p>Sur la mer de la vie, naviguons en regardant Marie! Les mystères de la vie du Christ que nous contemplons
+          avec elle dans le Rosaire seront nos balises. Selon que notre cap sera joyeux, lumineux, douloureux ou
+          glorieux, comme la mer reflète le ciel, nos journées auront une couleur spirituelle.</p>
+        <h6>Une prière litanique</h6>
+        <p>Répéter, c’est bien ennuyeux? Peut-être pas si nous nous laissons imprégner par le mystère de l’amour qui ne
+          se lasse pas de se tourner vers la personne aimée… Dans le Christ, Dieu n’a pas seulement un coeur divin mais
+          il a aussi un coeur humain. « M’aimes-tu? » demande Jésus, par trois fois, à Pierre. Trois fois, Pierre
+          répond: « Seigneur, tu sais bien que je t’aime ». La beauté de cette répétition, qui manifeste l’amour, habite
+          aussi le Rosaire.</p>
+        <h6>Laisser parler Dieu</h6>
+        <p>Même s’il nous est bien connu, considérons le passage d’Evangile qui expose le mystère en introduction à
+          chaque dizaine comme prononcé pour aujourd’hui et pour nous. Dans le silence intérieur, la Parole de Dieu agit
+          dans les âmes avec une efficacité particulière.</p>
+        <h6>Le recours à l’imagination</h6>
+        <p>Les vingt mystères du Rosaire sont comme vingt tableaux qui nous font entrer plus avant dans l’intimité de
+          Jésus et Marie. On peut camper le décor en se transportant en esprit au lieu indiqué, ou en regardant une
+          image pour guider son imagination vers l’épisode de la vie de Jésus et de Marie.</p>
+        <h6>Une grâce à demander</h6>
+        <p>Par la contemplation du mystère et à l’écoute de notre coeur, demandons la grâce de mettre en pratique
+          l’Evangile médité.</p>
+        <hr>
+        <h4><span style="color: #5fb0e7;">Mode d’emploi</span></h4>
+        <p>Choisissons, parmi les quatre cycles de mystères, celui que nous voulons méditer avec le chapelet. L’Eglise
+          recommande un certain ordre.</p>
+        <p>Au début du chapelet, le <strong>Signe de la Croix</strong> est le point de départ de notre chemin de
+          contemplation. Puis nous affirmons notre foi en disant <strong>Je crois en Dieu.</strong></p>
+        <p>Au premier grain, un <strong>Notre Père</strong>&nbsp;: Jésus veut nous introduire dans l’intimité de son
+          Père. Quel honneur pour nous! Et en nous apprenant à appeler Dieu « Père », il fait aussi de nous ses frères
+          et nous fait frères les uns des autres.</p>
+        <p>Aux trois grains suivants, trois <strong>Je vous salue Marie</strong>: En reprenant les paroles d’allégresse
+          de l’ange Gabriel et d’Elisabeth à la Vierge Marie, nous partageons leur émerveillement devant le chef
+          d’oeuvre de Dieu.</p>
+        <p>Au centre de la prière, le nom de Jésus: par Lui seul nous est donné le Salut. Enfin nous confions notre vie
+          et l’heure de notre mort à l’intercession de celle qui est Mère de Dieu.</p>
+        <p>Puis un <strong>Gloire au Père</strong>&nbsp;: Notre perspective, c’est le mystère de la Trinité!<br>
+          On récite ensuite les <strong>cinq dizaines du chapelet</strong>.</p>
+        <p>Pour chacune, on considère d’abord un événement de la vie de Jésus et Marie, soit un «&nbsp;mystère&nbsp;» du
+          cycle choisi. Puis au premier grain, on dit un <strong>Notre Père</strong>, et aux dix grains suivants les
+          <strong>Je vous salue Marie</strong>, dans lesquels on peut insérer une clausule, c’est-à-dire des mots qui
+          illustrent le mystère.</p>
+        <p>Terminons par un <strong>Gloire au Père</strong>, et si l’on veut, par les mots inscrits sur la Médaille
+          Miraculeuse: <strong>Ô Marie</strong>…</p>
 
 
+      </ion-col>
+    </ion-row>
+  </label>
 
-          <h6>Los origenes</h6>
-          <strong>Desde los primeros tiempos de la Iglesia</strong>, María se une a su Hijo Jesús en el amor de los cristianos y la oración de los fieles.
-          <br>
-          <strong>En el siglo III </strong>, recurrimos a María repitiendo las palabras del ángel Gabriel en la Anunciación: “Te saludo, lleno de gracia”.<br>
-          <strong>En el siglo IX </strong>, la antífona del ofertorio del 4º domingo de Adviento agrega al saludo del ángel a María la exclamación de Isabel durante la Visitación. Sólo el nombre de María se agrega al texto. Será, hasta el final del siglo XV, la primera expresión de Ave María.<br>
-          <strong>En el siglo XII </strong>, la devoción a María tuvo una importancia considerable en Occidente. Esta antífona del Ave María se convierte en una oración popular que nos gusta repetir, ya que al mismo tiempo, en Oriente, repetimos el nombre de Jesús en lo que se llama la oración del corazón. En los monasterios reemplaza gradualmente al Pater Noster recitado por los hermanos legos mientras los monjes cantan los salmos en latín. Los cordones anudados y los cuencos de grano inventados, tal vez con la influencia de los musulmanes encontrados durante las peregrinaciones a Tierra Santa o durante las primeras Cruzadas, para contar los Salmos y el Padrenuestro, se utilizarán a partir de ese momento para contar el Ave María. Estamos hablando del Salterio de María.<br>
-          <strong>En el siglo XIII </strong>, la gran mística Santa Gertrudis agrega el nombre de Jesús en la conclusión de Avemaría.<br>
-          <strong>En el siglo XIV </strong>, nos gusta coronar las estatuas de la Virgen con pequeños sombreros de flores o rosarios, o con guirnaldas de rosas o rosarios, como los que solíamos vestir niñas en días de fiesta. Es entonces cuando estos bonitos nombres de cuerdas y ábacos fueron dados a estos granos que sirven para contar los Pater y la Ave. ¡Cada Ave María es como una rosa ofrecida a la Virgen María!<br>
+  <label *ngIf="language=='english'">
+    <ion-row padding>
+      <ion-col>
+        The Rosary a treasure to rediscover! Have you already looked at the Rosary beads?
+        It is a chain, a gentle chain, that links us to God, our Father, and to others, our brothers in Christ. This
+        filial and fraternal chain converges towards a cross because it is Christ who opens up and leads the way to
+        prayer. “ To recite the Rosary, is to contemplate with Mary, the face of Christ”  wrote John-Paul II in the
+        Letter of the Rosary, 16th October, 2002.
+        <br>
 
-          <h6>Dominique, el padre cartujo del rosario</h6>
-          <strong>En el siglo XV </strong>, en Prusia, el prior de la Chartreuse de Trèves aconseja a un novato que recite todos los días cincuenta Ave Maria meditando sobre la vida de Jesús. El joven cartujo Dominique luego escribió 50 meditaciones breves, o clausulae, no solo en latín, sino también en alemán. Su prior es seducido por esta nueva propuesta y la envía a varios monasterios de su orden. Entonces Dominique escribe una serie de tres veces 50 clausulae, en paralelo con los 150 salmos. Poco a poco, para facilitar la memorización, pasamos al uso de agrupar la Ave en quince decenas, todo introducido por un Pater. Esto reduce el número de clausulas de 150 a 15. Nace el Rosario. Posteriormente, en idioma francés hay dos palabras: reservamos el uso de la palabra «Rosario» a quince decenas, «Chapelet» designando solo cinco. Es el hermano Alain de la Roche, nacido en Bretaña en 1428 y entró en la Orden de los predicadores (dominicanos) que lo difundió ampliamente. Predica en Flandes y luego en Lille, donde, en contacto con los monasterios cartujanos, descubre los clausulae de Domingo de Prusia que lo entusiasman. Alain de la Roche se convierte en el gran apóstol del Rosario. Predica la creación de las Hermandades del Rosario, cuyo éxito es tremendo, corriendo hasta Italia y el resto de Europa occidental.<br>
-          Curiosamente, Alain de la Roche atribuye el origen del Rosario a Santo Domingo, el fundador de su orden, ¡que murió en 1221! Aunque sin ningún fundamento histórico, esta leyenda se repetirá hasta hace muy poco.<br>
-          A finales del siglo XV aparece la frase «Santa María, Madre de Dios, ruega por nosotros, pecadores». El adjetivo «pobre» unido a «pecadores» se agrega más adelante.<br>
+        <h6>The origins</h6>
+        <strong>From the earliest times of the Church</strong>, Mary is united with her Son Jesus in the love of
+        Christians and the prayer of the faithful.
+        <br>
+        <strong>In the third century</strong>, we turn to Mary by repeating the words of the angel Gabriel at the
+        Annunciation: "I greet you, full of grace."<br>
+        <strong>In the 9th century</strong>, the antiphon of the offertory of the 4th Sunday of Advent adds to the
+        greeting of the angel to Mary the exclamation of Elizabeth during the Visitation. Only the name of Mary is added
+        to the text. It will be, until the end of the fifteenth century, the first expression of Hail Mary.<br>
+        <strong>In the twelfth century</strong>, devotion to Mary took an considerable importance in the West. This
+        antiphon of the Ave Maria becomes a popular prayer that we like to repeat, as at the same time, in the East, we
+        repeat the name of Jesus in what is called the prayer of the heart. In the monasteries it gradually replaces the
+        Pater Noster recited by the lay brothers while the monks sing the psalms in Latin. Knotted cords and invented
+        grain bowls, perhaps under the influence of Muslims encountered during pilgrimages to the Holy Land or during
+        the first Crusades, to count the Psalms and the Lord's Prayer, will be used from then on, to count the Hail
+        Mary. We are talking about the Psalter of Mary.<br>
+        <strong>In the thirteenth century</strong>, the great mystic Saint Gertrude adds the name of Jesus in conclusion
+        of Hail Mary.<br>
+        <strong>In the fourteenth century</strong>, we like to crown the statues of the Virgin with little hats of
+        flowers or rosaries, or with garlands of roses or rosaries, like those we used to dress young girls on feast
+        days. It is then, that these pretty names of cords and abacuses were given to these grains which serve to count
+        the Paters and the Ave. Every Ave Maria is like a rose offered to the Virgin Mary!<br>
+
+        <h6>Dominique the Carthusian father of the Rosary</h6>
+        <strong>In the 15th century</strong>, in Prussia, the prior of the Chartreuse of Trèves advises a novice to
+        recite every day fifty Ave Maria meditating the life of Jesus. The young Carthusian Dominique then wrote 50
+        short meditations, or clausulae, not only in Latin but also in German. His prior is seduced by this new proposal
+        and sends it to various monasteries of his order. Then Dominique writes a series of three times 50 clausulae, in
+        parallel with the 150 Psalms. Little by little, to facilitate the memorization, we move to the use of grouping
+        the Ave in fifteen tens, all introduced by a Pater. This reduces the number of clausulae from 150 to 15. The
+        Rosary is born. Subsequently, in French language there are two words : we reserve the use of the word « Rosary »
+        to fifteen tens, « Chapelet » designating only five. It is the brother Alain de la Roche, born in Brittany in
+        1428 and entered into the Order of the preachers (Dominicans) who diffused it widely. He preaches in Flanders
+        then in Lille where, in contact with Carthusian monasteries, he discovers the clausulae of Dominic of Prussia
+        which enthuse him. Alain de la Roche becomes the great apostle of the Rosary. He preaches the creation of the
+        Rosary Brotherhoods, whose success is tremendous, racing as far as Italy and the rest of Western Europe.
+        <br>
+        Curiously, Alain de la Roche attributes the origin of the Rosary to Saint Dominic, the founder of his order, who
+        died in 1221! Although without any historical foundation, this legend will be repeated until very recently.
+        <br>
+        At the end of the fifteenth century, the phrase « Holy Mary, Mother of God, pray for us sinners » appears. The
+        adjective « poor » attached to « sinners » is added later.
+        <br>
+
+        <h6>The prayer of the Christian people</h6>
+        <strong>In the sixteenth century</strong>, the printing press allows to multiply the booklets decorated with
+        engravings representing the « mysteries" chosen for meditation.
+        <br>
+        <strong>In 1571</strong>, Pope Pius V, Dominican, established the Day of Our Lady of the Rosary on October 7,
+        already feast of the brotherhood, in thanksgiving for the victory of Lepante on the Turks which was considered
+        as a miracle obtained by the prayer of the Rosary in which all Christendom was involved at his request.<br>
+        <strong>In 1572</strong> the same Pie V formalizes the list of fifteen mysteries. The Rosary becomes the prayer
+        of the Christian people.<br>
+        <strong>Throughout the centuries</strong>, great Christians will attach their names.<br>
+        <strong>In the eighteenth century</strong>, Louis-Marie Grignion de Montfort is the great apostle of the Rosary.<br>
+        <strong>In the nineteenth century</strong> Pauline Jaricot launches the Living Rosary; At the Grotto of Lourdes,
+        in 1858, Bernadette Soubirou recites the Rosary with the Blessed Virgin; Bartolo Longo founded in Pompeii a
+        sanctuary dedicated to the Virgin of the Holy Rosary; Pope Leo XIII devotes twelve encyclicals to prayer, so he
+        was known as « the Pope of the Rosary. »<br>
+        <strong>In the 20th century</strong>, in Fatima, in 1917, the Virgin herself declared to three children: "I am
+        Our Lady of the Rosary. I have come to urge the faithful recite the rosary every day, do penance for their sins
+        and change their lives. "<br>
+        <strong>At the beginning of the twenty-first century</strong>, John Paul II proclaims a year of the Rosary. He
+        utters a poignant cry to all Christians: "Let not my call be a dead letter," and add to the fifteen mysteries,
+        joyous, painful, glorious, "little new ones," the five luminous mysteries.<br>
+      </ion-col>
+    </ion-row>
+  </label>
+
+  <label *ngIf="language=='spanish'">
+    <ion-row padding>
+      <ion-col>
 
 
-          <h6>La oración del pueblo cristiano</h6>
-          <strong>En el siglo XVI </strong>, la imprenta permite multiplicar los folletos decorados con grabados que representan los «misterios» elegidos para la meditación.
-          <br>
-          <strong>En 1571, el Papa Pío V </strong>, dominico, estableció el 7 de octubre el Día de Nuestra Señora del Rosario, ya fiesta de la hermandad, en acción de gracias por la victoria de Lepante sobre los turcos, que fue considerado como un milagro obtenido por la oración del Rosario en el que toda la cristiandad estaba involucrada a petición suya.<br>
-          <strong>En 1572 </strong>, el mismo Pie V formaliza la lista de quince misterios. El Rosario se convierte en la oración del pueblo cristiano.<br>
-          <strong>A lo largo de los siglos </strong>, los grandes cristianos adjuntarán sus nombres.<br>
-          <strong>En el siglo XVIII </strong>, Louis-Marie Grignion de Montfort es el gran apóstol del Rosario.<br>
-          <strong>En el siglo XIX </strong>, Pauline Jaricot lanza el Living Rosary; En la Gruta de Lourdes, en 1858, Bernadette Soubirou recita el Rosario con la Santísima Virgen; Bartolo Longo fundó en Pompeya un santuario dedicado a la Virgen del Santo Rosario; El Papa León XIII dedica doce encíclicas a la oración, por lo que era conocido como «el Papa del Rosario». »<br>
-          <strong>En el siglo XX </strong>, en Fátima, en 1917, la propia Virgen declaró a tres niños: "Soy Nuestra Señora del Rosario. He venido a instar a los fieles a recitar el rosario todos los días, hacer penitencia por sus pecados y cambiar sus vidas. "<br>
-          <strong>A comienzos del siglo XXI </strong>, Juan Pablo II proclama un año del Rosario. Lanza un agudo grito a todos los cristianos: "No dejen que mi llamado sea una letra muerta", y añádanse a los quince misterios, gozosos, dolorosos, gloriosos, "pequeños nuevos", los cinco misterios luminosos.<br>
+        <h6>Los origenes</h6>
+        <strong>Desde los primeros tiempos de la Iglesia</strong>, María se une a su Hijo Jesús en el amor de los
+        cristianos y la oración de los fieles.
+        <br>
+        <strong>En el siglo III </strong>, recurrimos a María repitiendo las palabras del ángel Gabriel en la
+        Anunciación: “Te saludo, lleno de gracia”.<br>
+        <strong>En el siglo IX </strong>, la antífona del ofertorio del 4º domingo de Adviento agrega al saludo del
+        ángel a María la exclamación de Isabel durante la Visitación. Sólo el nombre de María se agrega al texto. Será,
+        hasta el final del siglo XV, la primera expresión de Ave María.<br>
+        <strong>En el siglo XII </strong>, la devoción a María tuvo una importancia considerable en Occidente. Esta
+        antífona del Ave María se convierte en una oración popular que nos gusta repetir, ya que al mismo tiempo, en
+        Oriente, repetimos el nombre de Jesús en lo que se llama la oración del corazón. En los monasterios reemplaza
+        gradualmente al Pater Noster recitado por los hermanos legos mientras los monjes cantan los salmos en latín. Los
+        cordones anudados y los cuencos de grano inventados, tal vez con la influencia de los musulmanes encontrados
+        durante las peregrinaciones a Tierra Santa o durante las primeras Cruzadas, para contar los Salmos y el
+        Padrenuestro, se utilizarán a partir de ese momento para contar el Ave María. Estamos hablando del Salterio de
+        María.<br>
+        <strong>En el siglo XIII </strong>, la gran mística Santa Gertrudis agrega el nombre de Jesús en la conclusión
+        de Avemaría.<br>
+        <strong>En el siglo XIV </strong>, nos gusta coronar las estatuas de la Virgen con pequeños sombreros de flores
+        o rosarios, o con guirnaldas de rosas o rosarios, como los que solíamos vestir niñas en días de fiesta. Es
+        entonces cuando estos bonitos nombres de cuerdas y ábacos fueron dados a estos granos que sirven para contar los
+        Pater y la Ave. ¡Cada Ave María es como una rosa ofrecida a la Virgen María!<br>
 
-        </ion-col>
-      </ion-row>
-    </label>
-  </ion-content>
+        <h6>Dominique, el padre cartujo del rosario</h6>
+        <strong>En el siglo XV </strong>, en Prusia, el prior de la Chartreuse de Trèves aconseja a un novato que recite
+        todos los días cincuenta Ave Maria meditando sobre la vida de Jesús. El joven cartujo Dominique luego escribió
+        50 meditaciones breves, o clausulae, no solo en latín, sino también en alemán. Su prior es seducido por esta
+        nueva propuesta y la envía a varios monasterios de su orden. Entonces Dominique escribe una serie de tres veces
+        50 clausulae, en paralelo con los 150 salmos. Poco a poco, para facilitar la memorización, pasamos al uso de
+        agrupar la Ave en quince decenas, todo introducido por un Pater. Esto reduce el número de clausulas de 150 a 15.
+        Nace el Rosario. Posteriormente, en idioma francés hay dos palabras: reservamos el uso de la palabra «Rosario» a
+        quince decenas, «Chapelet» designando solo cinco. Es el hermano Alain de la Roche, nacido en Bretaña en 1428 y
+        entró en la Orden de los predicadores (dominicanos) que lo difundió ampliamente. Predica en Flandes y luego en
+        Lille, donde, en contacto con los monasterios cartujanos, descubre los clausulae de Domingo de Prusia que lo
+        entusiasman. Alain de la Roche se convierte en el gran apóstol del Rosario. Predica la creación de las
+        Hermandades del Rosario, cuyo éxito es tremendo, corriendo hasta Italia y el resto de Europa occidental.<br>
+        Curiosamente, Alain de la Roche atribuye el origen del Rosario a Santo Domingo, el fundador de su orden, ¡que
+        murió en 1221! Aunque sin ningún fundamento histórico, esta leyenda se repetirá hasta hace muy poco.<br>
+        A finales del siglo XV aparece la frase «Santa María, Madre de Dios, ruega por nosotros, pecadores». El adjetivo
+        «pobre» unido a «pecadores» se agrega más adelante.<br>
+
+
+        <h6>La oración del pueblo cristiano</h6>
+        <strong>En el siglo XVI </strong>, la imprenta permite multiplicar los folletos decorados con grabados que
+        representan los «misterios» elegidos para la meditación.
+        <br>
+        <strong>En 1571, el Papa Pío V </strong>, dominico, estableció el 7 de octubre el Día de Nuestra Señora del
+        Rosario, ya fiesta de la hermandad, en acción de gracias por la victoria de Lepante sobre los turcos, que fue
+        considerado como un milagro obtenido por la oración del Rosario en el que toda la cristiandad estaba involucrada
+        a petición suya.<br>
+        <strong>En 1572 </strong>, el mismo Pie V formaliza la lista de quince misterios. El Rosario se convierte en la
+        oración del pueblo cristiano.<br>
+        <strong>A lo largo de los siglos </strong>, los grandes cristianos adjuntarán sus nombres.<br>
+        <strong>En el siglo XVIII </strong>, Louis-Marie Grignion de Montfort es el gran apóstol del Rosario.<br>
+        <strong>En el siglo XIX </strong>, Pauline Jaricot lanza el Living Rosary; En la Gruta de Lourdes, en 1858,
+        Bernadette Soubirou recita el Rosario con la Santísima Virgen; Bartolo Longo fundó en Pompeya un santuario
+        dedicado a la Virgen del Santo Rosario; El Papa León XIII dedica doce encíclicas a la oración, por lo que era
+        conocido como «el Papa del Rosario». »<br>
+        <strong>En el siglo XX </strong>, en Fátima, en 1917, la propia Virgen declaró a tres niños: "Soy Nuestra Señora
+        del Rosario. He venido a instar a los fieles a recitar el rosario todos los días, hacer penitencia por sus
+        pecados y cambiar sus vidas. "<br>
+        <strong>A comienzos del siglo XXI </strong>, Juan Pablo II proclama un año del Rosario. Lanza un agudo grito a
+        todos los cristianos: "No dejen que mi llamado sea una letra muerta", y añádanse a los quince misterios,
+        gozosos, dolorosos, gloriosos, "pequeños nuevos", los cinco misterios luminosos.<br>
+
+      </ion-col>
+    </ion-row>
+  </label>
+
+  <label *ngIf="language=='arabic'">
+    <!--<ion-row style="margin-top: 0 !important; padding-top: 0 !important;">-->
+      <!--<ion-col style="margin: 0 !important; padding: 0 !important;">-->
+        <!--<img src="assets/imgs/المسبحة، طريقة الاستعمال.jpg" alt="" style="width: 100%">-->
+      <!--</ion-col>-->
+
+    <!--</ion-row>-->
+    <ion-row padding>
+      <ion-col>
+
+
+        <h6>نهج مثمر</h6>
+        <p>في بحر الحياة، فلنسير ونحن نتطلع الى العذراء مريم. ان اسرار حياة المسيح التي نتأملها مع مريم العذراء من خلال
+          المسبحة ستكون علامتنا. سوف تكون ايامنا ملونة بالروحانية مهما كان وضعنا، فرحاً، مليئاً بالنور، مؤلماً أو
+          مجيداً.</p>
+        <h6>صلاة مريمية</h6>
+        <p>التكرار، انه ممل؟ ربما ليس كذلك في حال تركنا نفسنا نتعمق في سر المحبة الذي يركز على الشخص الذي نحب. في
+          المسيح، ان الرب ليس لدية فقط قلباً الهياً بل ايضاً قلباً انسانياً. "هل تحبني؟" سأل يسوع بطرس ثلاث مرات. واجاب
+          بطرس ثلاث مرات "سيدي، تعرف جيداً انني احبك". ان جمال هذا التكرار الذي يجسد المحبة موجود ايضاً في المسبحة.</p>
+        <h6>فلندع يسوع يتكلم</h6>
+        <p>حتى ولو كنا نعلم ذلك، فلنتطلع الى فقرة الانجيل التي تتناول الاسرار في مقدمة كل جزء من المسبحة وكأنه يلفظ
+          الينا اليوم. في الصمت الداخلي، تتحرك كلمة يسوع بفعالية مميزة.</p>
+        <h6>اللجوء الى الخيال</h6>
+        <p>ان الاسرار العشرين للمسيحة هي كعشرون لوحة تدخلنا اكثر في خصوصية يسوع ومريم. يمكننا الدخول الى الديكور من خلال
+          انتقالنا الروحي الى المكان المذكور او من خلال النظر الى صورة تأخذ خيالنا الى حلقة حياة يسوع ومريم.</p>
+        <h6>طلب الرحمة</h6>
+        <p>من خلال التأمل بالاسرار والاستماع الى قلبنا، فلنطلب نعمة وضع الانجيل المتأمل في التطبيق.</p>
+        <hr>
+        <h4><span style="color: #5fb0e7;">طريقة الاستعمال</span></h4>
+        <p>Cفلنختر بين الدورات الاربعة للاسرار، تلك التي نريد ان نتأملها في المسبحة. ان الكنيسة تنصح بتسلسل معين.</p>
+        <p>في بداية المسبحة, <strong>إشارة الصليب</strong> هي نقطة بداية طريق التأمل. ومن ثم نؤكد على ايماننا من خلال
+          القول <strong>باننا نؤمن بالمسيح.</strong></p>
+        <p>في الحبة الاولى، نصلي <strong> أبانا الذي في السماوات</strong>&nbsp;: يريد يسوع ان يدخلنا في خصوصية ابيه. يا
+          للشرف! من خلال حملنا على تسمية الرب"ابانا" يجعلنا اخوانه واخوان لبعضنا البعض.</p>
+        <p>في الحبات الثلاثة التالية، نصلي ٣ مرات <strong>السلام عليك يا مريم</strong>: من خلال اعادة كلمات الفرح التي
+          قالها الملاك جبرائيل واليزابيت الى العذراء مريم، نشاركهما اعجابهما بعظمة عمل الرب.</p>
+        <p>في وسط الصلاة، اسم يسوع: من خلاله وحده، يعطى لنا الخلاص. في النهاية نسلمه حياتنا وساعة مماتنا بشفاعة مريم
+          التي هي والدة الرب.</p>
+        <p>ومن بعدها <strong>المجد لله في الأعالي</strong>&nbsp;: ان وجهة نظرنا هو سر الثالوث الاقدس!<br>
+          نقول فيما بعد <strong>العشريات الخمسة للمسبحة</strong>.</p>
+        <p>بالنسبة لكل عشرية، نتأمل في محطة من حياة يسوع ومريم اي «&nbsp;سر&nbsp;» من الدورة التي اخترناها. من ثم، وفي
+          الحبة الاولى، نقول <strong>ابانا الذي في السماوات</strong>, وفي الحبات العشرة نقول <strong>السلام عليك يا
+            مريم</strong>, ويمكن ادخال كلمات تبين السر قيما بين الحبات.</p>
+        <p>ننهي المسبحة <strong>بالمجد لله في الأعالي</strong>, وإذا أردنا من خلال كلمات الايقونة العجائية : : <strong>يا
+          مريم</strong>…</p>
+
+
+      </ion-col>
+    </ion-row>
+  </label>
+
+
+  <label *ngIf="language=='portuguese'">
+    <!--<ion-row style="margin-top: 0 !important; padding-top: 0 !important;">-->
+      <!--<ion-col style="margin: 0 !important; padding: 0 !important;">-->
+        <!--<img src="assets/imgs/Mode_d’emploi_chapelet.jpg" alt="" style="width: 100%">-->
+      <!--</ion-col>-->
+
+    <!--</ion-row>-->
+    <ion-row padding>
+      <ion-col>
+
+
+        <h6>Rosário, instruções de uso</h6>
+        <h6>Uma jornada frutíferae</h6>
+        <p>No mar da vida, vamos navegar olhando para Maria! Os mistérios da vida de Cristo que contemplamos com ela no
+          Rosário serão nossos faróis. Dependendo se nosso curso será alegre, brilhante, doloroso ou glorioso, à medida
+          que o mar reflete o céu, nossos dias terão uma cor espiritual.</p>
+        <h6>Uma oração litânica</h6>
+        <p>Repita, é chato? Talvez não, se nos deixarmos impregnados pelo mistério do amor que nunca se cansa de se
+          voltar para a pessoa amada ... Em Cristo, Deus não só tem um coração divino, mas também tem um coração humano.
+          "Você me ama?» - pergunta Jesus, três vezes, a Pedro. Três vezes, Pedro responde: "Senhor, você sabe que eu te
+          amo". A beleza dessa repetição, que manifesta amor, também vive no Rosário.</p>
+        <h6>Deixe Deus falar</h6>
+        <p>Mesmo se já a conhecemos bem, considere a passagem evangélica que expõe o mistério em introdução a cada
+          dezena, como se fosse pronunciado para hoje e para nós. No silêncio interior, a Palavra de Deus age nas almas
+          com particular eficácia.</p>
+        <h6>O uso da imaginação</h6>
+        <p>Os vinte mistérios do Rosário são como vinte imagens que nos levam mais longe na intimidade de Jesus e Maria.
+          Pode-se colocar o cenário movendo-se em espírito para o lugar indicado, ou olhando uma imagem para orientar a
+          imaginação para o episódio da vida de Jesus e Maria.</p>
+        <h6>Uma graça para pedir</h6>
+        <p>Ao contemplar o mistério e ouvir o nosso coração, peça a graça de pôr em prática o Evangelho meditado.</p>
+        <hr>
+        <h4><span style="color: #5fb0e7;">Instruções de uso</span></h4>
+        <p>Escolha entre os quatro ciclos de mistérios que queremos meditar com o rosário. A Igreja recomenda uma certa
+          ordem.</p>
+        <p>No início do Rosário, o <strong>Sinal da Cruz</strong> é o ponto de partida do nosso caminho de contemplação.
+          Então afirmamos nossa fé dizendo <strong>que acreditamos em Deus.</strong></p>
+        <p>No primeiro grão, um <strong>Pai Nosso</strong>&nbsp;: Jesus quer nos apresentar na intimidade de seu Pai.
+          Que honra para nós! E ensinando-nos a chamar Deus "Pai", ele também nos torna seus irmãos e nos torna irmãos
+          uns dos outros.</p>
+        <p>Para os três grãos seguintes, três <strong>Ave Maria</strong>: Ao repetir as palavras de alegria do anjo
+          Gabriel e Isabel para a Virgem Maria, compartilhamos sua maravilha com a obra-prima de Deus.</p>
+        <p>No centro da oração, o nome de Jesus: somente por Ele somos salvos. Finalmente confiamos nossa vida e a hora
+          da nossa morte à intercessão daquele que é Mãe de Deus.</p>
+        <p>Então um <strong>Glória ao Pai</strong>&nbsp;: Nossa perspectiva é o mistério da Trindade!<br>
+          As cinco dezenas do rosário são recitadas.</p>
+        <p>Para cada uma, consideramos primeiro um evento na vida de Jesus e Maria, um «&nbsp;mistério&nbsp;» do ciclo
+          escolhido. Então, no primeiro grão, dizemos um <strong>Pai Nosso</strong>, e os próximos dez grãos <strong>Ave
+            Maria</strong>, em que podemos inserir um clausule, isto é, palavras que ilustram o mistério.</p>
+        <p>Vamos terminar com uma <strong>Glória ao Pai</strong>, e, se quisermos, pelas palavras inscritas na Medalha
+          Milagrosa: <strong>ó Maria</strong>…</p>
+
+
+      </ion-col>
+    </ion-row>
+  </label>
+
+</ion-content>
 
 
 

@@ -96,6 +96,37 @@
     >
     </calendar>
 
+  <calendar
+    [eventSource]="eventSource"
+    [calendarMode]="calendar_arabic.mode"
+    [currentDate]="calendar_arabic.currentDate"
+    (onCurrentDateChanged)="onCurrentDateChanged($event)"
+    (onEventSelected)="onEventSelected($event)"
+    (onTitleChanged)="onViewTitleChanged($event)"
+    (onTimeSelected)="onTimeSelected($event)"
+    step="30"
+    [monthviewDisplayEventTemplate]="template"
+    [locale]="calendar_arabic.locale"
+    *ngIf="language=='arabic'"
+  >
+  </calendar>
+
+
+  <calendar
+    [eventSource]="eventSource"
+    [calendarMode]="calendar_portuguese.mode"
+    [currentDate]="calendar_portuguese.currentDate"
+    (onCurrentDateChanged)="onCurrentDateChanged($event)"
+    (onEventSelected)="onEventSelected($event)"
+    (onTitleChanged)="onViewTitleChanged($event)"
+    (onTimeSelected)="onTimeSelected($event)"
+    step="30"
+    [monthviewDisplayEventTemplate]="template"
+    [locale]="calendar_portuguese.locale"
+    *ngIf="language=='portuguese'"
+  >
+  </calendar>
+
   <!--</label>-->
 
 
@@ -113,7 +144,7 @@
       </ion-item-divider>
       <ion-item>
         <ion-label>Categoría</ion-label>
-        <ion-select [(ngModel)]="categorySelect" (ionChange)="onActivityFiltered($event)">
+        <ion-select [(ngModel)]="categorySelect" (ionChange)="onActivityFiltered($event)" cancelText="Cancelar" okText="Validar">
           <ion-option value="all">Todo</ion-option>
           <ion-option value="evenement">Evento</ion-option>
           <ion-option value="pelerinage">Peregrinación</ion-option>
@@ -122,7 +153,7 @@
 
       <ion-item>
         <ion-label>País</ion-label>
-        <ion-select [(ngModel)]="countrySelect" (ionChange)="onActivityFiltered($event)">
+        <ion-select [(ngModel)]="countrySelect" (ionChange)="onActivityFiltered($event)" cancelText="Cancelar" okText="Validar">
           <ion-option value="all">Todo</ion-option>
           <ion-option *ngFor="let countryValue of pays" value="{{countryValue.code}}">{{countryValue.nom_fr}}</ion-option>
         </ion-select>
@@ -130,7 +161,7 @@
       <ion-item-divider color="light">
         Otro
       </ion-item-divider>
-      <button ion-button full outline  [navPush]="horaire" style="margin: 0" icon-right> Ver horarios y misas<ion-icon  name="arrow-forward"></ion-icon></button>
+        <button ion-button full outline  [navPush]="horaire" style="margin: 0" icon-right> Ver horarios y misas<ion-icon  name="arrow-forward"></ion-icon></button>
     </ion-list>
 
     <!--<button ion-button clear full  icon-right [navPush]="horaire">Voir horaires d'ouverture <ion-icon name="md-arrow-forward"></ion-icon></button>-->
@@ -147,7 +178,7 @@
           </ion-item-divider>
         <ion-item>
         <ion-label>Catégorie</ion-label>
-        <ion-select [(ngModel)]="categorySelect" (ionChange)="onActivityFiltered($event)">
+        <ion-select [(ngModel)]="categorySelect" (ionChange)="onActivityFiltered($event)" cancelText="Annuler" okText="Valider">
           <ion-option value="all">Tout</ion-option>
           <ion-option value="evenement">Evènement</ion-option>
           <ion-option value="pelerinage">Pélérinage</ion-option>
@@ -156,7 +187,7 @@
 
         <ion-item>
         <ion-label>Pays</ion-label>
-        <ion-select [(ngModel)]="countrySelect" (ionChange)="onActivityFiltered($event)">
+        <ion-select [(ngModel)]="countrySelect" (ionChange)="onActivityFiltered($event)" cancelText="Annuler" okText="Valider">
           <ion-option value="all">Tout</ion-option>
           <ion-option *ngFor="let countryValue of pays" value="{{countryValue.code}}">{{countryValue.nom_fr}}</ion-option>
         </ion-select>
@@ -182,7 +213,7 @@
         <ion-item>
         <ion-label>Category</ion-label>
         <ion-select [(ngModel)]="categorySelect" (ionChange)="onActivityFiltered($event)">
-          <ion-option value="all">Tout</ion-option>
+          <ion-option value="all">All</ion-option>
           <ion-option value="evenement">Event</ion-option>
           <ion-option value="pelerinage">Pilgrimage</ion-option>
         </ion-select>
@@ -190,7 +221,7 @@
 
         <ion-item>
         <ion-label>Country</ion-label>
-        <ion-select [(ngModel)]="countrySelect" (ionChange)="onActivityFiltered($event)">
+        <ion-select [(ngModel)]="countrySelect" (ionChange)="onActivityFiltered($event)" >
           <ion-option value="all">All</ion-option>
           <ion-option *ngFor="let countryValue of pays" value="{{countryValue.code}}">{{countryValue.nom_fr}}</ion-option>
         </ion-select>
@@ -202,6 +233,74 @@
         </ion-list>
 
         <!--<button ion-button clear full  icon-right [navPush]="horaire">Voir horaires d'ouverture <ion-icon name="md-arrow-forward"></ion-icon></button>-->
+
+
+  </ion-toolbar>
+
+  <ion-toolbar style=" padding:0 !important;" *ngIf="language=='arabic'">
+
+        <ion-list style="margin: 0;">
+
+          <ion-item-divider color="light">
+            تصفية التقويم من قبل:
+          </ion-item-divider>
+        <ion-item>
+        <ion-label>الفئة</ion-label>
+        <ion-select [(ngModel)]="categorySelect" (ionChange)="onActivityFiltered($event)"  cancelText="إلغاء" okText="التحقق من صحة">
+          <ion-option value="all">الكل</ion-option>
+          <ion-option value="evenement">هدف</ion-option>
+          <ion-option value="pelerinage">الحج</ion-option>
+        </ion-select>
+        </ion-item>
+
+        <ion-item>
+        <ion-label>بلد</ion-label>
+        <ion-select [(ngModel)]="countrySelect" (ionChange)="onActivityFiltered($event)" cancelText="إلغاء" okText="التحقق من صحة">
+          <ion-option value="all">الكل</ion-option>
+          <ion-option *ngFor="let countryValue of pays" value="{{countryValue.code}}">{{countryValue.nom_fr}}</ion-option>
+        </ion-select>
+        </ion-item>
+          <ion-item-divider color="light">
+            آخر
+          </ion-item-divider>
+          <button ion-button full outline  [navPush]="horaire" style="margin: 0" icon-right> انظر أوقات العمل والجماهير <ion-icon  name="arrow-forward"></ion-icon></button>
+        </ion-list>
+
+        <!--<button ion-button clear full  icon-right [navPush]="horaire">Voir horaires d'ouverture <ion-icon name="md-arrow-forward"></ion-icon></button>-->
+
+
+  </ion-toolbar>
+
+  <ion-toolbar style=" padding:0 !important;" *ngIf="language=='portuguese'">
+
+    <ion-list style="margin: 0;">
+
+      <ion-item-divider color="light">
+        Filtrar calendário por:
+      </ion-item-divider>
+      <ion-item>
+        <ion-label>Categoria</ion-label>
+        <ion-select [(ngModel)]="categorySelect" (ionChange)="onActivityFiltered($event)" cancelText="Anuladora" okText="Valider">
+          <ion-option value="all">Todos</ion-option>
+          <ion-option value="evenement">Evento</ion-option>
+          <ion-option value="pelerinage">Peregrinação</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>País</ion-label>
+        <ion-select [(ngModel)]="countrySelect" (ionChange)="onActivityFiltered($event)" cancelText="Anuladora" okText="Valider">
+          <ion-option value="all">Todos</ion-option>
+          <ion-option *ngFor="let countryValue of pays" value="{{countryValue.code}}">{{countryValue.nom_fr}}</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item-divider color="light">
+        De outros
+      </ion-item-divider>
+      <button ion-button full outline  [navPush]="horaire" style="margin: 0" icon-right> Veja horários de abertura e massas <ion-icon  name="arrow-forward"></ion-icon></button>
+    </ion-list>
+
+    <!--<button ion-button clear full  icon-right [navPush]="horaire">Voir horaires d'ouverture <ion-icon name="md-arrow-forward"></ion-icon></button>-->
 
 
   </ion-toolbar>

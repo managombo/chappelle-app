@@ -10,6 +10,8 @@
       <ion-title *ngIf="language=='french'">Prier le Chapelet</ion-title>
       <ion-title *ngIf="language=='english'">Pray the Rosary</ion-title>
       <ion-title *ngIf="language=='spanish'">Rezar el Rosario</ion-title>
+      <ion-title *ngIf="language=='portuguese'">Rezem o Rosário</ion-title>
+      <ion-title *ngIf="language=='arabic'">صلاة الوردية</ion-title>
     </ion-navbar>
 
 
@@ -220,4 +222,141 @@
       </ion-col>
     </ion-row>
   </label>
+
+  <label *ngIf="language=='arabic'">
+    <ion-row style="height: 50%; background-color: #5fb0e7;">
+      <ion-col text-center >
+        <img src="assets/imgs/chapelet_fond_bleu.jpg" alt="" style="height: 100%" class="main-image">
+      </ion-col>
+    </ion-row>
+    <hr style="margin: 0">
+
+    <ion-row style="height: 50%">
+      <ion-col>
+        <ion-row class="listChapelet" (click)="onNavSelect('apropos')">
+          <ion-col col-3>
+            <img src="assets/imgs/help.png" alt="" item-left >
+          </ion-col>
+          <ion-col col-7>
+            <div class="center-menu">حول الوردية</div>
+          </ion-col>
+          <ion-col col-2>
+            <div class="center-menu">
+              <ion-icon name="arrow-forward" style="font-size: 2em;"></ion-icon>
+            </div>
+          </ion-col>
+
+        </ion-row>
+        <hr style="margin: 0">
+        <ion-row class="listChapelet" (click)="onNavSelect('glorieux')">
+          <ion-col col-3>        <img src="assets/imgs/glorieux.png" alt="" item-left ></ion-col>
+          <ion-col col-7><div class="center-menu">أسرار مجيدة</div></ion-col>
+          <ion-col col-2>
+            <div class="center-menu">
+              <ion-icon name="arrow-forward" style="font-size: 2em;"></ion-icon>
+            </div>
+          </ion-col>
+        </ion-row>
+        <hr style="margin: 0">
+        <ion-row class="listChapelet" (click)="onNavSelect('lumineux')">
+          <ion-col col-3><img src="assets/imgs/lumineux.png" alt="" item-left></ion-col>
+          <ion-col col-7><div class="center-menu">أسرار مضيئة</div></ion-col>
+          <ion-col col-2>
+            <div class="center-menu">
+              <ion-icon name="arrow-forward" style="font-size: 2em;"></ion-icon>
+            </div>
+          </ion-col>
+        </ion-row>
+        <hr style="margin: 0">
+        <ion-row class="listChapelet" (click)="onNavSelect('joyeux')">
+          <ion-col col-3><img src="assets/imgs/joyeux.png" alt="" item-left></ion-col>
+          <ion-col col-7><div class="center-menu">أسرار بهيجة</div></ion-col>
+          <ion-col col-2>
+            <div class="center-menu">
+              <ion-icon name="arrow-forward" style="font-size: 2em;"></ion-icon>
+            </div>
+          </ion-col>
+        </ion-row>
+        <hr style="margin: 0">
+        <ion-row class="listChapelet" (click)="onNavSelect('douloureux')">
+          <ion-col col-3><img src="assets/imgs/douloureux.png" alt="" item-left></ion-col>
+          <ion-col col-7><div class="center-menu">أسرار حزينة</div></ion-col>
+          <ion-col col-2>
+            <div class="center-menu">
+              <ion-icon name="arrow-forward" style="font-size: 2em;"></ion-icon>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </label>
+
+  <label *ngIf="language=='portuguese'">
+    <ion-row style="height: 50%; background-color: #5fb0e7;">
+      <ion-col text-center >
+        <img src="assets/imgs/chapelet_fond_bleu.jpg" alt="" style="height: 100%" class="main-image">
+      </ion-col>
+    </ion-row>
+    <hr style="margin: 0">
+
+    <ion-row style="height: 50%">
+      <ion-col>
+        <ion-row class="listChapelet" (click)="onNavSelect('apropos')">
+          <ion-col col-3>
+            <img src="assets/imgs/help.png" alt="" item-left >
+          </ion-col>
+          <ion-col col-7>
+            <div class="center-menu">Sobre o Rosário</div>
+          </ion-col>
+          <ion-col col-2>
+            <div class="center-menu">
+              <ion-icon name="arrow-forward" style="font-size: 2em;"></ion-icon>
+            </div>
+          </ion-col>
+
+        </ion-row>
+        <hr style="margin: 0">
+        <ion-row class="listChapelet" (click)="onNavSelect('glorieux')">
+          <ion-col col-3>        <img src="assets/imgs/glorieux.png" alt="" item-left ></ion-col>
+          <ion-col col-7><div class="center-menu">Mistérios gloriosos</div></ion-col>
+          <ion-col col-2>
+            <div class="center-menu">
+              <ion-icon name="arrow-forward" style="font-size: 2em;"></ion-icon>
+            </div>
+          </ion-col>
+        </ion-row>
+        <hr style="margin: 0">
+        <ion-row class="listChapelet" (click)="onNavSelect('lumineux')">
+          <ion-col col-3><img src="assets/imgs/lumineux.png" alt="" item-left></ion-col>
+          <ion-col col-7><div class="center-menu">Mistérios luminosos</div></ion-col>
+          <ion-col col-2>
+            <div class="center-menu">
+              <ion-icon name="arrow-forward" style="font-size: 2em;"></ion-icon>
+            </div>
+          </ion-col>
+        </ion-row>
+        <hr style="margin: 0">
+        <ion-row class="listChapelet" (click)="onNavSelect('joyeux')">
+          <ion-col col-3><img src="assets/imgs/joyeux.png" alt="" item-left></ion-col>
+          <ion-col col-7><div class="center-menu">Mistérios alegres</div></ion-col>
+          <ion-col col-2>
+            <div class="center-menu">
+              <ion-icon name="arrow-forward" style="font-size: 2em;"></ion-icon>
+            </div>
+          </ion-col>
+        </ion-row>
+        <hr style="margin: 0">
+        <ion-row class="listChapelet" (click)="onNavSelect('douloureux')">
+          <ion-col col-3><img src="assets/imgs/douloureux.png" alt="" item-left></ion-col>
+          <ion-col col-7><div class="center-menu">Mistérios Dolorosos</div></ion-col>
+          <ion-col col-2>
+            <div class="center-menu">
+              <ion-icon name="arrow-forward" style="font-size: 2em;"></ion-icon>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </label>
+
 </ion-content>

@@ -33,12 +33,17 @@ import {MedaillePage} from "../pages/medaille/medaille";
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
 import localeEs from '@angular/common/locales/es';
+import localeAr from '@angular/common/locales/ar';
+import localePt from '@angular/common/locales/pt';
 import {Push} from "@ionic-native/push";
 import {DeviceFeedback} from "@ionic-native/device-feedback";
 import {FCM} from "@ionic-native/fcm";
+import {UserAgent} from "@ionic-native/user-agent";
 
 registerLocaleData(localeFr);
 registerLocaleData(localeEs);
+registerLocaleData(localeAr);
+registerLocaleData(localePt);
 
 
 @NgModule({
@@ -108,7 +113,8 @@ registerLocaleData(localeEs);
     // {provide: ErrorHandler, useClass: IonicErrorHandler},
     Push,
     DeviceFeedback,
-    FCM
+    FCM,
+    UserAgent,
 
 
     // RssService

@@ -10,6 +10,8 @@
       <ion-title *ngIf="language=='french'">Paramètres</ion-title>
       <ion-title *ngIf="language=='english'">Settings</ion-title>
       <ion-title *ngIf="language=='spanish'">Ajustes</ion-title>
+      <ion-title *ngIf="language=='arabic'">إعدادات</ion-title>
+      <ion-title *ngIf="language=='portuguese'">Configurações</ion-title>
     </ion-navbar>
 
 </ion-header>
@@ -28,6 +30,8 @@
             <ion-option value="english">English</ion-option>
             <ion-option value="french">Français</ion-option>
             <ion-option value="spanish">Español</ion-option>
+            <ion-option value="portuguese">Português</ion-option>
+            <ion-option value="arabic">عربى</ion-option>
             <!--<ion-option value="italian">Italiano</ion-option>-->
             <!--<ion-option value="portuguese">Português</ion-option>-->
           </ion-select>
@@ -50,6 +54,8 @@
             <ion-option value="english">English</ion-option>
             <ion-option value="french">Français</ion-option>
             <ion-option value="spanish">Español</ion-option>
+            <ion-option value="portuguese">Português</ion-option>
+            <ion-option value="arabic">عربى</ion-option>
             <!--<ion-option value="italian">Italiano</ion-option>-->
             <!--<ion-option value="portuguese">Português</ion-option>-->
           </ion-select>
@@ -72,13 +78,63 @@
             <ion-option value="english">English</ion-option>
             <ion-option value="french">Français</ion-option>
             <ion-option value="spanish">Español</ion-option>
+            <ion-option value="portuguese">Português</ion-option>
+            <ion-option value="arabic">عربى</ion-option>
+            <!--<ion-option value="italian">Italiano</ion-option>-->
+            <ion-option value="portuguese">Português</ion-option>
+          </ion-select>
+
+      </ion-item>
+      <ion-item>
+        <ion-label>Notificaciones de oraciones</ion-label>
+        <ion-toggle [(ngModel)]="subscribed" (ionChange)="updateItem()"></ion-toggle>
+      </ion-item>
+    </ion-list>
+  </label>
+
+  <label *ngIf="language=='arabic'">
+    <ion-list style="margin-top: 20%">
+      <ion-item>
+        <ion-label>اختيار اللغة</ion-label>
+
+          <ion-select [(ngModel)]="countrySelect" (ionChange)="onLangageChoosen($event)" cancelText="إلغاء" okText="التحقق من صحة">
+
+            <ion-option value="english">English</ion-option>
+            <ion-option value="french">Français</ion-option>
+            <ion-option value="spanish">Español</ion-option>
+            <ion-option value="portuguese">Português</ion-option>
+            <ion-option value="arabic">عربى</ion-option>
             <!--<ion-option value="italian">Italiano</ion-option>-->
             <!--<ion-option value="portuguese">Português</ion-option>-->
           </ion-select>
 
       </ion-item>
       <ion-item>
-        <ion-label>Notificaciones de oraciones</ion-label>
+        <ion-label>إخطارات الصلاة</ion-label>
+        <ion-toggle [(ngModel)]="subscribed" (ionChange)="updateItem()"></ion-toggle>
+      </ion-item>
+    </ion-list>
+  </label>
+
+  <label *ngIf="language=='portuguese'">
+    <ion-list style="margin-top: 20%">
+      <ion-item>
+        <ion-label>Seleção de idioma</ion-label>
+
+        <ion-select [(ngModel)]="countrySelect" (ionChange)="onLangageChoosen($event)" cancelText="Anuladora" okText="Valider">
+
+          <ion-option value="english">English</ion-option>
+          <ion-option value="french">Français</ion-option>
+          <ion-option value="spanish">Español</ion-option>
+          <ion-option value="portuguese">Português</ion-option>
+          <ion-option value="arabic">عربى</ion-option>
+          <!--<ion-option value="italian">Italiano</ion-option>-->
+          <!--<ion-option value="portuguese">Português</ion-option>-->
+        </ion-select>
+
+      </ion-item>
+      <ion-item>
+        <ion-label> Notificações de oração</ion-label>
         <ion-toggle [(ngModel)]="subscribed" (ionChange)="updateItem()"></ion-toggle>
       </ion-item>
     </ion-list>

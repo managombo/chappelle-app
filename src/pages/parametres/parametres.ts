@@ -68,6 +68,8 @@ export class ParametresPage {
         this.viewCtrl.setBackButtonText('Back');
       } else if (this.language == 'spanish') {
         this.viewCtrl.setBackButtonText('Retorno');
+      }else if (this.language == 'arabic') {
+        this.viewCtrl.setBackButtonText('الى الخلف');
       }
     }
 

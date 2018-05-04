@@ -3,7 +3,7 @@
     <name>Chappelle Miraculeuse</name>
     <description>An awesome Ionic/Cordova app.</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
-    <content src="index.html" />
+    <content original-src="index.html" src="http://192.168.1.150:8100" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -42,6 +42,12 @@
         <splash density="port-xxxhdpi" src="resources/android/splash/drawable-port-xxxhdpi-screen.png" />
     </platform>
     <platform name="ios">
+        <config-file parent="NSAppTransportSecurity" platform="ios" target="*-Info.plist">
+            <dict>
+                <key>NSAllowsArbitraryLoads</key>
+                <true />
+            </dict>
+        </config-file>
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
         <icon height="57" src="resources/ios/icon/icon.png" width="57" />
@@ -105,7 +111,7 @@
         <variable name="SENDER_ID" value="328264864972" />
     </plugin>
     <allow-navigation href="http://192.168.1.5:8100" />
+    <allow-navigation href="http://192.168.1.150:8101" />
     <engine name="android" spec="~6.3.0" />
     <engine name="browser" spec="~5.0.3" />
-    <allow-navigation href="http://192.168.1.150:8101" />
 </widget>

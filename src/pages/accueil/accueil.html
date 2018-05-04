@@ -29,6 +29,26 @@
      </ion-navbar>
    </label>
 
+   <label *ngIf="language=='arabic'">
+     <ion-navbar style="height: 100%">
+       <ion-title>
+         <ion-item style="background: transparent;" text-center text-wrap>
+           كنيسة سيدة ميدالية المعجزة
+         </ion-item>
+       </ion-title>
+     </ion-navbar>
+   </label>
+
+   <label *ngIf="language=='portuguese'">
+     <ion-navbar style="height: 100%">
+       <ion-title>
+         <ion-item style="background: transparent;" text-center text-wrap>
+           Capela de Nossa Senhora da Medalha Milagrosa
+         </ion-item>
+       </ion-title>
+     </ion-navbar>
+   </label>
+
 
 
   </ion-header>
@@ -177,7 +197,7 @@
 
     <label *ngIf="language=='english'">
       <ion-row class="home_image" style="height: 40%"></ion-row>
-      <ion-row style="height: 55%">
+      <ion-row style="height: 60%">
         <ion-col style="color: #707070 !important; ">
           <ion-row style="height: 33%; padding-top: 1%; margin-left: 5px; margin-right: 5px;">
             <ion-col col-4 text-center (click)="onNavSelect('prieres')" class="menu">
@@ -316,7 +336,7 @@
 
     <label *ngIf="language=='spanish'">
       <ion-row class="home_image" style="height: 40%"></ion-row>
-      <ion-row style="height: 55%">
+      <ion-row style="height: 60%">
         <ion-col style="color: #707070 !important; ">
           <ion-row style="height: 33%; padding-top: 10px; margin-left: 5px; margin-right: 5px;">
             <ion-col col-4 text-center (click)="onNavSelect('prieres')" class="menu">
@@ -451,6 +471,284 @@
         </ion-col>
       </ion-row>
     </label>
+
+    <label *ngIf="language=='arabic'">
+      <ion-row class="home_image" style="height: 40%"></ion-row>
+      <ion-row style="height: 60%">
+        <ion-col style="color: #707070 !important; ">
+          <ion-row style="height: 33%; padding-top: 1%; margin-left: 5px; margin-right: 5px;">
+            <ion-col col-4 text-center (click)="onNavSelect('prieres')" class="menu">
+              <ion-row>
+                <ion-col>
+                  <!--<ion-icon  name="brush"></ion-icon>-->
+                  <img src="assets/imgs/priere.png" alt="" class="menuIcon">
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col class="textMenu">
+                  صلاة اليوم الفرنسية
+                </ion-col>
+              </ion-row>
+            </ion-col>
+            <ion-col col-4 text-center (click)="onNavSelect('chapelets')" class="menu">
+              <ion-row>
+                <ion-col>
+                  <!--<ion-icon name="brush"></ion-icon>-->
+                  <img src="assets/imgs/chapelet.png" alt="" class="menuIcon">
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col class="textMenu">
+                  صلاة الوردية
+                </ion-col>
+              </ion-row>
+
+            </ion-col>
+            <ion-col col-4 text-center (click)="onNavSelect('agenda')" class="menu">
+              <ion-row>
+                <ion-col>
+                  <!--<ion-icon name="brush"></ion-icon>-->
+                  <img src="assets/imgs/agenda-01.png" alt="" class="menuIcon">
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col class="textMenu">
+                  التقويم
+                </ion-col>
+              </ion-row>
+            </ion-col>
+          </ion-row>
+          <ion-row style="height: 33%; padding-top: 1%; margin-left: 5px; margin-right: 5px;">
+            <ion-col col-4 text-center (click)="onNavSelect('parcours')" class="menu">
+              <ion-row>
+                <ion-col>
+                  <!--<ion-icon name="brush"></ion-icon>-->
+                  <img src="assets/imgs/parcours.png" alt="" class="menuIcon">
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col class="textMenu" text-wrap>
+                  رحلة روحية
+                </ion-col>
+              </ion-row>
+
+            </ion-col>
+            <ion-col col-4 text-center (click)="onNavSelect('benediction')" class="menu">
+              <ion-row>
+                <ion-col>
+                  <!--<ion-icon name="brush"></ion-icon>-->
+                  <img src="assets/imgs/benediction.png" alt="" class="menuIcon">
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col class="textMenu">
+                  نعمة من الميداليات
+                </ion-col>
+              </ion-row>
+
+            </ion-col>
+            <ion-col col-4 text-center (click)="onNavSelect('intention')" class="menu">
+              <ion-row>
+                <ion-col>
+                  <!--<ion-icon name="brush"></ion-icon>-->
+                  <img src="assets/imgs/intention-prieres.png" alt="" class="menuIcon">
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col class="textMenu">
+                  نية الصلاة
+                </ion-col>
+              </ion-row>
+
+            </ion-col>
+          </ion-row>
+          <ion-row style="height: 33%; padding-top: 1%; margin-left: 5px; margin-right: 5px;">
+            <ion-col col-4 text-center (click)="onNavSelect('historique')" class="menu">
+              <ion-row>
+                <ion-col>
+                  <!--<ion-icon name="brush"></ion-icon>-->
+                  <img src="assets/imgs/historique-01.png" alt="" class="menuIcon">
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col class="textMenu">
+                  تاريخي
+                </ion-col>
+              </ion-row>
+
+            </ion-col>
+            <ion-col col-4 text-center (click)="onNavSelect('medaille')" class="menu">
+              <ion-row>
+                <ion-col>
+                  <!--<ion-icon name="brush"></ion-icon>-->
+                  <img src="assets/imgs/medaille-01.png" alt="" class="menuIcon">
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col class="textMenu">
+                  الميدالية المعجزة
+                </ion-col>
+              </ion-row>
+
+            </ion-col>
+            <ion-col col-4 text-center (click)="onNavSelect('parametres')" class="menu">
+              <ion-row>
+                <ion-col>
+                  <!--<ion-icon name="brush"></ion-icon>-->
+                  <img src="assets/imgs/settings.png" alt="" class="menuIcon">
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col class="textMenu">
+                  إعدادات
+                </ion-col>
+              </ion-row>
+
+            </ion-col>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </label>
+
+
+    <label *ngIf="language=='portuguese'">
+      <ion-row class="home_image" style="height: 40%"></ion-row>
+      <ion-row style="height: 60%">
+        <ion-col style="color: #707070 !important; ">
+          <ion-row style="height: 33%; padding-top: 1%; margin-left: 5px; margin-right: 5px;">
+            <ion-col col-4 text-center (click)="onNavSelect('prieres')" class="menu">
+              <ion-row>
+                <ion-col>
+                  <!--<ion-icon  name="brush"></ion-icon>-->
+                  <img src="assets/imgs/priere.png" alt="" class="menuIcon">
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col class="textMenu">
+                  Ore do dia (francês)
+                </ion-col>
+              </ion-row>
+            </ion-col>
+            <ion-col col-4 text-center (click)="onNavSelect('chapelets')" class="menu">
+              <ion-row>
+                <ion-col>
+                  <!--<ion-icon name="brush"></ion-icon>-->
+                  <img src="assets/imgs/chapelet.png" alt="" class="menuIcon">
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col class="textMenu">
+                  Rezem o Rosário
+                </ion-col>
+              </ion-row>
+
+            </ion-col>
+            <ion-col col-4 text-center (click)="onNavSelect('agenda')" class="menu">
+              <ion-row>
+                <ion-col>
+                  <!--<ion-icon name="brush"></ion-icon>-->
+                  <img src="assets/imgs/agenda-01.png" alt="" class="menuIcon">
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col class="textMenu">
+                  Calendário
+                </ion-col>
+              </ion-row>
+            </ion-col>
+          </ion-row>
+          <ion-row style="height: 33%; padding-top: 1%; margin-left: 5px; margin-right: 5px;">
+            <ion-col col-4 text-center (click)="onNavSelect('parcours')" class="menu">
+              <ion-row>
+                <ion-col>
+                  <!--<ion-icon name="brush"></ion-icon>-->
+                  <img src="assets/imgs/parcours.png" alt="" class="menuIcon">
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col class="textMenu" text-wrap>
+                  Jornada espiritual
+                </ion-col>
+              </ion-row>
+
+            </ion-col>
+            <ion-col col-4 text-center (click)="onNavSelect('benediction')" class="menu">
+              <ion-row>
+                <ion-col>
+                  <!--<ion-icon name="brush"></ion-icon>-->
+                  <img src="assets/imgs/benediction.png" alt="" class="menuIcon">
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col class="textMenu">
+                  Bênção das medalhas
+                </ion-col>
+              </ion-row>
+
+            </ion-col>
+            <ion-col col-4 text-center (click)="onNavSelect('intention')" class="menu">
+              <ion-row>
+                <ion-col>
+                  <!--<ion-icon name="brush"></ion-icon>-->
+                  <img src="assets/imgs/intention-prieres.png" alt="" class="menuIcon">
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col class="textMenu">
+                  Intenção de orações
+                </ion-col>
+              </ion-row>
+
+            </ion-col>
+          </ion-row>
+          <ion-row style="height: 33%; padding-top: 1%; margin-left: 5px; margin-right: 5px;">
+            <ion-col col-4 text-center (click)="onNavSelect('historique')" class="menu">
+              <ion-row>
+                <ion-col>
+                  <!--<ion-icon name="brush"></ion-icon>-->
+                  <img src="assets/imgs/historique-01.png" alt="" class="menuIcon">
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col class="textMenu">
+                  Histórico
+                </ion-col>
+              </ion-row>
+
+            </ion-col>
+            <ion-col col-4 text-center (click)="onNavSelect('medaille')" class="menu">
+              <ion-row>
+                <ion-col>
+                  <!--<ion-icon name="brush"></ion-icon>-->
+                  <img src="assets/imgs/medaille-01.png" alt="" class="menuIcon">
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col class="textMenu">
+                  A medalha miraculosa
+                </ion-col>
+              </ion-row>
+
+            </ion-col>
+            <ion-col col-4 text-center (click)="onNavSelect('parametres')" class="menu">
+              <ion-row>
+                <ion-col>
+                  <!--<ion-icon name="brush"></ion-icon>-->
+                  <img src="assets/imgs/settings.png" alt="" class="menuIcon">
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col class="textMenu">
+                  Configurações
+                </ion-col>
+              </ion-row>
+
+            </ion-col>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </label>
+
 
   </ion-content>
 

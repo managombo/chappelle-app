@@ -2,7 +2,11 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>benediction</ion-title>
+    <ion-title *ngIf="language=='french'">Bénediction</ion-title>
+    <ion-title *ngIf="language=='english'">Blessing</ion-title>
+    <ion-title *ngIf="language=='spanish'">Bendición</ion-title>
+    <ion-title *ngIf="language=='portuguese'">Bênção</ion-title>
+    <ion-title *ngIf="language=='arabic'">بركة</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -25,6 +29,18 @@
         Las medallas son bendecidas al final de cada misa.
       </h3>
     </ion-col>
+    <ion-col style="margin: 30px; color: #5fb0e7" *ngIf="language=='arabic'">
+      <h3 text-center>
+        المباركة هي الميداليات في نهاية كل كتلة.
+      </h3>
+    </ion-col>
+
+    <ion-col style="margin: 30px; color: #5fb0e7" *ngIf="language=='portuguese'">
+      <h3 text-center>
+        Medalhas são abençoadas no final de cada missa.
+      </h3>
+    </ion-col>
+
   </ion-row>
 
 </ion-content>

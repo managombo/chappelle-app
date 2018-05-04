@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {IonicPage, LoadingController, NavController, NavParams} from 'ionic-angular';
 import {RssService} from "../../services/rss-service";
 import moment from 'moment';
+import { UserAgent } from '@ionic-native/user-agent';
 
 
 
@@ -32,6 +33,7 @@ export class PrieresPage implements OnInit{
               private localNotifications: LocalNotifications,
               public loadingCtrl: LoadingController,
               private http: HttpClient,
+              private userAgent: UserAgent
               ) {
   }
 
@@ -45,13 +47,22 @@ export class PrieresPage implements OnInit{
   ionViewDidLoad(){
     this.loading = this.loadingCtrl.create({
       content: `
-      Please wait... 
+      Un instant... 
       `
     });
 
+    // this.userAgent.set('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36')
+    //   .then((res: any) => console.log(res))
+    //   .catch((error: any) => console.error(error));
+
+
+
     this.loading.present();
-    // this.http.get('/priere/feed', { responseType: 'text' })
-    this.http.get('https://www.medaille-miraculeuse.fr/feed')
+    // this.http.get('priere/feed', { responseType: 'text' })
+    // this.http.get('https://raw.githubusercontent.com/managombo/chappelle-app/master/test.xml', { responseType: 'text' })
+    // this.http.get('https://www.medaille-miraculeuse.fr/feed/', { responseType: 'text' })
+    // this.http.get('http://localhost:8080/', { responseType: 'text' })
+    this.http.get('https://medaille-miraculeuse-prieres.appspot.com/', { responseType: 'text' })
     // this.http.get('https://raw.githubusercontent.com/managombo/chappelle-app/master/src/assets/xml/test.xml', { responseType: 'text' })
     // this.http.get('assets/xml/test.xml', { responseType: 'text' })
       .map(res=>res.toString())

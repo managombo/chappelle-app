@@ -46,6 +46,18 @@ export class AgendaPage implements OnInit {
     currentDate: new Date()
   };
 
+  calendar_portuguese = {
+    locale: 'pt',
+    mode: 'month',
+    currentDate: new Date()
+  };
+
+  calendar_arabic = {
+    locale: 'ar',
+    mode: 'month',
+    currentDate: new Date()
+  };
+
 
 
   evenements:any;
@@ -160,19 +172,38 @@ export class AgendaPage implements OnInit {
 
 
 
+    //
+    //
+    // if(this.language== "french"){
+    //
+    // this.loading = this.loadingCtrl.create({
+    //   content: 'Chargement...'
+    // });
+    //   this.loading.present();
+    // } else  if(this.language== "english"){
+
+      this.loading = this.loadingCtrl.create({
+        content: 'Loading...'
+      });
+      this.loading.present();
+    //
+    // } else  if(this.language== "spanish"){
+    //
+    //   this.loading = this.loadingCtrl.create({
+    //     content: 'Cargando...'
+    //   });
+    //   this.loading.present();
+    //
+    // }
 
 
 
-    this.loading = this.loadingCtrl.create({
-      content: 'Chargement...'
-    });
-
-    this.loading.present();
 
 
 
 
-
+      // this.http.get('https://medaille-miraculeuse-prieres.appspot.com/agenda').subscribe((res) => {
+      // this.http.get('http://localhost:8080/agenda').subscribe((res) => {
       this.http.get('https://raw.githubusercontent.com/managombo/chappelle-app/master/src/assets/json/mr_evenements.json').subscribe((res) => {
         // return res;
         this.evenements = res;
@@ -182,7 +213,10 @@ export class AgendaPage implements OnInit {
         // var i =0;
         for(var evenement of this.evenements){
 
+          var timezone = moment.tz.guess();
+          var starthour = moment.tz(evenement.date+" "+evenement.heure_debut, timezone).clone().tz("Europe/Gibraltar").toDate();
 
+          var endhour = moment.tz(evenement.date+((evenement.heure_fin == "00:00:00")? "23:59:59": evenement.heure_fin), timezone).clone().tz("Europe/Gibraltar").toDate();
           // i=i+1;
           // if(i>5) break;
 
@@ -190,8 +224,10 @@ export class AgendaPage implements OnInit {
           this.activities.push({
             id:evenement.id,
             title:evenement.nom,
-            startTime:new Date(evenement.date+"T"+evenement.heure_debut),
-            endTime:new Date(evenement.date+"T"+((evenement.heure_fin == "00:00:00")? "23:59:59" : evenement.heure_fin)),
+            // startTime:new Date(evenement.date+"T"+evenement.heure_debut),
+            startTime:starthour,
+            // endTime:new Date(evenement.date+"T"+((evenement.heure_fin == "00:00:00")? "23:59:59" : evenement.heure_fin)),
+            endTime:endhour,
             allDay:false,
             description:evenement.descriptif,
             country:evenement.pays,
@@ -207,8 +243,11 @@ export class AgendaPage implements OnInit {
 
 
         this.http.get('https://raw.githubusercontent.com/managombo/chappelle-app/master/src/assets/json/mr_pelerinages.json').subscribe((res) => {
+        // this.http.get('http://localhost:8080/pelerinages').subscribe((res) => {
+        // this.http.get('https://medaille-miraculeuse-prieres.appspot.com/pelerinages').subscribe((res) => {
           // return res;
           this.pelerinages = res;
+
           this.loading.dismiss();
           // console.log(this.pelerinages);
           for(var pelerinage of this.pelerinages){
@@ -293,11 +332,13 @@ export class AgendaPage implements OnInit {
     this.calendar_french.mode = mode;
     this.calendar_english.mode = mode;
     this.calendar_spanish.mode = mode;
+    this.calendar_arabic.mode = mode;
   }
   today() {
     this.calendar_french.currentDate = new Date();
     this.calendar_english.currentDate = new Date();
     this.calendar_spanish.currentDate = new Date();
+    this.calendar_arabic.currentDate = new Date();
   }
   onTimeSelected(ev) {
     console.log('Selected time: ' + ev.selectedTime + ', hasEvents: ' +

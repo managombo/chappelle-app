@@ -10,6 +10,8 @@
     <ion-title *ngIf="language=='french'">Intention de prières</ion-title>
     <ion-title *ngIf="language=='english'">Prayer intentions</ion-title>
     <ion-title *ngIf="language=='spanish'">Intenciones de oración</ion-title>
+    <ion-title *ngIf="language=='portuguese'">Intenções de oração</ion-title>
+    <ion-title *ngIf="language=='arabic'">نوايا الصلاة</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -17,12 +19,12 @@
 
 <ion-content>
 
-  <ion-row style="margin-top: 20%">
-    <ion-col *ngIf="language=='french'">
+  <ion-row style="height:100%">
+    <ion-col  *ngIf="language=='french'">
 
-      <form #form="ngForm" (ngSubmit)="submit()" novalidate>
+      <form class="form-all" #form="ngForm" (ngSubmit)="submit()" novalidate>
 
-        <ion-row>
+        <ion-row class="form-content">
 
           <ion-col>
 
@@ -49,7 +51,7 @@
               </ion-select>
             </ion-item>
 
-            <ion-item>
+            <ion-item  class="textarea-content">
               <ion-label color="primary" stacked>Contenu du texte</ion-label>
               <!--<ion-textarea  placeholder="Entrez votre texte"></ion-textarea>-->
               <ion-textarea required [(ngModel)]="content" name="content"></ion-textarea>
@@ -71,10 +73,10 @@
     </ion-col>
 
 
-    <ion-col *ngIf="language=='english'">
-      <form #form="ngForm" (ngSubmit)="submit()" novalidate>
+    <ion-col  *ngIf="language=='english'">
+      <form  class="form-all" #form="ngForm" (ngSubmit)="submit()" novalidate>
 
-        <ion-row>
+        <ion-row class="form-content">
           <ion-col>
 
             <ion-item>
@@ -99,7 +101,7 @@
               </ion-select>
 
             </ion-item>
-            <ion-item>
+            <ion-item  class="textarea-content">
               <ion-label color="primary" stacked>Text content</ion-label>
               <ion-textarea required [(ngModel)]="content" name="content"></ion-textarea>
             </ion-item>
@@ -118,10 +120,10 @@
     </ion-col>
 
 
-    <ion-col *ngIf="language=='spanish'">
-      <form #form="ngForm" (ngSubmit)="submit()" novalidate>
+    <ion-col  *ngIf="language=='spanish'">
+      <form class="form-all" #form="ngForm" (ngSubmit)="submit()" novalidate>
 
-        <ion-row>
+        <ion-row class="form-content">
           <ion-col>
             <ion-item>
               <ion-label color="primary" stacked>Tu primer nombre</ion-label>
@@ -145,7 +147,7 @@
               </ion-select>
 
             </ion-item>
-            <ion-item>
+            <ion-item  class="textarea-content">
               <ion-label color="primary" stacked>Contenido de texto</ion-label>
               <ion-textarea required [(ngModel)]="content" name="content"></ion-textarea>
             </ion-item>
@@ -161,6 +163,99 @@
 
     </ion-col>
 
+
+
+    <ion-col  *ngIf="language=='arabic'">
+      <form class="form-all" #form="ngForm" (ngSubmit)="submit()" novalidate>
+
+        <ion-row class="form-content">
+          <ion-col>
+
+            <ion-item>
+              <ion-label color="primary" stacked>اسمك الأول</ion-label>
+              <ion-input required [(ngModel)]="name" name="name"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label color="primary" stacked>اسم عائلتك</ion-label>
+              <ion-input required [(ngModel)]="subName" name="subName"></ion-input>
+              <!--<ion-input type="email" placeholder="entrer email"></ion-input>-->
+            </ion-item>
+            <ion-item>
+              <ion-label color="primary" stacked>نوع الصلاة</ion-label>
+              <ion-select [(ngModel)]="prayType" name="prayType">
+
+                <ion-option value="illness">المرض والصحة القضايا</ion-option>
+                <ion-option value="thanks">شكر</ion-option>
+                <ion-option value="school-failure">فشل المدرسة</ion-option>
+                <ion-option value="family-conflict">الصراع الأسري</ion-option>
+                <ion-option value="work-conflict">الصراع العمل</ion-option>
+                <ion-option value="job-search">البحث عن الوظائف</ion-option>
+              </ion-select>
+
+            </ion-item>
+            <ion-item  class="textarea-content">
+              <ion-label color="primary" stacked>محتوى النص</ion-label>
+              <ion-textarea required [(ngModel)]="content" name="content"></ion-textarea>
+            </ion-item>
+          </ion-col>
+
+        </ion-row>
+
+        <ion-row style="margin-top: 10%;">
+          <ion-col text-center col-12>
+            <button ion-button style="width: 50%; padding: 0; margin: 0" type="submit">إرسال</button>
+          </ion-col>
+
+        </ion-row>
+      </form>
+
+    </ion-col>
+
+    <ion-col  *ngIf="language=='portuguese'">
+      <form class="form-all" #form="ngForm" (ngSubmit)="submit()" novalidate>
+
+        <ion-row class="form-content">
+          <ion-col>
+
+            <ion-item>
+              <ion-label color="primary" stacked>Seu primeiro nome</ion-label>
+              <ion-input required [(ngModel)]="name" name="name"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label color="primary" stacked>Seu nome de família</ion-label>
+              <ion-input required [(ngModel)]="subName" name="subName"></ion-input>
+              <!--<ion-input type="email" placeholder="entrer email"></ion-input>-->
+            </ion-item>
+            <ion-item>
+              <ion-label color="primary" stacked>Tipo de oração</ion-label>
+              <ion-select [(ngModel)]="prayType" name="prayType" cancelText="Anuladora" okText="Valider">
+
+                <ion-option value="illness">Problemas de saúde e doença</ion-option>
+                <ion-option value="thanks">obrigado</ion-option>
+                <ion-option value="school-failure">Fracasso escolar</ion-option>
+                <ion-option value="family-conflict">Conflito Familiar</ion-option>
+                <ion-option value="work-conflict">Conflito de trabalho</ion-option>
+                <ion-option value="job-search">Procura de emprego</ion-option>
+              </ion-select>
+
+            </ion-item>
+            <ion-item class="textarea-content">
+              <ion-label color="primary" stacked>Conteúdo de texto</ion-label>
+              <ion-textarea required [(ngModel)]="content" name="content"></ion-textarea>
+            </ion-item>
+          </ion-col>
+
+        </ion-row>
+
+        <ion-row style="margin-top: 10%;">
+          <ion-col text-center col-12>
+            <button ion-button style="width: 50%; padding: 0; margin: 0" type="submit">Enviar</button>
+          </ion-col>
+
+        </ion-row>
+      </form>
+
+    </ion-col>
 
   </ion-row>
 

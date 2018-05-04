@@ -38,7 +38,7 @@ export class AccueilPage {
     "parcours": ParcoursPage,
     "medaille": MedaillePage,
     "parametres": ParametresPage
-  }
+  };
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
@@ -58,7 +58,7 @@ export class AccueilPage {
 
     this.platform.ready().then(() => {
 
-        this.fcm.subscribeToTopic('all');
+
       //
       //   this.fcm.getToken().then(token=>{
       //     // backend.registerToken(token);
@@ -124,7 +124,7 @@ export class AccueilPage {
     this.storage.get('subscribed').then((val) => {
       if(val == null){
         this.storage.set('subscribed', true);
-
+        this.fcm.subscribeToTopic('all');
       }
     });
 

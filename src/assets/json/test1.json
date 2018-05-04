@@ -1,0 +1,1716 @@
+/**
+Exportation format JSON depuis l'extension MR-Agenda
+@version 1.1
+*/
+
+// Base de donnÃ©es 'CFDLC_db'
+
+// CFDLC_db.mr_agenda
+
+// Fichier gÃ©nÃ©rÃ© le 21/03/2018 Ã  12h27
+
+[
+  {
+    "id": "267",
+    "nom": "ConfÃ©rence de CarÃªme+Chemin de Croix",
+    "date": "2018-03-02",
+    "mois_annee": "mars-2018",
+    "heure_debut": "15:30:00",
+    "heure_fin": "00:00:00",
+    "heure_fin_masquer": "1",
+    "categorie": "0",
+    "pays": "",
+    "type": "",
+    "descriptif": "TroisiÃ¨me pas pour approfndir notre foi en JÃ©sus Christ",
+    "afficher": "1"
+  },
+  [
+    {
+      "id": "252",
+      "nom": "Stella (18-35 ans)",
+      "date": "2018-03-04",
+      "mois_annee": "mars-2018",
+      "heure_debut": "10:30:00",
+      "heure_fin": "14:30:00",-
+      "heure_fin_masquer": "0",
+      "categorie": "0",
+      "pays": "",
+      "type": "",
+      "descriptif": "La voation de JÃ©remie (Jr 1, 1-10)",
+      "afficher": "1"
+    },
+    [
+      {
+        "id": "268",
+        "nom": "ConfÃ©rence de CarÃªme+Chemin de Croix",
+        "date": "2018-03-09",
+        "mois_annee": "mars-2018",
+        "heure_debut": "15:30:00",
+        "heure_fin": "00:00:00",
+        "heure_fin_masquer": "1",
+        "categorie": "0",
+        "pays": "",
+        "type": "",
+        "descriptif": "QuatriÃ¨me pas pour approfonir notre foi en JÃ©sus Christ",
+        "afficher": "1"
+      },
+      [
+        {
+          "id": "304",
+          "nom": "24 heures pour le Seigneur",
+          "date": "2018-03-09",
+          "mois_annee": "mars-2018",
+          "heure_debut": "18:00:00",
+          "heure_fin": "20:00:00",
+          "heure_fin_masquer": "0",
+          "categorie": "0",
+          "pays": "",
+          "type": "",
+          "descritif": "Adoration + Confession",
+          "afficher": "1"
+        },
+        [
+          {
+            "id": "296",
+            "nom": "24 heures pour le Seigneur",
+            "date": "2018-03-09",
+            "mois_annee": "mars-2018",
+            "heure_debut": "18:15:00",
+            "heure_fin": "20:00:00",
+            "heure_fin_masquer": "0",
+            "categorie": "0",
+            "pays": "",
+            "type": "",
+            "descriptif": "doration-Confession-VÃªpres",
+            "afficher": "1"
+          },
+          [
+            {
+              "id": "305",
+              "nom": "24 heures pour le Seigneur",
+              "date": "2018-03-10",
+              "mois_annee": "mars-2018",
+              "heure_debut": "00:00:00",
+              "heure_fin": "00:00:00",
+              "heure_fin_masquer": "1",
+              "categorie": "0",
+              "pays": "",
+              "type": "",
+              "descriptif": "Programme du jou + Confession de 15h-20h30",
+              "afficher": "1"
+            },
+            [
+              {
+                "id": "231",
+                "nom": "Kristu Bolingo / ThÃ¨me Â« Â« â€¦ toutes sortes dâ€™Ã©preuves vÃ©rifient la valeur de votre foi Â» (1 P 1,6-7) ",
+                "date": "2018-03-10",
+                "mois_annee": "mars-2018",
+                "heure_debut": "19:45:00",
+                "heure_fin": "21:30:00",
+                "heure_fin_masquer": "0",
+                "categorie": "0",
+                "pays": "",
+                "type": "",
+                "descriptif": "CHAPELET-CONFESSION-LOUANE - EXHORTATION-ADORATION",
+                "afficher": "1"
+              },
+              [
+                {
+                  "id": "269",
+                  "nom": "ConfÃ©rence de CarÃªme+Chemin de Croix",
+                  "date": "2018-03-16",
+                  "mois_annee": "mars-2018",
+                  "heure_debut": "15:30:00",
+                  "heure_fin": "00:00:00",
+                  "heure_fin_masquer": "1",
+                  "categorie": "0",
+                  "pays": "",
+                  "type": "",
+                  "descriptif": "CinquiÃ¨me pas pour approfondir ntre foi en JÃ©sus Christ",
+                  "afficher": "1"
+                },
+                [
+                  {
+                    "id": "217",
+                    "nom": "VeillÃ©e de priÃ¨re avec le groupe Ã  JÃ©sus par Marie",
+                    "date": "2018-03-16",
+                    "mois_annee": "mars-2018",
+                    "heure_debut": "19:45:00",
+                    "heure_fin": "21:45:00",
+                    "heure_fin_masquer": "0",
+                    "categorie": "0",
+                    "pays": "",
+                    "type": "",
+                    "descriptif"
+                    "Le thÃ¨me : "
+                    La
+                    Croix
+                    "",
+                    "afficher": "1"
+                  },
+                  [
+                    {
+                      "id": "225",
+                      "nom": "Coeur de JÃ©sus et de Marie / ThÃ¨me : Saint Joseph",
+                      "date": "2018-03-18",
+                      "mois_annee": "mars-2018",
+                      "heure_debut": "15:00:00",
+                      "heure_fin": "18:00:00",
+                      "heure_fin_masquer": "0",
+                      "categorie": "0",
+                      "pays": "",
+                      "type": "",
+                      "descriptif": "ROSAIREINTERCESSION-ADORATION",
+                      "afficher": "1"
+                    },
+                    [
+                      {
+                        "id": "270",
+                        "nom": "ConfÃ©rence de CarÃªme+Chemin de Croix",
+                        "date": "2018-03-23",
+                        "mois_annee": "mars-2018",
+                        "heure_debut": "15:30:00",
+                        "heure_fin": "00:00:00",
+                        "heure_fin_masquer": "1",
+                        "categorie": "0",
+                        "pays": "",
+                        "type": "",
+                        "descriptif": "SixiÃ¨me pas pour approfondir notr foi en JÃ©sus Christ",
+                        "afficher": "1"
+                      },
+                      [
+                        {
+                          "id": "243",
+                          "nom": "Jeunesse Mariale Vincentienne",
+                          "date": "2018-03-24",
+                          "mois_annee": "mars-2018",
+                          "heure_debut": "14:30:00",
+                          "heure_fin": "16:30:00",
+                          "heure_fin_masquer": "0",
+                          "categorie": "0",
+                          "pays": "",
+                          "type": "",
+                          "descriptif": "Les enfants de 8 - 12 ns - sur inscription",
+                          "afficher": "1"
+                        },
+                        [
+                          {
+                            "id": "297",
+                            "nom": "Dimanche de Rameaux",
+                            "date": "2018-03-24",
+                            "mois_annee": "mars-2018",
+                            "heure_debut": "17:15:00",
+                            "heure_fin": "00:00:00",
+                            "heure_fin_masquer": "1",
+                            "categorie": "0",
+                            "pays": "",
+                            "type": "",
+                            "descriptif": "Messe anticip©e/Vente des rameux",
+                            "afficher": "1"
+                          },
+                          [
+                            {
+                              "id": "298",
+                              "nom": "Dimanche de Rameaux",
+                              "date": "2018-03-25",
+                              "mois_annee": "mars-2018",
+                              "heure_debut": "08:00:00",
+                              "heure_fin": "00:00:00",
+                              "heure_fin_masquer": "1",
+                              "categorie": "0",
+                              "pays": "",
+                              "type": "",
+                              "descriptif": "Messe- Vente de rameaux",
+                              "afficher": "1"
+                            },
+                            [
+                              {
+                                "id": "309",
+                                "nom": "Dimanche de Rameaux",
+                                "date": "2018-03-25",
+                                "mois_annee": "mars-2018",
+                                "heure_debut": "10:00:00",
+                                "heure_fin": "00:00:00",
+                                "heure_fin_masquer": "1",
+                                "categorie": "0",
+                                "pays": "",
+                                "type": "",
+                                "descriptif": "Messe  Vente de rameaux",
+                                "afficher": "1"
+                              },
+                              [
+                                {
+                                  "id": "310",
+                                  "nom": "Dimanche de Rameaux",
+                                  "date": "2018-03-25",
+                                  "mois_annee": "mars-2018",
+                                  "heure_debut": "11:30:00",
+                                  "heure_fin": "00:00:00",
+                                  "heure_fin_masquer": "1",
+                                  "categorie": "0",
+                                  "pays": "",
+                                  "type": "",
+                                  "descriptif": "Messe -Vente de rameaux",
+                                  "afficher": "1"
+                                },
+                                [
+                                  {
+                                    "id": "299",
+                                    "nom": "Jeudi Sainte",
+                                    "date": "2018-03-29",
+                                    "mois_annee": "mars-2018",
+                                    "heure_debut": "17:30:00",
+                                    "heure_fin": "00:00:00",
+                                    "heure_fin_masquer": "1",
+                                    "categorie": "0",
+                                    "pays": "",
+                                    "type": "",
+                                    "descriptif": "Office du CÃ¨ne","afficher":"
+                                    1
+                                    "}, [{"
+                                    id
+                                    ":"
+                                    300
+                                    ","
+                                    nom
+                                    ":"
+                                    Vendredi
+                                    Saint
+                                    ","
+                                    date
+                                    ":"
+                                    2018-03-30
+                                    ","
+                                    mois_annee
+                                    ":"
+                                    mars-2018
+                                    ","
+                                    heure_debut
+                                    ":"
+                                    17: 30
+                                    :
+                                    00
+                                    ","
+                                    heure_fin
+                                    ":"
+                                    00: 00
+                                    :
+                                    00
+                                    ","
+                                    heure_fin_masquer
+                                    ":"
+                                    1
+                                    ","
+                                    categorie
+                                    ":"
+                                    0
+                                    ","
+                                    pays
+                                    ":"
+                                    ","
+                                    type
+                                    ":"
+                                    ","
+                                    descriptif
+                                    ":"
+                                    Offic
+                                    de
+                                    la
+                                    Passion
+                                    ","
+                                    afficher
+                                    ":"
+                                    1
+                                    "}, [{"
+                                    id
+                                    ":"
+                                    301
+                                    ","
+                                    nom
+                                    ":"
+                                    Samedi
+                                    Saint
+                                    ","
+                                    date
+                                    ":"
+                                    2018-03-31
+                                    ","
+                                    mois_annee
+                                    ":"
+                                    mars-2018
+                                    ","
+                                    heure_debut
+                                    ":"
+                                    18: 30
+                                    :
+                                    00
+                                    ","
+                                    heure_fin
+                                    ":"
+                                    00: 00
+                                    :
+                                    00
+                                    ","
+                                    heure_fin_masquer
+                                    ":"
+                                    1
+                                    ","
+                                    categorie
+                                    ":"
+                                    0
+                                    ","
+                                    pays
+                                    ":"
+                                    ","
+                                    type
+                                    ":"
+                                    ","
+                                    descritif
+                                    ":"
+                                    VÃªpres
+                                    ","
+                                    afficher
+                                    ":"
+                                    1
+                                    "}, [{"
+                                    id
+                                    ":"
+                                    302
+                                    ","
+                                    nom
+                                    ":"
+                                    Dimanche
+                                    de
+                                    PÃ¢ques
+                                    ","
+                                    date
+                                    ":"
+                                    2018-04-01
+                                    ","
+                                    mois_annee
+                                    ":"
+                                    avril-2018
+                                    ","
+                                    heure_debut
+                                    ":"
+                                    08: 30
+                                    :
+                                    00
+                                    ","
+                                    heure_fin
+                                    ":"
+                                    00: 00
+                                    :
+                                    00
+                                    ","
+                                    heure_fin_masquer
+                                    ":"
+                                    1
+                                    ","
+                                    categorie
+                                    ":"
+                                    0
+                                    ","
+                                    pays
+                                    ":"
+                                    ","
+                                    type
+                                    ":"
+                                    ","
+                                    descrptif
+                                    ":"
+                                    Messe
+                                    ","
+                                    afficher
+                                    ":"
+                                    1
+                                    "}, [{"
+                                    id
+                                    ":"
+                                    313
+                                    ","
+                                    nom
+                                    ":"
+                                    Dimanche
+                                    de
+                                    PÃ¢ques
+                                    ","
+                                    date
+                                    ":"
+                                    2018-04-01
+                                    ","
+                                    mois_annee
+                                    ":"
+                                    avril-2018
+                                    ","
+                                    heure_debut
+                                    ":"
+                                    11: 30
+                                    :
+                                    00
+                                    ","
+                                    heure_fin
+                                    ":"
+                                    00: 00
+                                    :
+                                    00
+                                    ","
+                                    heure_fin_masquer
+                                    ":"
+                                    1
+                                    ","
+                                    categorie
+                                    ":"
+                                    0
+                                    ","
+                                    pays
+                                    ":"
+                                    ","
+                                    type
+                                    ":"
+                                    ","
+                                    descritif
+                                    ":"
+                                    Messe
+                                    ","
+                                    afficher
+                                    ":"
+                                    1
+                                    "}, [{"
+                                    id
+                                    ":"
+                                    312
+                                    ","
+                                    nom
+                                    ":"
+                                    Dimanche
+                                    de
+                                    PÃ¢ques
+                                    ","
+                                    date
+                                    ":"
+                                    2018-04-01
+                                    ","
+                                    mois_annee
+                                    ":"
+                                    avril-2018
+                                    ","
+                                    heure_debut
+                                    ":"
+                                    10: 00
+                                    :
+                                    00
+                                    ","
+                                    heure_fin
+                                    ":"
+                                    00: 00
+                                    :
+                                    00
+                                    ","
+                                    heure_fin_masquer
+                                    ":"
+                                    1
+                                    ","
+                                    categorie
+                                    ":"
+                                    0
+                                    ","
+                                    pays
+                                    ":"
+                                    ","
+                                    type
+                                    ":"
+                                    ","
+                                    descripif
+                                    ":"
+                                    Messe
+                                    ","
+                                    afficher
+                                    ":"
+                                    1
+                                    "}, [{"
+                                    id
+                                    ":"
+                                    303
+                                    ","
+                                    nom
+                                    ":"
+                                    Lundi
+                                    de
+                                    PÃ¢ques
+                                    ","
+                                    date
+                                    ":"
+                                    2018-04-02
+                                    ","
+                                    mois_annee
+                                    ":"
+                                    avril-2018
+                                    ","
+                                    heure_debut
+                                    ":"
+                                    08: 30
+                                    :
+                                    00
+                                    ","
+                                    heure_fin
+                                    ":"
+                                    00: 00
+                                    :
+                                    00
+                                    ","
+                                    heure_fin_masquer
+                                    ":"
+                                    1
+                                    ","
+                                    categorie
+                                    ":"
+                                    0
+                                    ","
+                                    pays
+                                    ":"
+                                    ","
+                                    type
+                                    ":"
+                                    ","
+                                    descriptf
+                                    ":"
+                                    Messe
+                                    ","
+                                    afficher
+                                    ":"
+                                    1
+                                    "}, [{"
+                                    id
+                                    ":"
+                                    320
+                                    ","
+                                    nom
+                                    ":"
+                                    Lundi
+                                    de
+                                    PÃ¢ques
+                                    ","
+                                    date
+                                    ":"
+                                    2018-04-02
+                                    ","
+                                    mois_annee
+                                    ":"
+                                    avril-2018
+                                    ","
+                                    heure_debut
+                                    ":"
+                                    10: 30
+                                    :
+                                    00
+                                    ","
+                                    heure_fin
+                                    ":"
+                                    00: 00
+                                    :
+                                    00
+                                    ","
+                                    heure_fin_masquer
+                                    ":"
+                                    1
+                                    ","
+                                    categorie
+                                    ":"
+                                    0
+                                    ","
+                                    pays
+                                    ":"
+                                    ","
+                                    type
+                                    ":"
+                                    ","
+                                    descripti
+                                    ":"
+                                    Messe
+                                    ","
+                                    afficher
+                                    ":"
+                                    1
+                                    "}, [{"
+                                    id
+                                    ":"
+                                    253
+                                    ","
+                                    nom
+                                    ":"
+                                    Stella
+                                    (18-35
+                                    ans)
+                                    ","
+                                    date
+                                    ":"
+                                    2018-04-08
+                                    ","
+                                    mois_annee
+                                    ":"
+                                    avril-2018
+                                    ","
+                                    heure_debut
+                                    ":"
+                                    10: 30
+                                    :
+                                    00
+                                    ","
+                                    heure_fin
+                                    ":"
+                                    14: 30
+                                    :
+                                    00
+                                    ","
+                                    heure_fin_masquer
+                                    ":"
+                                    0
+                                    ","
+                                    categorie
+                                    ":"
+                                    0
+                                    ","
+                                    pays
+                                    ":"
+                                    ","
+                                    type
+                                    ":"
+                                    ","
+                                    descriptif
+                                    ":"
+                                    La
+                                    vocation
+                                    de
+                                    Joseph
+                                    (Mt,
+                                    18-28)
+                                    ","
+                                    afficher
+                                    ":"
+                                    1
+                                    "}, [{"
+                                    id
+                                    ":"
+                                    232
+                                    ","
+                                    nom
+                                    ":"
+                                    Kristu
+                                    Bolingo
+                                    /
+                                    ThÃ
+                                    ¨
+                                    me
+                                    Â
+                                    «
+                                    Augmente
+                                    en
+                                    nous
+                                    la
+                                    foi
+                                    !
+                                    Â
+                                    »
+                                    (Lc
+                                    17,
+                                    5)
+                                    ","
+                                    date
+                                    ":"
+                                    2018-04-14
+                                    ","
+                                    mois_annee
+                                    ":"
+                                    avril-2018
+                                    ","
+                                    heure_debut
+                                    ":"
+                                    19: 45
+                                    :
+                                    00
+                                    ","
+                                    heure_fin
+                                    ":"
+                                    21: 30
+                                    :
+                                    00
+                                    ","
+                                    heure_fin_masquer
+                                    ":"
+                                    0
+                                    ","
+                                    categorie
+                                    ":"
+                                    0
+                                    ","
+                                    pays
+                                    ":"
+                                    ","
+                                    type
+                                    ":"
+                                    ","
+                                    descriptif
+                                    ":"
+                                    CHAPELET-CONFESSION-LOUANGE
+                                    -
+                                    EXHORTATION-ADRATION
+                                    ","
+                                    afficher
+                                    ":"
+                                    1
+                                    "}, [{"
+                                    id
+                                    ":"
+                                    244
+                                    ","
+                                    nom
+                                    ":"
+                                    Jeunesse
+                                    Mariale
+                                    Vincentienne
+                                    ","
+                                    date
+                                    ":"
+                                    2018-04-14
+                                    ","
+                                    mois_annee
+                                    ":"
+                                    avril-2018
+                                    ","
+                                    heure_debut
+                                    ":"
+                                    14: 30
+                                    :
+                                    00
+                                    ","
+                                    heure_fin
+                                    ":"
+                                    16: 30
+                                    :
+                                    00
+                                    ","
+                                    heure_fin_masquer
+                                    ":"
+                                    0
+                                    ","
+                                    categorie
+                                    ":"
+                                    0
+                                    ","
+                                    pays
+                                    ":"
+                                    ","
+                                    type
+                                    ":"
+                                    ","
+                                    descriptif
+                                    ":"
+                                    Les
+                                    enfants
+                                    de
+                                    8
+                                    -
+                                    12
+                                    ans
+                                    -
+                                    sur
+                                    inscrption
+                                    ","
+                                    afficher
+                                    ":"
+                                    1
+                                    "}, [{"
+                                    id
+                                    ":"
+                                    218
+                                    ","
+                                    nom
+                                    ":"
+                                    VeillÃ
+                                    ©
+                                    e
+                                    de
+                                    priÃ
+                                    ¨
+                                    re
+                                    avec
+                                    le
+                                    groupe
+                                    Ã
+                                    JÃ
+                                    ©
+                                    sus
+                                    par
+                                    Marie
+                                    ","
+                                    date
+                                    ":"
+                                    2018-04-20
+                                    ","
+                                    mois_annee
+                                    ":"
+                                    avril-2018
+                                    ","
+                                    heure_debut
+                                    ":"
+                                    19: 45
+                                    :
+                                    00
+                                    ","
+                                    heure_fin
+                                    ":"
+                                    21: 45
+                                    :
+                                    00
+                                    ","
+                                    heure_fin_masquer
+                                    ":"
+                                    0
+                                    ","
+                                    categorie
+                                    ":"
+                                    0
+                                    ","
+                                    pays
+                                    ":"
+                                    ","
+                                    type
+                                    ":"
+                                    ","
+                                    descriptif
+                                    ":"
+                                    Le
+                                    thÃ
+                                    ¨
+                                    me: "Les raons"
+                                    ","
+                                    afficher
+                                    ":"
+                                    1
+                                    "}, [{"
+                                    id
+                                    ":"
+                                    271
+                                    ","
+                                    nom
+                                    ":"
+                                    Chapelet
+                                    +
+                                    ConfÃ
+                                    ©
+                                    rence
+                                    ","
+                                    date
+                                    ":"
+                                    2018-04-27
+                                    ","
+                                    mois_annee
+                                    ":"
+                                    avril-2018
+                                    ","
+                                    heure_debut
+                                    ":"
+                                    15: 30
+                                    :
+                                    00
+                                    ","
+                                    heure_fin
+                                    ":"
+                                    00: 00
+                                    :
+                                    00
+                                    ","
+                                    heure_fin_masquer
+                                    ":"
+                                    1
+                                    ","
+                                    categorie
+                                    ":"
+                                    0
+                                    ","
+                                    pays
+                                    ":"
+                                    ","
+                                    type
+                                    ":"
+                                    ","
+                                    descriptif
+                                    ":"
+                                    RÃ
+                                    ©
+                                    surrection
+                                    de
+                                    JÃ
+                                    ©
+                                    sus
+                                    et
+                                    notre
+                                    rÃ
+                                    ©
+                                    surrecion
+                                    ","
+                                    afficher
+                                    ":"
+                                    1
+                                    "}, [{"
+                                    id
+                                    ":"
+                                    254
+                                    ","
+                                    nom
+                                    ":"
+                                    Stella
+                                    (18-35
+                                    ans)
+                                    ","
+                                    date
+                                    ":"
+                                    2018-05-06
+                                    ","
+                                    mois_annee
+                                    ":"
+                                    mai-2018
+                                    ","
+                                    heure_debut
+                                    ":"
+                                    10: 30
+                                    :
+                                    00
+                                    ","
+                                    heure_fin
+                                    ":"
+                                    14: 30
+                                    :
+                                    00
+                                    ","
+                                    heure_fin_masquer
+                                    ":"
+                                    0
+                                    ","
+                                    categorie
+                                    ":"
+                                    0
+                                    ","
+                                    pays
+                                    ":"
+                                    ","
+                                    type
+                                    ":"
+                                    ","
+                                    descriptif
+                                    ":"
+                                    La
+                                    vocation
+                                    de
+                                    Marie
+                                    (Lc
+                                    1,
+                                    26-8)
+                                    ","
+                                    afficher
+                                    ":"
+                                    1
+                                    "}, [{"
+                                    id
+                                    ":"
+                                    272
+                                    ","
+                                    nom
+                                    ":"
+                                    FÃªte
+                                    de
+                                    Sainte
+                                    Louise
+                                    de
+                                    Marillac
+                                    ","
+                                    date
+                                    ":"
+                                    2018-05-09
+                                    ","
+                                    mois_annee
+                                    ":"
+                                    mai-2018
+                                    ","
+                                    heure_debut
+                                    ":"
+                                    08: 00
+                                    :
+                                    00
+                                    ","
+                                    heure_fin
+                                    ":"
+                                    00: 00
+                                    :
+                                    00
+                                    ","
+                                    heure_fin_masquer
+                                    ":"
+                                    1
+                                    ","
+                                    categorie
+                                    ":"
+                                    0
+                                    ","
+                                    pays
+                                    ":"
+                                    ","
+                                    type
+                                    ":"
+                                    ","
+                                    descriptif
+                                    ":"
+                                    Mese
+                                    ","
+                                    afficher
+                                    ":"
+                                    1
+                                    "}, [{"
+                                    id
+                                    ":"
+                                    318
+                                    ","
+                                    nom
+                                    ":"
+                                    FÃªte
+                                    de
+                                    Sainte
+                                    Louise
+                                    de
+                                    Marillac
+                                    ","
+                                    date
+                                    ":"
+                                    2018-05-09
+                                    ","
+                                    mois_annee
+                                    ":"
+                                    mai-2018
+                                    ","
+                                    heure_debut
+                                    ":"
+                                    10: 30
+                                    :
+                                    00
+                                    ","
+                                    heure_fin
+                                    ":"
+                                    00: 00
+                                    :
+                                    00
+                                    ","
+                                    heure_fin_masquer
+                                    ":"
+                                    1
+                                    ","
+                                    categorie
+                                    ":"
+                                    0
+                                    ","
+                                    pays
+                                    ":"
+                                    ","
+                                    type
+                                    ":"
+                                    ","
+                                    descriptif
+                                    ":"
+                                    Messe
+                                    solennell
+                                    ","
+                                    afficher
+                                    ":"
+                                    1
+                                    "}, [{"
+                                    id
+                                    ":"
+                                    319
+                                    ","
+                                    nom
+                                    ":"
+                                    FÃªte
+                                    de
+                                    Sainte
+                                    Louise
+                                    de
+                                    Marillac
+                                    ","
+                                    date
+                                    ":"
+                                    2018-05-09
+                                    ","
+                                    mois_annee
+                                    ":"
+                                    mai-2018
+                                    ","
+                                    heure_debut
+                                    ":"
+                                    12: 30
+                                    :
+                                    00
+                                    ","
+                                    heure_fin
+                                    ":"
+                                    00: 00
+                                    :
+                                    00
+                                    ","
+                                    heure_fin_masquer
+                                    ":"
+                                    1
+                                    ","
+                                    categorie
+                                    ":"
+                                    0
+                                    ","
+                                    pays
+                                    ":"
+                                    ","
+                                    type
+                                    ":"
+                                    ","
+                                    descriptif
+                                    ":"
+                                    Messe
+                                    solennelle,
+                                    "afficher": "1"
+                                  },
+                                  [
+                                    {
+                                      "id": "233",
+                                      "nom": "Kristu Bolingo / ThÃ¨me Â« Croyez du moins Ã  cause de ces Å“uvres Â» (Jn 14,11) ",
+                                      "date": "2018-05-12",
+                                      "mois_annee": "mai-2018",
+                                      "heure_debut": "19:45:00",
+                                      "heure_fin": "21:30:00",
+                                      "heure_fin_masquer": "0",
+                                      "categorie": "0",
+                                      "pays": "",
+                                      "type": "",
+                                      "descriptif": "CHAPELET-CONFESSION-LOUANGE - EXHORTATION-ADORATION"
+                                      "afficher": "1"
+                                    },
+                                    [
+                                      {
+                                        "id": "226",
+                                        "nom": "Coeur de JÃ©sus et de Marie / ThÃ¨me : L'Esprit Saint",
+                                        "date": "2018-05-13",
+                                        "mois_annee": "mai-2018",
+                                        "heure_debut": "15:00:00",
+                                        "heure_fin": "18:00:00",
+                                        "heure_fin_masquer": "0",
+                                        "categorie": "0",
+                                        "pays": "",
+                                        "type": "",
+                                        "descriptif": "ROSAIRE-INTERCESSION-ADORATION",
+                                        afficher
+                                        ":"
+                                        1
+                                        "}, [{"
+                                        id
+                                        ":"
+                                        219
+                                        ","
+                                        nom
+                                        ":"
+                                        VeillÃ
+                                        ©
+                                        e
+                                        de
+                                        priÃ
+                                        ¨
+                                        re
+                                        avec
+                                        le
+                                        groupe
+                                        Ã
+                                        JÃ
+                                        ©
+                                        sus
+                                        par
+                                        Marie
+                                        ","
+                                        date
+                                        ":"
+                                        2018-05-18
+                                        ","
+                                        mois_annee
+                                        ":"
+                                        mai-2018
+                                        ","
+                                        heure_debut
+                                        ":"
+                                        19: 45
+                                        :
+                                        00
+                                        ","
+                                        heure_fin
+                                        ":"
+                                        21: 45
+                                        :
+                                        00
+                                        ","
+                                        heure_fin_masquer
+                                        ":"
+                                        0
+                                        ","
+                                        categorie
+                                        ":"
+                                        0
+                                        ","
+                                        pays
+                                        ":"
+                                        ","
+                                        type
+                                        ":"
+                                        ","
+                                        descriptif
+                                        ":"
+                                        Le
+                                        thÃ
+                                        ¨
+                                        me: "Le coeur ImmaculÃ© de Marie"
+                                        ","
+                                        fficher
+                                        ":"
+                                        1
+                                        "}, [{"
+                                        id
+                                        ":"
+                                        273
+                                        ","
+                                        nom
+                                        ":"
+                                        Chemin
+                                        de
+                                        Croix
+                                        +
+                                        ConfÃ
+                                        ©
+                                        rence
+                                        ","
+                                        date
+                                        ":"
+                                        2018-05-25
+                                        ","
+                                        mois_annee
+                                        ":"
+                                        mai-2018
+                                        ","
+                                        heure_debut
+                                        ":"
+                                        15: 30
+                                        :
+                                        00
+                                        ","
+                                        heure_fin
+                                        ":"
+                                        00: 00
+                                        :
+                                        00
+                                        ","
+                                        heure_fin_masquer
+                                        ":"
+                                        1
+                                        ","
+                                        categorie
+                                        ":"
+                                        0
+                                        ","
+                                        pays
+                                        ":"
+                                        ","
+                                        type
+                                        ":"
+                                        ","
+                                        descriptif
+                                        ":"
+                                        JÃ
+                                        ©
+                                        sus
+                                        et
+                                        les
+                                        pauvres
+                                        ","
+                                        aficher
+                                        ":"
+                                        1
+                                        "}, [{"
+                                        id
+                                        ":"
+                                        245
+                                        ","
+                                        nom
+                                        ":"
+                                        Jeunesse
+                                        Mariale
+                                        Vincentienne
+                                        ","
+                                        date
+                                        ":"
+                                        2018-05-26
+                                        ","
+                                        mois_annee
+                                        ":"
+                                        mai-2018
+                                        ","
+                                        heure_debut
+                                        ":"
+                                        14: 30
+                                        :
+                                        00
+                                        ","
+                                        heure_fin
+                                        ":"
+                                        16: 30
+                                        :
+                                        00
+                                        ","
+                                        heure_fin_masquer
+                                        ":"
+                                        0
+                                        ","
+                                        categorie
+                                        ":"
+                                        0
+                                        ","
+                                        pays
+                                        ":"
+                                        ","
+                                        type
+                                        ":"
+                                        ","
+                                        descriptif
+                                        ":"
+                                        Les
+                                        enfants
+                                        de
+                                        8
+                                        -
+                                        12
+                                        ans
+                                        -
+                                        sur
+                                        inscription
+                                        ","
+                                        aficher
+                                        ":"
+                                        1
+                                        "}, [{"
+                                        id
+                                        ":"
+                                        255
+                                        ","
+                                        nom
+                                        ":"
+                                        Stella
+                                        (18-35
+                                        ans)
+                                        ","
+                                        date
+                                        ":"
+                                        2018-06-03
+                                        ","
+                                        mois_annee
+                                        ":"
+                                        juin-2018
+                                        ","
+                                        heure_debut
+                                        ":"
+                                        10: 30
+                                        :
+                                        00
+                                        ","
+                                        heure_fin
+                                        ":"
+                                        14: 30
+                                        :
+                                        00
+                                        ","
+                                        heure_fin_masquer
+                                        ":"
+                                        0
+                                        ","
+                                        categorie
+                                        ":"
+                                        0
+                                        ","
+                                        pays
+                                        ":"
+                                        ","
+                                        type
+                                        ":"
+                                        ","
+                                        descriptif
+                                        ":"
+                                        La
+                                        vocation
+                                        de
+                                        Saul/Paul
+                                        (Ac
+                                        9,
+                                        1-22)
+                                        ","
+                                        affcher
+                                        ":"
+                                        1
+                                        "}, [{"
+                                        id
+                                        ":"
+                                        234
+                                        ","
+                                        nom
+                                        ":"
+                                        Kristu
+                                        Bolingo
+                                        /
+                                        ThÃ
+                                        ¨
+                                        me
+                                        Â
+                                        «
+                                        Le
+                                        juste
+                                        vivra
+                                        par
+                                        la
+                                        foi
+                                        Â
+                                        »
+                                        (Ga
+                                        3,
+                                        11)
+                                        ","
+                                        date
+                                        ":"
+                                        2018-06-09
+                                        ","
+                                        mois_annee
+                                        ":"
+                                        juin-2018
+                                        ","
+                                        heure_debut
+                                        ":"
+                                        19: 45
+                                        :
+                                        00
+                                        ","
+                                        heure_fin
+                                        ":"
+                                        21: 30
+                                        :
+                                        00
+                                        ","
+                                        heure_fin_masquer
+                                        ":"
+                                        0
+                                        ","
+                                        categorie
+                                        ":"
+                                        0
+                                        ","
+                                        pays
+                                        ":"
+                                        ","
+                                        type
+                                        ":"
+                                        ","
+                                        descriptif
+                                        ":"
+                                        CHAPELET-CONFESSION-LOUANGE
+                                        -
+                                        EXHORTATION-ADORATION
+                                        ","
+                                        affiher
+                                        ":"
+                                        1
+                                        "}, [{"
+                                        id
+                                        ":"
+                                        220
+                                        ","
+                                        nom
+                                        ":"
+                                        VeillÃ
+                                        ©
+                                        e
+                                        de
+                                        priÃ
+                                        ¨
+                                        re
+                                        avec
+                                        le
+                                        groupe
+                                        Ã
+                                        JÃ
+                                        ©
+                                        sus
+                                        par
+                                        Marie
+                                        ","
+                                        date
+                                        ":"
+                                        2018-06-15
+                                        ","
+                                        mois_annee
+                                        ":"
+                                        juin-2018
+                                        ","
+                                        heure_debut
+                                        ":"
+                                        19: 45
+                                        :
+                                        00
+                                        ","
+                                        heure_fin
+                                        ":"
+                                        21: 45
+                                        :
+                                        00
+                                        ","
+                                        heure_fin_masquer
+                                        ":"
+                                        0
+                                        ","
+                                        categorie
+                                        ":"
+                                        0
+                                        ","
+                                        pays
+                                        ":"
+                                        ","
+                                        type
+                                        ":"
+                                        ","
+                                        descriptif
+                                        ":"
+                                        Le
+                                        thÃ
+                                        ¨
+                                        me: "Le Coeur SacrÃ© de JÃ©sus"
+                                        ","
+                                        afficer
+                                        ":"
+                                        1
+                                        "}, [{"
+                                        id
+                                        ":"
+                                        246
+                                        ","
+                                        nom
+                                        ":"
+                                        Jeunesse
+                                        Mariale
+                                        Vincentienne
+                                        ","
+                                        date
+                                        ":"
+                                        2018-06-16
+                                        ","
+                                        mois_annee
+                                        ":"
+                                        juin-2018
+                                        ","
+                                        heure_debut
+                                        ":"
+                                        14: 30
+                                        :
+                                        00
+                                        ","
+                                        heure_fin
+                                        ":"
+                                        16: 30
+                                        :
+                                        00
+                                        ","
+                                        heure_fin_masquer
+                                        ":"
+                                        0
+                                        ","
+                                        categorie
+                                        ":"
+                                        0
+                                        ","
+                                        pays
+                                        ":"
+                                        ","
+                                        type
+                                        ":"
+                                        ","
+                                        descriptif
+                                        ":"
+                                        Les
+                                        enfants
+                                        de
+                                        8
+                                        -
+                                        12
+                                        ans
+                                        -
+                                        sur
+                                        inscription
+                                        ","
+                                        affichr
+                                        ":"
+                                        1
+                                        "}, [{"
+                                        id
+                                        ":"
+                                        274
+                                        ","
+                                        nom
+                                        ":"
+                                        Chemin
+                                        de
+                                        Croix
+                                        +
+                                        ConfÃ
+                                        ©
+                                        rence
+                                        ","
+                                        date
+                                        ":"
+                                        2018-06-29
+                                        ","
+                                        mois_annee
+                                        ":"
+                                        juin-2018
+                                        ","
+                                        heure_debut
+                                        ":"
+                                        15: 30
+                                        :
+                                        00
+                                        ","
+                                        heure_fin
+                                        ":"
+                                        00: 00
+                                        :
+                                        00
+                                        ","
+                                        heure_fin_masquer
+                                        ":"
+                                        1
+                                        ","
+                                        categorie
+                                        ":"
+                                        0
+                                        ","
+                                        pays
+                                        ":"
+                                        ","
+                                        type
+                                        ":"
+                                        ","
+                                        descriptif
+                                        ":"
+                                        Mission
+                                        de
+                                        JÃ
+                                        ©
+                                        sus,
+                                        mission
+                                        de
+                                        l
+                                        'Eglise","affiche":"1"}, [{"id":"275","nom":"Anniversaire de la premiÃ¨re manifestation de Marie Ã  Ste Catherine LabourÃ©","date":"2018-07-18","mois_annee":"juillet-2018","heure_debut":"20:30:00","heure_fin":"00:00:00","heure_fin_masquer":"1","categorie":"0","pays":"","type":"","descriptif":"VeillÃ©e de priÃ¨re ouverte Ã  tous","afficher:"1"}, [{"id":"276","nom":"Anniversaire de la DÃ©dicace de la Chapelle","date":"2018-08-05","mois_annee":"aout-2018","heure_debut":"08:00:00","heure_fin":"00:00:00","heure_fin_masquer":"1","categorie":"0","pays":"","type":"","descriptif":"Messe","afficher""1"}, [{"id":"306","nom":"Anniversaire de la DÃ©dicace de la Chapelle","date":"2018-08-05","mois_annee":"aout-2018","heure_debut":"10:00:00","heure_fin":"00:00:00","heure_fin_masquer":"1","categorie":"0","pays":"","type":"","descriptif":"Messe","afficher":1"}, [{"id":"307","nom":"Anniversaire de la DÃ©dicace de la Chapelle","date":"2018-08-05","mois_annee":"aout-2018","heure_debut":"11:30:00","heure_fin":"00:00:00","heure_fin_masquer":"1","categorie":"0","pays":"","type":"","descriptif":"Messe","afficher":""}, [{"id":"277","nom":"Assomption de la Vierge Marie","date":"2018-08-15","mois_annee":"aout-2018","heure_debut":"08:00:00","heure_fin":"00:00:00","heure_fin_masquer":"1","categorie":"0","pays":"","type":"","descriptif":"Messe","afficher":"1}, [{"id":"314","nom":"Assomption de la Vierge Marie","date":"2018-08-15","mois_annee":"aout-2018","heure_debut":"10:30:00","heure_fin":"00:00:00","heure_fin_masquer":"1","categorie":"0","pays":"","type":"","descriptif":"Messe","afficher":"1", [{"id":"315","nom":"Assomption de la Vierge Marie","date":"2018-08-15","mois_annee":"aout-2018","heure_debut":"12:30:00","heure_fin":"00:00:00","heure_fin_masquer":"1","categorie":"0","pays":"","type":"","descriptif":"Messe","afficher":"1"} [{"id":"316","nom":"Assomption de la Vierge Marie","date":"2018-08-15","mois_annee":"aout-2018","heure_debut":"15:30:00","heure_fin":"00:00:00","heure_fin_masquer":"1","categorie":"0","pays":"","type":"","descriptif":"Messe","afficher":"1"}, [{"id":"317","nom":"Assomption de la Vierge Marie","date":"2018-08-15","mois_annee":"aout-2018","heure_debut":"17:15:00","heure_fin":"00:00:00","heure_fin_masquer":"1","categorie":"0","pays":"","type":"","descriptif":"Messe","afficher":"1"}]
