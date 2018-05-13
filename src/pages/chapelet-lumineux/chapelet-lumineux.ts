@@ -41,18 +41,20 @@ export class ChapeletLumineuxPage {
   }
 
 
-changeBackButton(){
-  if(this.plt.is("ios")) {
-    if (this.language == 'french') {
-      this.viewCtrl.setBackButtonText('Retour');
-    } else if (this.language == 'english') {
-      this.viewCtrl.setBackButtonText('Back');
-    } else if (this.language == 'spanish') {
-      this.viewCtrl.setBackButtonText('Retorno');
+  changeBackButton(){
+    if(this.plt.is("ios")) {
+      if (this.language == 'french') {
+        this.viewCtrl.setBackButtonText('Retour');
+      } else if (this.language == 'english') {
+        this.viewCtrl.setBackButtonText('Back');
+      } else if (this.language == 'spanish') {
+        this.viewCtrl.setBackButtonText('Retorno');
+      }else if (this.language == 'arabic') {
+        this.viewCtrl.setBackButtonText('الى الخلف');
+      }
     }
-  }
 
-}
+  }
 
 
 }

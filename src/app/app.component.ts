@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
-import { StatusBar } from '@ionic-native/status-bar';
+// import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import {AccueilPage} from "../pages/accueil/accueil";
+// import {AccueilPage} from "../pages/accueil/accueil";
 // import { Push, PushObject, PushOptions } from '@ionic-native/push';
 // import {LocalNotifications} from "@ionic-native/local-notifications";
 
@@ -11,11 +11,11 @@ import {AccueilPage} from "../pages/accueil/accueil";
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = AccueilPage;
+  rootPage:any = 'AccueilPage';
 
   constructor(
     platform: Platform,
-    statusBar: StatusBar,
+    // statusBar: StatusBar,
     splashScreen: SplashScreen,
     // private push: Push,
     // private localNotifications: LocalNotifications,
@@ -24,7 +24,7 @@ export class MyApp {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
-      statusBar.styleDefault();
+      // statusBar.styleDefault();
       splashScreen.hide();
 
       // const options: any = {

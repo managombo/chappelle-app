@@ -1,13 +1,14 @@
 import {Component, OnInit} from '@angular/core';
-import {IonicPage, LoadingController, NavController, NavParams} from 'ionic-angular';
+import {IonicPage, LoadingController, NavController, NavParams, Platform, ViewController} from 'ionic-angular';
 import {RssService} from "../../services/rss-service";
 import moment from 'moment';
 import { UserAgent } from '@ionic-native/user-agent';
+import { Storage } from '@ionic/storage';
 
 
 
 import {HttpClient} from "@angular/common/http";
-import {LocalNotifications} from "@ionic-native/local-notifications";
+// import {LocalNotifications} from "@ionic-native/local-notifications";
 
 /**
  * Generated class for the PrieresPage page.
@@ -26,15 +27,20 @@ export class PrieresPage implements OnInit{
 
   public prieres: any = null;
   loading:any;
+  language;
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
               public rssService: RssService,
-              private localNotifications: LocalNotifications,
+              // private localNotifications: LocalNotifications,
               public loadingCtrl: LoadingController,
               private http: HttpClient,
-              private userAgent: UserAgent
+              private userAgent: UserAgent,
+              public plt: Platform,
+              public viewCtrl: ViewController,
+              private storage: Storage
               ) {
+
   }
 
 
@@ -44,11 +50,17 @@ export class PrieresPage implements OnInit{
     this.loading.dismiss();
   }
 
+  ionViewWillEnter(){
+    this.storage.get('language').then((val) => {
+      this.language = val;
+      this.changeBackButton();
+    });
+
+  }
+
   ionViewDidLoad(){
     this.loading = this.loadingCtrl.create({
-      content: `
-      Un instant... 
-      `
+      content: ``
     });
 
     // this.userAgent.set('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36')
@@ -90,15 +102,15 @@ export class PrieresPage implements OnInit{
           //   if (this.prieres != val) {
           //     this.storage.set('name', this.prieres);
 
-              this.localNotifications.schedule({
-                // text: "test1",
-                // text: title_priere,
-                text: text_priere,
-                title: title_priere,
-
-                led: 'FF0000',
-                sound: null
-              });
+              // this.localNotifications.schedule({
+              //   // text: "test1",
+              //   // text: title_priere,
+              //   text: text_priere,
+              //   title: title_priere,
+              //
+              //   led: 'FF0000',
+              //   sound: null
+              // });
 
         }
       });
@@ -122,6 +134,21 @@ export class PrieresPage implements OnInit{
     var txt = document.createElement("textarea");
     txt.innerHTML = html;
     return txt.value;
+  }
+
+  changeBackButton(){
+    if(this.plt.is("ios")) {
+      if (this.language == 'french') {
+        this.viewCtrl.setBackButtonText('Retour');
+      } else if (this.language == 'english') {
+        this.viewCtrl.setBackButtonText('Back');
+      } else if (this.language == 'spanish') {
+        this.viewCtrl.setBackButtonText('Retorno');
+      }else if (this.language == 'arabic') {
+        this.viewCtrl.setBackButtonText('الى الخلف');
+      }
+    }
+
   }
 
 

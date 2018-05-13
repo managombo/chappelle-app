@@ -5,6 +5,7 @@ import { ChapeletsPage } from './chapelets';
 @NgModule({
   declarations: [
     ChapeletsPage,
+
   ],
   imports: [
     IonicPageModule.forChild(ChapeletsPage),

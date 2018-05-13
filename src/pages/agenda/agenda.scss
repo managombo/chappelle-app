@@ -6,7 +6,8 @@ page-agenda {
    }
 
   .scroll-content{
-
+    // overflow-y: auto !important;
+    overflow-y: scroll !important;
   }
 
   .ion-slides{
@@ -24,5 +25,15 @@ page-agenda {
 
   .monthview-eventdetail-timecolumn{
     color: #f53d3d !important;
+  }
+
+  .item{
+    //height: 30px;
+  }
+
+  ion-footer{
+    -webkit-box-shadow: 0 -4px 6px -6px black;
+    -moz-box-shadow: 0 -4px 6px -6px black;
+    box-shadow: 0 -4px 6px -6px black;
   }
 }

@@ -1,10 +1,13 @@
-import {Component, OnInit} from '@angular/core';
-import {AlertController, IonicPage, LoadingController, NavController, NavParams} from 'ionic-angular';
+import {Component, OnInit, ViewChild} from '@angular/core';
+import {
+  AlertController, Content, IonicPage, LoadingController, NavController, NavParams, Platform,
+  ViewController
+} from 'ionic-angular';
 import {Activity} from "../../data/activity.interface";
 import{HttpClient} from "@angular/common/http";
 // import * as moment from 'moment';
 import * as moment from 'moment-timezone';
-import {HorairePage} from "../horaire/horaire";
+// import {HorairePage} from "../horaire/horaire";
 import { Storage } from '@ionic/storage';
 
 @IonicPage()
@@ -13,6 +16,8 @@ import { Storage } from '@ionic/storage';
   templateUrl: 'agenda.html',
 })
 export class AgendaPage implements OnInit {
+
+  @ViewChild(Content) content: Content;
 
   activities: Activity[]=[];
   activitiesFiltered: Activity[]=[];
@@ -75,7 +80,9 @@ export class AgendaPage implements OnInit {
     public http: HttpClient,
     private alertCrl: AlertController,
     public loadingCtrl: LoadingController,
-    private storage: Storage
+    private storage: Storage,
+    public plt: Platform,
+    public viewCtrl: ViewController
   ){
   }
 
@@ -84,6 +91,7 @@ export class AgendaPage implements OnInit {
 
     this.storage.get('language').then((val) => {
       this.language = val;
+      this.changeBackButton();
       console.log("### value language: "+val);
       //
       // this.calendar = {
@@ -139,7 +147,8 @@ export class AgendaPage implements OnInit {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AgendaPage');
-    this.horaire = HorairePage;
+    this.horaire = 'HorairePage';
+
   }
 
   convertToActivities(source: string){
@@ -183,7 +192,7 @@ export class AgendaPage implements OnInit {
     // } else  if(this.language== "english"){
 
       this.loading = this.loadingCtrl.create({
-        content: 'Loading...'
+        content: ''
       });
       this.loading.present();
     //
@@ -202,9 +211,10 @@ export class AgendaPage implements OnInit {
 
 
 
-      // this.http.get('https://medaille-miraculeuse-prieres.appspot.com/agenda').subscribe((res) => {
+      this.http.get('https://medaille-miraculeuse-prieres.appspot.com/agenda').subscribe((res) => {
       // this.http.get('http://localhost:8080/agenda').subscribe((res) => {
-      this.http.get('https://raw.githubusercontent.com/managombo/chappelle-app/master/src/assets/json/mr_evenements.json').subscribe((res) => {
+      // this.http.get('https://raw.githubusercontent.com/managombo/chappelle-app/master/src/assets/json/mr_evenements.json').subscribe((res) => {
+      // this.http.get('https://raw.githubusercontent.com/managombo/chappelle-app/master/src/assets/json/mr_evenements.json').subscribe((res) => {
         // return res;
         this.evenements = res;
         // console.log(this.evenements);
@@ -216,7 +226,7 @@ export class AgendaPage implements OnInit {
           var timezone = moment.tz.guess();
           var starthour = moment.tz(evenement.date+" "+evenement.heure_debut, timezone).clone().tz("Europe/Gibraltar").toDate();
 
-          var endhour = moment.tz(evenement.date+((evenement.heure_fin == "00:00:00")? "23:59:59": evenement.heure_fin), timezone).clone().tz("Europe/Gibraltar").toDate();
+          var endhour = moment.tz(evenement.date+((evenement.heure_fin == " 00:00:00")? " 23:59:59": " "+evenement.heure_fin), timezone).clone().tz("Europe/Gibraltar").toDate();
           // i=i+1;
           // if(i>5) break;
 
@@ -242,9 +252,9 @@ export class AgendaPage implements OnInit {
         // console.log(this.activities);
 
 
-        this.http.get('https://raw.githubusercontent.com/managombo/chappelle-app/master/src/assets/json/mr_pelerinages.json').subscribe((res) => {
+        // this.http.get('https://raw.githubusercontent.com/managombo/chappelle-app/master/src/assets/json/mr_pelerinages.json').subscribe((res) => {
         // this.http.get('http://localhost:8080/pelerinages').subscribe((res) => {
-        // this.http.get('https://medaille-miraculeuse-prieres.appspot.com/pelerinages').subscribe((res) => {
+        this.http.get('https://medaille-miraculeuse-prieres.appspot.com/pelerinages').subscribe((res) => {
           // return res;
           this.pelerinages = res;
 
@@ -288,6 +298,7 @@ export class AgendaPage implements OnInit {
           // console.log(this.activities);
 
           this.loadEvents(this.activities);
+          this.content.resize();
         });
 
 
@@ -386,5 +397,19 @@ export class AgendaPage implements OnInit {
   }
 
 
+  changeBackButton(){
+    if(this.plt.is("ios")) {
+      if (this.language == 'french') {
+        this.viewCtrl.setBackButtonText('Retour');
+      } else if (this.language == 'english') {
+        this.viewCtrl.setBackButtonText('Back');
+      } else if (this.language == 'spanish') {
+        this.viewCtrl.setBackButtonText('Retorno');
+      }else if (this.language == 'arabic') {
+        this.viewCtrl.setBackButtonText('الى الخلف');
+      }
+    }
+
+  }
 
 }

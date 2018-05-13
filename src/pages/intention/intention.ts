@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {AlertController, IonicPage, NavController, NavParams} from 'ionic-angular';
+import {AlertController, IonicPage, NavController, NavParams, Platform, ViewController} from 'ionic-angular';
 import {Storage} from '@ionic/storage';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 
@@ -29,7 +29,9 @@ export class IntentionPage {
               public navParams: NavParams,
               private storage: Storage,
               private http: HttpClient,
-              private alertCtrl: AlertController
+              private alertCtrl: AlertController,
+              public plt: Platform,
+              public viewCtrl: ViewController
   ) {
   }
 
@@ -41,7 +43,9 @@ export class IntentionPage {
   ionViewWillEnter() {
     this.storage.get('language').then((val) => {
       this.language = val;
+      this.changeBackButton();
     });
+
   }
 
 
@@ -54,7 +58,7 @@ export class IntentionPage {
       "family-conflict": "Conflit Familial",
       "work-conflict": "Conflit de travail",
       "job-search": "Recherche d'emploi"
-    }
+    };
 
     var link = 'http://35.189.73.232:3000';
     var myData = JSON.stringify({
@@ -105,6 +109,21 @@ export class IntentionPage {
       }, error => {
         console.log("Oooops!");
       });
+  }
+
+  changeBackButton(){
+    if(this.plt.is("ios")) {
+      if (this.language == 'french') {
+        this.viewCtrl.setBackButtonText('Retour');
+      } else if (this.language == 'english') {
+        this.viewCtrl.setBackButtonText('Back');
+      } else if (this.language == 'spanish') {
+        this.viewCtrl.setBackButtonText('Retorno');
+      }else if (this.language == 'arabic') {
+        this.viewCtrl.setBackButtonText('الى الخلف');
+      }
+    }
+
   }
 
 }

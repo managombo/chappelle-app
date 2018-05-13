@@ -1,20 +1,20 @@
 import { Component } from '@angular/core';
-import {IonicPage, NavController, NavParams, Platform} from 'ionic-angular';
-import {PrieresPage} from "../prieres/prieres";
-import {AgendaPage} from "../agenda/agenda";
-import {BenedictionPage} from "../benediction/benediction";
-import {HistoriquePage} from "../historique/historique";
-import {IntentionPage} from "../intention/intention";
-import {ParcoursPage} from "../parcours/parcours";
-import {ChapeletsPage} from "../chapelets/chapelets";
-import {MedaillePage} from "../medaille/medaille";
-import {ParametresPage} from "../parametres/parametres";
+import {IonicPage, NavController, NavParams, Platform, ViewController} from 'ionic-angular';
+// import {PrieresPage} from "../prieres/prieres";
+// import {AgendaPage} from "../agenda/agenda";
+// import {BenedictionPage} from "../benediction/benediction";
+// import {HistoriquePage} from "../historique/historique";
+// import {IntentionPage} from "../intention/intention";
+// // import {ParcoursPage} from "../parcours/parcours";
+// // import {ChapeletsPage} from "../chapelets/chapelets";
+// // import {MedaillePage} from "../medaille/medaille";
+// import {ParametresPage} from "../parametres/parametres";
 // import { BackgroundMode } from '@ionic-native/background-mode';
 import { Storage } from '@ionic/storage';
 // import { Push, PushObject, PushOptions } from '@ionic-native/push';
-import { DeviceFeedback } from '@ionic-native/device-feedback';
+// import { DeviceFeedback } from '@ionic-native/device-feedback';
 import {FCM} from "@ionic-native/fcm";
-import {LocalNotifications} from "@ionic-native/local-notifications";
+// import {LocalNotifications} from "@ionic-native/local-notifications";
 
 
 
@@ -29,15 +29,15 @@ import {LocalNotifications} from "@ionic-native/local-notifications";
 export class AccueilPage {
   language='french';
   navigationMenu = {
-    "prieres": PrieresPage,
-    "chapelets": ChapeletsPage,
-    "agenda": AgendaPage,
-    "benediction": BenedictionPage,
-    "historique": HistoriquePage,
-    "intention": IntentionPage,
-    "parcours": ParcoursPage,
-    "medaille": MedaillePage,
-    "parametres": ParametresPage
+    "prieres": 'PrieresPage',
+    "chapelets": 'ChapeletsPage',
+    "agenda": 'AgendaPage',
+    "benediction": 'BenedictionPage',
+    "historique": 'HistoriquePage',
+    "intention": 'IntentionPage',
+    "parcours": 'ParcoursPage',
+    "medaille": 'MedaillePage',
+    "parametres": 'ParametresPage'
   };
 
   constructor(public navCtrl: NavController,
@@ -45,10 +45,11 @@ export class AccueilPage {
               private storage: Storage,
               // private push: Push,
               private fcm: FCM,
-              private deviceFeedback: DeviceFeedback,
-              private localNotifications: LocalNotifications,
+              // private deviceFeedback: DeviceFeedback,
+              // private localNotifications: LocalNotifications,
               // private backgroundMode: BackgroundMode,
-              private platform: Platform
+              public plt: Platform,
+              public viewCtrl: ViewController
   ) {
   }
 
@@ -56,7 +57,7 @@ export class AccueilPage {
     console.log('ionViewDidLoad AccueilPage');
     // this.backgroundMode.enable();
 
-    this.platform.ready().then(() => {
+    this.plt.ready().then(() => {
 
 
       //
@@ -117,6 +118,7 @@ export class AccueilPage {
         this.language = val;
       }
 
+
       // console.log('Your age is', val);
       console.log("### accueil language = "+this.language);
     });
@@ -135,6 +137,21 @@ export class AccueilPage {
 
   onNavSelect(name: string){
     this.navCtrl.push(this.navigationMenu[name]);
+  }
+
+  changeBackButton(){
+    if(this.plt.is("ios")) {
+      if (this.language == 'french') {
+        this.viewCtrl.setBackButtonText('Retour');
+      } else if (this.language == 'english') {
+        this.viewCtrl.setBackButtonText('Back');
+      } else if (this.language == 'spanish') {
+        this.viewCtrl.setBackButtonText('Retorno');
+      }else if (this.language == 'arabic') {
+        this.viewCtrl.setBackButtonText('الى الخلف');
+      }
+    }
+
   }
 
 }

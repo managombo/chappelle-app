@@ -44,7 +44,12 @@ export class ParametresPage {
   }
 
   ionViewWillEnter(){
+    this.storage.get('language').then((val) => {
+      this.language = val;
       this.changeBackButton();
+    });
+
+
   }
 
   ionViewDidLoad() {
